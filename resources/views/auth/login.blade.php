@@ -5,7 +5,8 @@
     <div class="container">
         <div class="row">
             <div class="card card-signup" data-background-color="orange" style="margin-top:-3%">
-                <form class="form" method="" action="">
+                <form class="form" method="POST" action="{{ route('login') }}">
+                    {{ csrf_field() }}
                     <div class="header text-center">
                         <h4 class="title title-up">Login</h4>
                         <div class="social-line">
@@ -28,14 +29,14 @@
                             <span class="input-group-addon">
                                 <i class="far fa-envelope-open"></i>
                             </span>
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input type="text" class="form-control" placeholder="Email" name="email">
                         </div>
 
                         <div class="input-group form-group-no-border">
                                 <span class="input-group-addon">
                                     <i class="fas fa-unlock-alt"></i>
                                 </span>
-                                <input type="password" class="form-control" placeholder="Password">
+                                <input type="password" class="form-control" placeholder="Password" name="password">
                                 
                             </div>
                         
@@ -51,13 +52,13 @@
                     </div>
                     <div class="footer text-center">
                             
-                        <a href="#pablo" class="btn btn-neutral btn-round btn-lg">Registrati</a>
-                        <a href="#pablo" class="btn btn-success btn-round btn-lg">Login</a>
+                        <a href="{{ route('register') }}" class="btn btn-neutral btn-round btn-lg">Registrati</a>
+                        <button type="submit" class="btn btn-success btn-round btn-lg">Login</button>
 
                     </div>
                     
                     <div class="text-center" style="padding-bottom:10%">
-                        <a href="#pss">Passowrd dimenticata?</a>
+                        <a href="{{ route('password.request') }}">Passowrd dimenticata?</a>
                     </div>
                     
                 </form>
