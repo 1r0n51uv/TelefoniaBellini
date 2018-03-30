@@ -10,7 +10,14 @@
         <div class="container">
             <div class="content-center">
                 <div class="photo-container">
-                    <img src="{{Auth::user()->fb_pic}}" alt="">
+
+                    @if(isset(Auth::user()->fb_pic))
+                    <img src="{{Auth::user()->fb_pic}}">
+                    @elseif(isset(Auth::user()->g_pic))
+                    <img src="{{Auth::user()->g_pic}}">
+                    @endif
+                
+                
                 </div>
                 
                 <h3 class="title">Il tuo profilo</h3>                
@@ -29,42 +36,7 @@
         
         </div>
     </div>
-    <footer class="footer footer-default">
-        <div class="container">
-            <nav>
-                <ul>
-                    <li>
-                        <a href="https://www.creative-tim.com">
-                            Creative Tim
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://presentation.creative-tim.com">
-                            About Us
-                        </a>
-                    </li>
-                    <li>
-                        <a href="http://blog.creative-tim.com">
-                            Blog
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://github.com/creativetimofficial/now-ui-kit/blob/master/LICENSE.md">
-                            MIT License
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="copyright">
-                &copy;
-                <script>
-                    document.write(new Date().getFullYear())
-                </script>, Designed by
-                <a href="http://www.invisionapp.com" target="_blank">Invision</a>. Coded by
-                <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>.
-            </div>
-        </div>
-    </footer>
+    <a href="{{ Auth::logout() }}">logout</a>
 </div>
 
 

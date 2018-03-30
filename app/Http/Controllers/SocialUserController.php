@@ -24,20 +24,30 @@ class SocialUserController extends Controller
     private static function storeUser($user, $provider) {
         echo "inserting";
         $dbUser = new User;
-        $dbUser['name'] = $user['first_name'];
-        $dbUser['surname'] = $user['last_name'];
-        $dbUser['email'] = $user->getEmail();
-        $dbUser['password'] = "pelo";
+        
         switch($provider) {
             case 'google':
+                
+                $dbUser['name'] = $user['name']['givenName'];
+                $dbUser['surname'] = $user['name']['familyName'];
+                $dbUser['email'] = $user->getEmail();
+                $dbUser['password'] = "pelo";
                 $dbUser['g_id'] = $user->getId();
-                $dbUser['g_pic'] = $user->getAvatar();
+                $dbUser['g_pic'] = "https://pikmail.herokuapp.com/" . $user->getId() . "?size=1024";
                 break;
             case 'facebook':
+                $dbUser['name'] = $user['first_name'];
+                $dbUser['surname'] = $user['last_name'];
+                $dbUser['email'] = $user->getEmail();
+                $dbUser['password'] = "pelo";
                 $dbUser['fb_id'] = $user->getId();
                 $dbUser['fb_pic'] = "https://graph.facebook.com/" . $user->getId() ."/picture?width=9999";
                 break;
             }
+
+
+       
+        
 
             $dbUser->save();
             return $dbUser;
