@@ -16,7 +16,7 @@
                             <a href="login/facebook" class="btn btn-neutral btn-facebook btn-icon btn-lg btn-round">
                                 <i class="fab fa-facebook-square" style="font-size:170%; margin-top:25%"></i>
                             </a>
-                            <a href="#pablo" class="btn btn-neutral btn-google btn-icon btn-round">
+                            <a href="login/google" class="btn btn-neutral btn-google btn-icon btn-round">
                                 <i class="fab fa-google-plus-g" style="font-size:120%; margin-top:25%"></i>
                             </a>
                         </div>

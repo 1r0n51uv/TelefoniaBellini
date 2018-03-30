@@ -38,9 +38,19 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function redirectToProvider()
+    public function redirectToProvider($provider)
     {
-        return Socialite::driver('facebook')->redirect();
+
+        switch($provider) {
+            case 'google':
+                return Socialite::driver('google')->redirect();
+                break;
+            case 'facebook':
+                return Socialite::driver('facebook')->redirect();
+                break;
+        }
+
+        
     }
 
     /**
@@ -48,13 +58,25 @@ class LoginController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function handleProviderCallback()
+    public function handleProviderCallback($provider)
     {
-        $user = Socialite::driver('facebook')->user();
+        $user = $this->chooseProvider($provider);
 
         var_dump($user);
 
         // $user->token;
     }
 
+
+    public function chooseProvider($the_provider) {
+
+        if ($the_provider == 'google') {
+            $user = Socialite::driver($the_provider)->stateless()->user();
+        } else {
+            $user = Socialite::driver($the_provider)->fields(['first_name', 'last_name', 'email', 'gender'])->user();
+        }
+
+        return $user;
+
+    }
 }
