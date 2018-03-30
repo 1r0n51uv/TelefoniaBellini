@@ -114,6 +114,6 @@
         <label>	●</label>
     </div>
 </div>
-{{header('Refresh: 3; URL=https://telefoniabellini.it/profile')}}
+<script>window.location = "/profile";</script>
 </body>
 </html>
