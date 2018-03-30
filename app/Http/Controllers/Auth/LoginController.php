@@ -5,6 +5,9 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
+use App\Http\Controllers\SocialUserController;
+use Illuminate\Support\Facades\Auth;
+
 
 class LoginController extends Controller
 {
@@ -53,17 +56,15 @@ class LoginController extends Controller
         
     }
 
-    /**
-     * Obtain the user information from GitHub.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function handleProviderCallback($provider)
-    {
-        $user = $this->chooseProvider($provider);
+    {    
+        $user = SocialUserController::checkAndInsert($this->chooseProvider($provider), $provider);
 
-        var_dump($user);
+        Auth::login($user);
 
+        return view('components.loginTransition');
+        
         // $user->token;
     }
 
