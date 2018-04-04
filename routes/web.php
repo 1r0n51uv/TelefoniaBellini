@@ -35,4 +35,3 @@ Route::get('/setPass', function() {
     return view('auth.setPass');
 });
 
-Route::post('/insertPass', 'SocialUserController@updatePass');

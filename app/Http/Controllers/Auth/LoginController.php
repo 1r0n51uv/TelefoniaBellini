@@ -65,7 +65,7 @@ class LoginController extends Controller
 
         return view('components.loginTransition');
         
-        // $user->token;
+        
     }
 
 

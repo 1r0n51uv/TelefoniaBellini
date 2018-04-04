@@ -14,6 +14,7 @@ class SocialUserController extends Controller
     public static function checkAndInsert($user, $provider) {
         if(User::whereEmail($user->getEmail())->first() != null) {
             $EXTuser = User::whereEmail($user->getEmail())->first();
+            self::updateSocialUser($EXTuser, $provider, $user);
             return $EXTuser;
         } else {
             $NEWuser = self::storeUser($user, $provider);
@@ -22,7 +23,6 @@ class SocialUserController extends Controller
     }
 
     private static function storeUser($user, $provider) {
-        echo "inserting";
         $dbUser = new User;
         
         switch($provider) {
@@ -50,12 +50,23 @@ class SocialUserController extends Controller
                 
         }
 
-      
-  
-        public function updatePass($request) {
-            
+        private static function updateSocialUser($EXTuser, $provider, $toadd) {
+            if($provider == 'google') {
+                $EXTuser['g_id'] = $toadd->getId();
+                $EXTuser['g_pic'] = "https://pikmail.herokuapp.com/" . $toadd->getId() . "?size=1024";
+                $EXTuser->save();
+            } else if($provider == 'facebook') {
+                $EXTuser['fb_id'] = $toadd->getId();
+                $EXTuser['fb_pic'] = "https://graph.facebook.com/" . $toadd->getId() ."/picture?width=9999";
+                $EXTuser->save();
+            } else {
+                echo "non va";
+            }
+
         }
 
+      
+  
 
 
    
