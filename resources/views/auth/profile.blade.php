@@ -33,10 +33,14 @@
             <h3 class="title">{{Auth::user()->email}}</h3>
             <p class="category">Email</p>
         
+            
         
         </div>
     </div>
-    <a href="{{ Auth::logout() }}">logout</a>
+
+    
+
+
 </div>
 
 

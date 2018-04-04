@@ -30,3 +30,8 @@ Route::get('/profile', function() {
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->where(['provider' => 'facebook|google']);
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->where(['provider' => 'facebook|google']);
+
+Route::get('/setPass', function() {
+    return view('auth.setPass');
+});
+

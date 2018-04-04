@@ -38,6 +38,13 @@
 
                             <div class="input-group">
                                     <span class="input-group-addon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <input type="text" class="form-control" placeholder="Cognome" name="surname" required>
+                                </div>
+
+                            <div class="input-group">
+                                    <span class="input-group-addon">
                                         <i class="far fa-envelope-open"></i>
                                     </span>
                                     <input type="text" class="form-control" placeholder="Email" name="email" required>
