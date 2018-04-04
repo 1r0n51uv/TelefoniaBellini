@@ -44,15 +44,21 @@ class SocialUserController extends Controller
                 $dbUser['fb_pic'] = "https://graph.facebook.com/" . $user->getId() ."/picture?width=9999";
                 break;
             }
-
-
-       
-        
-
+            
             $dbUser->save();
             return $dbUser;
                 
         }
-  
 
-}
+      
+  
+        public function updatePass($request) {
+            
+        }
+
+
+
+   
+   
+   
+    }
