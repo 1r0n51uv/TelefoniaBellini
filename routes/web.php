@@ -35,3 +35,6 @@ Route::get('/setPass', function() {
     return view('auth.setPass');
 });
 
+Route::get('/index', function() {
+    return view('index');;
+});
