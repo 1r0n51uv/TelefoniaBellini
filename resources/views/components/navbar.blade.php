@@ -11,18 +11,28 @@
                 <div class="collapse navbar-collapse justify-content-end" id="example-navbar-info">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#pablo">
-                                <p>Discover</p>
+                            <a class="nav-link" href="/index">
+                                <p>Home</p>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#pablo">
-                                <p>Profile</p>
+                                <p>Shop</p>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#pablo">
-                                <p>Settings</p>
+                            <a class="nav-link" href="/login">
+
+                                @if(isset(Auth::user()->name))
+
+                                <p>{{Auth::user()->name}}</p>
+
+                                @else
+                                
+                                <p>Login</p>
+                                
+                                @endif             
+                            
                             </a>
                         </li>
                     </ul>
