@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-info fixed-top " color-on-scroll="400">
+<nav class="navbar navbar-expand-lg bg-info fixed-top">
     <div class="container">
             <div class="navbar-translate">
                     <a class="navbar-brand" href="#pablo">Telefonia Bellini</a>
@@ -10,6 +10,7 @@
                 </div>
                 <div class="collapse navbar-collapse justify-content-end" id="example-navbar-info">
                     <ul class="navbar-nav">
+
                         <li class="nav-item">
                             <a class="nav-link" href="/index">
                                 <p>Home</p>

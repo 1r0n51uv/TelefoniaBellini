@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
 Route::get('/template', function (){
@@ -40,3 +40,11 @@ Route::get('/index', function() {
 });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+Route::get('/shop', function(){
+    return view('shop');
+});
+
+Route::get('/shop2', function(){
+    return view('shop2');
+});
