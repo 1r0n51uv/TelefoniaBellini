@@ -22,7 +22,17 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/login">
+
+                                @if(isset(Auth::user()->name))
+
+                                <p>{{Auth::user()->name}}</p>
+
+                                @else
+                                
                                 <p>Login</p>
+                                
+                                @endif             
+                            
                             </a>
                         </li>
                     </ul>
