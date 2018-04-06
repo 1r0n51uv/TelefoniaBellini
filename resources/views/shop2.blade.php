@@ -8,10 +8,51 @@
         <div class="container">
             
                 <div class="row" style="margin-top:5%">
+
+                    
                         
                     <div class="col-md-2 col-sm-3 col-xs-2" style="border: 1px red solid">
+                                <div class="row">
 
-                    </div>
+                                    <div class="col-md-12">
+                                        <div class="text-center">
+                                            <h5>Brand</h5>
+                                        </div>
+                                            <div class="row">
+
+                                                <div class="col-md-12">
+                                                        <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                                                                <li class="nav-item">
+                                                                    <a class="nav-link" data-toggle="tab" href="#active" role="tablist">
+                                                                            <i class="fab fa-apple" style="font-size:200%; margin-top:50%"></i>
+                                                                    </a>
+                                                                </li>
+                    
+                                                                <li class="nav-item">
+                                                                        <a class="nav-link" data-toggle="tab" href="#active" role="tablist">
+                                                                                <i class="fab fa-apple" style="font-size:200%; margin-top:50%"></i>
+                                                                        </a>
+                                                                    </li>
+                    
+                                                                    <li class="nav-item">
+                                                                            <a class="nav-link" data-toggle="tab" href="#active" role="tablist">
+                                                                                    <i class="fab fa-apple" style="font-size:200%; margin-top:50%"></i>
+                                                                            </a>
+                                                                        </li>
+                                                                
+                                                            </ul>
+                                                </div>
+
+                                                    
+                                            </div>
+                                        
+                                    </div>
+
+                                </div>
+
+                                    
+                                </div>
+                            
 
                     <div class="col-md-10 col-sm-9 col-xs-9">
 
@@ -41,9 +82,12 @@
                 
                                                      <div class="card-footer text-muted">
                                                            <div class="text-center">
-                                                                <button class="btn btn-primary btn-round" type="button">
-                                                                        <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
-                                                                    </button>
+                                                           <a href="/addToCart/{{$phone->id}}">
+                                                                        <button class="btn btn-primary btn-round" type="button">
+                                                                                        <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
+                                                                                    </button>
+                                                                   </a>
+                                                                
                                                            </div>
                                                      </div>
                                                      

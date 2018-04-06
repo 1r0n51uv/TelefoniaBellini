@@ -53,3 +53,7 @@ Route::get('/search', function() {
 Route::get('searcher','DemoController@liveSearch');        
 
 Route::get('/shop2', 'PhoneController@index');
+
+Route::get('/addToCart/{id}', 'CartController@addToCart');
+
+Route::get('/cart', 'CartController@showCart');
