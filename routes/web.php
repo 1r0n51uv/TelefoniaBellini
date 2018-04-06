@@ -46,12 +46,10 @@ Route::get('/shop', function(){
     return view('shop');
 });
 
-Route::get('/shop2', function(){
-    return view('shop2');
-});
-
 Route::get('/search', function() {
     return view('search');
   });
 
 Route::get('searcher','DemoController@liveSearch');        
+
+Route::get('/shop2', 'PhoneController@index');
