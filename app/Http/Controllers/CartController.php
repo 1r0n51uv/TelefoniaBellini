@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Cart;
+use Notification;
 use App\Phone;
 use Illuminate\Http\Request;
 
@@ -17,8 +18,11 @@ class CartController extends Controller
 
         Cart::add($item->id, $item->model, 1, $item->price);
 
-        echo "addedd";
+        //echo "addedd";
 
+        Notification::add('success', '', 'Elemento aggiunto al carrello');
+
+        return redirect()->action('PhoneController@index');
     }
 
     public function showCart() {
