@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/'
+, function () {
     return view('index');
 });
 
@@ -48,3 +49,9 @@ Route::get('/shop', function(){
 Route::get('/shop2', function(){
     return view('shop2');
 });
+
+Route::get('/search', function() {
+    return view('search');
+  });
+
+Route::get('searcher','DemoController@liveSearch');        
