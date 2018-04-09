@@ -17,10 +17,15 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#pablo">
+                            <a class="nav-link" href="/shop">
                                 <p>Shop</p>
                             </a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="/cart">
+                                    <p>Carrello</p>
+                                </a>
+                            </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/login">
 
