@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Socialite;
+use Notification;
 use App\Http\Controllers\SocialUserController;
 use Illuminate\Support\Facades\Auth;
 
@@ -62,6 +63,8 @@ class LoginController extends Controller
         $user = SocialUserController::checkAndInsert($this->chooseProvider($provider), $provider);
 
         Auth::login($user);
+
+        Notification::add('success', '', 'Ciao, ' . $user->name);
 
         return view('components.loginTransition');
         

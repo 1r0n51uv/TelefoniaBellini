@@ -104,6 +104,7 @@
         animation: lol 3s 500ms infinite ease-in-out;
     }</style>
 <body>
+    
 <div class="cs-loader">
     <div class="cs-loader-inner">
         <label>	●</label>
@@ -114,6 +115,6 @@
         <label>	●</label>
     </div>
 </div>
-<script>window.location = "/profile";</script>
+<script>setTimeout(function(){location.href="/profile"} , 3000);  </script>
 </body>
 </html>

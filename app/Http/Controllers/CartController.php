@@ -29,6 +29,19 @@ class CartController extends Controller
         return view('cart');
     }
 
+    public function deleteCartItem($id) {
+        
+        //echo $id;
+        Cart::remove($id);
+        Notification::add('error', '', 'Elemento rimosso dal carrello');
+        return redirect()->action('CartController@showCart');
+
+    }
+
+    public function destroyCart() {
+        Cart::destroy();
+        return view('cart');
+    }
     
 
 

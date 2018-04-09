@@ -56,4 +56,6 @@ Route::get('/shop2', 'PhoneController@index');
 
 Route::get('/addToCart/{id}', 'CartController@addToCart');
 
+Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
+Route::get('/cart/{id}', 'CartController@deleteCartItem');
