@@ -24,6 +24,11 @@
                             </a>
                         </li>
                         <li class="nav-item">
+                                <a class="nav-link" href="/cart">
+                                    <p>Carrello</p>
+                                </a>
+                            </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="/login">
 
                                 @if(isset(Auth::user()->name))
