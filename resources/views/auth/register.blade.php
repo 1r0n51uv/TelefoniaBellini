@@ -9,7 +9,7 @@
                 <form class="form" method="POST" action="{{ route('register') }}">
                     {{ csrf_field() }}
                     <div class="header text-center">
-                        <h4 class="title title-up">Registrati</h4>
+                        <h4 class="title title-up">Sign In</h4>
                         <div class="social-line">
                             <a href="#pablo" class="btn btn-neutral btn-twitter btn-icon btn-round">
                                 <i class="fab fa-twitter" style="font-size:120%; margin-top:25%"></i>
@@ -24,10 +24,6 @@
                     </div>
                     <div class="card-body">
 
-                        <div class="text-center">
-                            <p>Oppure</p>
-                        </div>
-                       
 
                         <div class="input-group">
                                 <span class="input-group-addon">
@@ -72,7 +68,7 @@
                     </div>
                     <div class="footer text-center">
                             
-                        <button type="submit" class="btn btn-success btn-round btn-lg">Registrati</button>
+                        <button type="submit" class="btn btn-success btn-round btn-lg" style="background-color: whitesmoke; color: black;">Registrati</button>
 
                     </div>
                     

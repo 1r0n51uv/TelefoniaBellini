@@ -2,10 +2,10 @@
 
 @section('content')
 
-    <div class="section" id="carousel" style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-9">
+    <div class="section" id="carousel" style="background-image: url('assets/img/wall.png'); background-size: cover; background-position: top center; min-height: 700px;">
+
+            <div class="row" style="margin-top: 4%; margin-left: -1%;">
+                <div class="col-7">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">
                             <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -17,19 +17,21 @@
                                 <img class="d-block" src="assets/img/s9.jpg" alt="First slide">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>Samsung Galaxy S9</h5>
-                                    <button class="btn btn-danger">Shop Now</button>
+                                    <button class="btn btn-danger" style="background-color: #9097A2;">Shop Now</button>
                                 </div>
                             </div>
                             <div class="carousel-item">
                                 <img class="d-block" src="assets/img/iphone10.png" alt="Second slide">
                                 <div class="carousel-caption d-none d-md-block">
                                     <h5>I-Phone X</h5>
+                                    <button class="btn btn-danger" style="background-color: #9097A2;">Shop Now</button>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <img class="d-block" src="assets/img/iphone8.png" alt="Third slide">
+                                <img class="d-block" src="assets/img/wall2.png" alt="Third slide">
                                 <div class="carousel-caption d-none d-md-block">
-                                    <h5>I-phone 8 & 8+</h5>
+                                    <h5>Samsung Galaxy S8 & 8+</h5>
+                                    <button class="btn btn-danger" style="background-color: #9097A2;">Shop Now</button>
                                 </div>
                             </div>
                         </div>
@@ -41,6 +43,63 @@
                         </a>
                     </div>
                 </div>
+                <div class="col-2">
+                    <div class="card">
+
+                        <div class="card-header" style="background-color: white">
+                            <span class="badge badge-danger">Novità</span>
+                        </div>
+
+                        <img class="card-img-top" src="assets/image/x.png" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%">
+                        <div class="card-body" style="text-align:center;">
+
+                            <h5 class="card-text"><i class="fas fa-mobile-alt"></i> IPhone X</h5>
+                            <h5 class="card-text"><i class="far fa-hdd"></i> 256 GB</h5>
+                            <h5 class="card-text"><i class="fas fa-paint-brush"></i> Black</h5>
+                            <h5 class="card-text"><i class="far fa-money-bill-alt"></i> 999€</h5>
+
+                        </div>
+
+                        <div class="card-footer text-muted">
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-round" type="button">
+                                    <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="col-2">
+                    <div class="card">
+
+                        <div class="card-header" style="background-color: white">
+                            <span class="badge badge-danger">Novità</span>
+                        </div>
+
+                        <img class="card-img-top" src="assets/image/x.png" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%">
+                        <div class="card-body" style="text-align:center;">
+
+                            <h5 class="card-text"><i class="fas fa-mobile-alt"></i> IPhone X</h5>
+                            <h5 class="card-text"><i class="far fa-hdd"></i> 256 GB</h5>
+                            <h5 class="card-text"><i class="fas fa-paint-brush"></i> Black</h5>
+                            <h5 class="card-text"><i class="far fa-money-bill-alt"></i> 999€</h5>
+
+                        </div>
+
+                        <div class="card-footer text-muted">
+                            <div class="text-center">
+                                <button class="btn btn-primary btn-round" type="button">
+                                    <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
+                                </button>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

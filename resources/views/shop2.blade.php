@@ -10,10 +10,9 @@
             
                 <div class="row" style="margin-top:5%">
 
-                    
-                        
                     <div class="col-md-2 col-sm-3 col-xs-2" style="border: 1px red solid">
                                 <div class="row">
+
 
                                     <div class="col-md-12">
                                         <div class="text-center">
@@ -48,8 +47,6 @@
                                             </div>
                                         
                                     </div>
-
-                                </div>
 
                                     
                                 </div>
