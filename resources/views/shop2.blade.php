@@ -50,9 +50,10 @@
 
                                     
                                 </div>
-                            
+                    </div>
 
-                    <div class="col-md-10 col-sm-9 col-xs-9">
+                    
+                                <div class="col-md-10 col-sm-9 col-xs-9">
 
                         
                         <div class="row">
