@@ -1,10 +1,10 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="section section-signup" style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+<div class="section section-signup" style="background-image: url('assets/img/wall.png'); background-size: cover; background-position: top center; min-height: 700px;">
     <div class="container">
         <div class="row">
-            <div class="card card-signup" data-background-color="orange" style="margin-top:-3%">
+            <div class="card card-signup" data-background-color="black" style="margin-top:-3%">
                 <form class="form" method="POST" action="{{ route('login') }}">
                     {{ csrf_field() }}
                     <div class="header text-center">
@@ -52,8 +52,8 @@
                     </div>
                     <div class="footer text-center">
                             
-                        <a href="{{ route('register') }}" class="btn btn-neutral btn-round btn-lg">Registrati</a>
-                        <button type="submit" class="btn btn-success btn-round btn-lg">Login</button>
+                        <a href="{{ route('register') }}" class="btn btn-neutral btn-round btn-lg" style="background-color: whitesmoke; color: black;">Registrati</a>
+                        <button type="submit" class="btn btn-success btn-round btn-lg" style="background-color: whitesmoke; color: black;">Login</button>
 
                     </div>
                     

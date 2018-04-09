@@ -37,7 +37,7 @@ Route::get('/setPass', function() {
 });
 
 Route::get('/index', function() {
-    return view('index');;
+    return view('index');
 });
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
