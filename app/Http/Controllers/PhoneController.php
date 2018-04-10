@@ -11,4 +11,7 @@ class PhoneController extends Controller
         $phones = Phone::latest()->get();
         return view('shop2', compact('phones'));
     }
+
+
+
 }

@@ -62,6 +62,8 @@ class LoginController extends Controller
     {    
         $user = SocialUserController::checkAndInsert($this->chooseProvider($provider), $provider);
 
+        
+
         Auth::login($user);
 
         Notification::add('success', '', 'Ciao, ' . $user->name);
