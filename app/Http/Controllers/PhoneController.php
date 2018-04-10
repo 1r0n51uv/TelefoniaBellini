@@ -11,4 +11,11 @@ class PhoneController extends Controller
         $phones = Phone::latest()->get();
         return view('shop2', compact('phones'));
     }
+
+
+    public function singlephone($id) {
+        $phone = Phone::whereId($id)->first();
+        return view('listphone', compact('phone'));
+
+    }
 }
