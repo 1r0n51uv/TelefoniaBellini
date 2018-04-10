@@ -26,13 +26,13 @@ return [
     ],
 
     'sparkpost' => [
-        'secret' => env('SPARKPOST_SECRET'),
+        'secret' => 'sk_live_nyaIUFc8EyxDqXK9CYdP6Iwe',
     ],
 
     'stripe' => [
         'model' => App\User::class,
-        'key' => env('STRIPE_KEY'),
-        'secret' => env('STRIPE_SECRET'),
+        'key' => 'pk_test_pRCP2N5mU3nRaJGzvJDslOM6',
+        'secret' => 'sk_test_8Kzs6fXmdOGs7i7h9cdujG6k',
     ],
 
     'facebook' => [

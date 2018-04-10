@@ -11,7 +11,10 @@
                 <div class="collapse navbar-collapse justify-content-end" id="example-navbar-info">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <input type="text" placeholder="Search. . ." class="form-control form-control-success" style="margin-top: 2%; border-color: grey;">
+                            <input type="text" id="search" placeholder="Search. . ." class="form-control form-control-success" style="margin-top: 2%; border-color: grey;" autocomplete="off">
+                        <!-- search box container ends  -->
+          
+          
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/index">
@@ -46,3 +49,10 @@
                     </ul>
                 </div>
 </nav>
+
+<!-- Risultati ricerca
+<div class="section">
+    <div id="txtHint" class="title-color" style="text-align:center;"></div>
+</div>
+
+-->

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Phone;
 
 class DemoController extends Controller
 {
@@ -17,9 +17,9 @@ class DemoController extends Controller
         }
         else
         {
-            $users = User::where('name','LIKE',"%{$search}%")->orWhere('email','LIKE',"%{$search}%")->get();
+            $phones = Phone::where('brand','LIKE',"%{$search}%")->orWhere('model','LIKE',"%{$search}%")->get();
 
-            return view('searchajax')->withUsers($users);
+            return view('searchajax')->withPhones($phones);
         }
     }
 }

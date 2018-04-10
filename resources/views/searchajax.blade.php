@@ -1,6 +1,6 @@
 
 <?php
-if(!empty($users))  
+if(!empty($phones))  
 { 
   $outputbody = '';  
   $outputhead = '';
@@ -8,7 +8,7 @@ if(!empty($users))
   $count = 0;
 
 
-  foreach ($users as $user)    
+  foreach ($phones as $phone)    
   {   
 
     
@@ -36,7 +36,7 @@ if(!empty($users))
       $outputbody .=  '
     <div class="row">
         <div class="col-md-12 ">
-            <a class="' . $color . '" href="/showBook/' . $user->id . '"><h5>' . $user->name . ' - ' . $user->email .'</h5></a>
+            <a class="' . $color . '" href="/showBook/' . $phone->brand . '"><h5>' . $phone->model . ' - ' . $phone->color .'</h5></a>
         </div> 
      </div>   ';
 

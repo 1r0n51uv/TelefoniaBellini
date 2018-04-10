@@ -66,3 +66,9 @@ Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
 Route::get('/cart/{id}', 'CartController@deleteCartItem');
 
+Route::get('/checkout', function() {
+    return view('checkout');
+})->middleware('auth');
+
+//Route::post('/pay', 'StripeController@pay');
+

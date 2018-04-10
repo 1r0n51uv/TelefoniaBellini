@@ -40,9 +40,9 @@ class CartController extends Controller
 
     public function destroyCart() {
         Cart::destroy();
-        return view('cart');
+        return view('components.payTransition');
     }
-    
 
+   
 
 }

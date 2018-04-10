@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\User; 
 use Illuminate\Foundation\Auth\AuthenticatesUsers; 
 use Socialite; 
+use App\Http\Controllers\StripeController;
  
 class SocialUserController extends Controller 
 { 
@@ -18,11 +19,13 @@ class SocialUserController extends Controller
             return $EXTuser; 
         } else { 
             $NEWuser = self::storeUser($user, $provider); 
+            StripeController::createStripeAccount($NEWuser);
             return $NEWuser; 
         } 
     } 
  
-    private static function storeUser($user, $provider) { 
+    private static function storeUser($user, $provider) {
+
         $dbUser = new User; 
          
         switch($provider) { 
