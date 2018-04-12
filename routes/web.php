@@ -70,5 +70,3 @@ Route::get('/checkout', function() {
     return view('checkout');
 })->middleware('auth');
 
-//Route::post('/pay', 'StripeController@pay');
-

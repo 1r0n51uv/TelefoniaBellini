@@ -7,8 +7,7 @@ use App\Phone;
 
 class DemoController extends Controller
 {
-    public function liveSearch(Request $request)
-    { 
+    public function liveSearch(Request $request) { 
         $search = $request->id;
 
         if (is_null($search))
@@ -22,4 +21,7 @@ class DemoController extends Controller
             return view('searchajax')->withPhones($phones);
         }
     }
+
+
+
 }
