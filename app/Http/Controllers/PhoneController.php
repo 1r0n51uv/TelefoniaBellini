@@ -14,7 +14,7 @@ class PhoneController extends Controller
 
  
 
-    public function singlephone($id) {
+    public function showSingle($id) {
         $phone = Phone::whereId($id)->first();
         return view('singleDevice');
     }
