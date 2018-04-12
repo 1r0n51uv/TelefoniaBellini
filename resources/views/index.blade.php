@@ -43,11 +43,11 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="card">
+                <div class="col-md-3" style="">
+                    <div class="card" style="background-color: whitesmoke;">
 
-                        <div class="card-header" style="background-color: white">
-                            <span class="badge badge-danger">Novità</span>
+                        <div class="card-header">
+                            <span class="badge badge-danger" style="border-color: #9097A2; color: black;">Novità</span>
                         </div>
 
                         <img class="card-img-top" src="assets/image/x.png" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%">
@@ -62,7 +62,7 @@
 
                         <div class="card-footer text-muted">
                             <div class="text-center">
-                                <button class="btn btn-primary btn-round" type="button">
+                                <a href="/shop2"><button class="btn btn-primary btn-round" type="button" style="background-color:#9097A2;">
                                     <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
                                 </button>
                             </div>
@@ -71,35 +71,6 @@
 
                     </div>
                 </div>
-                <div class="col-2">
-                    <div class="card">
-
-                        <div class="card-header" style="background-color: white">
-                            <span class="badge badge-danger">Novità</span>
-                        </div>
-
-                        <img class="card-img-top" src="assets/image/x.png" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%">
-                        <div class="card-body" style="text-align:center;">
-
-                            <h5 class="card-text"><i class="fas fa-mobile-alt"></i> IPhone X</h5>
-                            <h5 class="card-text"><i class="far fa-hdd"></i> 256 GB</h5>
-                            <h5 class="card-text"><i class="fas fa-paint-brush"></i> Black</h5>
-                            <h5 class="card-text"><i class="far fa-money-bill-alt"></i> 999€</h5>
-
-                        </div>
-
-                        <div class="card-footer text-muted">
-                            <div class="text-center">
-                                <button class="btn btn-primary btn-round" type="button">
-                                    <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
-                                </button>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-
             </div>
         </div>
     </div>

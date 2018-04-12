@@ -1,4 +1,3 @@
-
 @extends('layouts.master')
 
 @section('content')
@@ -10,7 +9,7 @@
             
                 <div class="row" style="margin-top:5%">
 
-                    <div class="col-md-2 col-sm-3 col-xs-2" style="border: 1px red solid">
+                    <div class="col-md-2 col-sm-3 col-xs-2" style="border: 1px whitesmoke solid">
                                 <div class="row">
 
 
@@ -21,7 +20,7 @@
                                             <div class="row">
 
                                                 <div class="col-md-12">
-                                                        <ul class="nav nav-pills nav-pills-primary" role="tablist">
+                                                        <ul class="nav nav-pills nav-pills-primary" role="tablist" style="color: whitesmoke;">
                                                                 <li class="nav-item">
                                                                     <a class="nav-link" data-toggle="tab" href="#active" role="tablist">
                                                                             <i class="fab fa-apple" style="font-size:200%; margin-top:50%"></i>
@@ -36,7 +35,7 @@
                     
                                                                     <li class="nav-item">
                                                                             <a class="nav-link" data-toggle="tab" href="#active" role="tablist">
-                                                                                    <i class="fab fa-apple" style="font-size:200%; margin-top:50%"></i>
+                                                                                    <i class="fab fa-apple" style="font-size:200%; margin-top:50%;"></i>
                                                                             </a>
                                                                         </li>
                                                                 
@@ -62,10 +61,10 @@
 
                             
                                         <div class="col-md-5 col-sm-10"> 
-                                                <div class="card">
+                                                <div class="card" style="background-color: whitesmoke;">
                 
-                                                        <div class="card-header" style="background-color: white">
-                                                                <span class="badge badge-danger">Novità</span>
+                                                        <div class="card-header">
+                                                                <span class="badge badge-danger" style="border-color: #9097A2; color: black;">Novità</span>
                                                         </div>
                 
                                                         <img class="card-img-top" src="{{ $phone->pic}}" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%">
@@ -80,9 +79,9 @@
                                                      </div>
                 
                                                      <div class="card-footer text-muted">
-                                                           <div class="text-center">
+                                                           <div class="text-center"  >
                                                            <a href="/addToCart/{{$phone->id}}">
-                                                                        <button class="btn btn-primary btn-round" type="button">
+                                                                        <button class="btn btn-primary btn-round" type="button" style="background-color:#9097A2;">
                                                                                         <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
                                                                                     </button>
                                                                    </a>
