@@ -12,10 +12,12 @@ class PhoneController extends Controller
         return view('shop2', compact('phones'));
     }
 
+ 
 
     public function singlephone($id) {
         $phone = Phone::whereId($id)->first();
-        return view('listphone', compact('phone'));
-
+        return view('singleDevice');
     }
+
+    
 }
