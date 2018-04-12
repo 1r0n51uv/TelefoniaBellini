@@ -96,4 +96,6 @@
 
 </div>
 
+<script src="./assets/js/stripeui.js" type="text/javascript"></script>
+
 @endsection
