@@ -13,7 +13,7 @@ class StripeController extends Controller
 {
     public function pay(Request $request) {
 
-        $stripe = Stripe::make('sk_test_8Kzs6fXmdOGs7i7h9cdujG6k', '2018-02-28');
+        $stripe = Stripe::make(env('STRIPE_SECRET'), '2018-02-28');
     
         $amount = $request['amount'];
         $id = $request['user'];
@@ -37,7 +37,7 @@ class StripeController extends Controller
    
 
     public static function createStripeAccount($user) {
-        $stripe = Stripe::make('sk_test_8Kzs6fXmdOGs7i7h9cdujG6k', '2018-02-28');
+        $stripe = Stripe::make(env('STRIPE_SECRET'), '2018-02-28');
 
         $customer = $stripe->customers()->create([
             'id' => $user->id,
