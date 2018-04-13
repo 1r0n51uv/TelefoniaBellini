@@ -1384,7 +1384,7 @@
     border-radius: 0.1875rem;
     padding: 11px 22px;
     cursor: pointer;
-    background-color: #888;
+    background-color: whitesmoke;
     color: #FFFFFF;
 }
 
@@ -3735,7 +3735,9 @@ body {
 }
 
 .bg-info {
-    background-color: #31332C !important;
+    background-color: #000000 !important;
+    opacity: 0.8;
+
 
 }
 

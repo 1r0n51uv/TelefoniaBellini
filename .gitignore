@@ -15,3 +15,7 @@ yarn-error.log
 composer\.lock
 
 env
+
+public/assets/img/nature\.jpg
+
+public/assets/img/nature1\.jpg
