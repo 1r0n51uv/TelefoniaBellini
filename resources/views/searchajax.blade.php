@@ -36,7 +36,7 @@ if(!empty($phones))
       $outputbody .=  '
     <div class="row justify-content-center">
         <div class="col-md-12">
-            <a class="dropdown-item"' . $color . '" href="/showBook/' . $phone->brand . '"><h6>' . $phone->model . ' - ' . $phone->color .'</h6></a>
+            <a class="dropdown-item"' . $color . '" href="/showDevice/' . $phone->id . '"><h6>' . $phone->model . ' - ' . $phone->color .'</h6></a>
         </div> 
      </div>   ';
 

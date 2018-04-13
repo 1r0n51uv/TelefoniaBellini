@@ -20,7 +20,7 @@
                                 
                                 <div class="row">
         
-                                   <div class="col-md-8 col-sm-8">
+                                   <div class="col-md-8 col-sm-12">
                                     
                                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                                         <ol class="carousel-indicators">
@@ -60,15 +60,17 @@
                                     
                                     </div>
                                     
-                                    <div class="col-md-4 col-sm-4" style="border: 1px red solid">
+                                    <div class="col-md-4 col-sm-6" style="border: 1px red solid">
 
                                         <div class="row">
 
-                                            <div class="col-md-12 text-center" style="border: blue 1px solid">
+                                            <div class="col-md-12 text-left" style="border: blue 1px solid">
 
-                                                <h3 class="card-text"><i class="fab fa-apple"></i> {{ $phone->brand}}</h3>
-                                                <h3 class="card-text"><i class="fas fa-mobile-alt"></i> {{ $phone->model}}</h3>
-
+                                                <h4 class="card-text"><i class="fab fa-apple"></i> {{ $phone->brand}}</h4>
+                                                <h4 class="card-text"><i class="fas fa-mobile-alt"></i> {{ $phone->model}}</h4>
+                                                <h4 class="card-text"><i class="far fa-hdd"></i> {{ $phone->storage}} GB</h4>
+                                                <h4 class="card-text"><i class="fas fa-paint-brush"></i> {{ $phone->color}}</h4>
+                                            
                                             </div>
 
                                         </div>
