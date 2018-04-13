@@ -8,13 +8,18 @@
                         <span class="navbar-toggler-bar bar3"></span>
                     </button>
                 </div>
+
                 <div class="collapse navbar-collapse justify-content-end" id="example-navbar-info">
                     <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <input type="text" id="search" placeholder="Search. . ." class="form-control form-control-success" style="margin-top: 2%; border-color: grey;" autocomplete="off">
+                        <li class="nav-item dropdown">
+                            
+                                <input type="text" id="search" data-toggle="dropdown" placeholder="Search. . ." class="form-control form-control-success" style="margin-top: 2%; border-color: grey;" autocomplete="off">
+                            
+                            
                         <!-- search box container ends  -->
-          
-          
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                <div id="txtHint" class="title-color" style="text-align:center;" ></div>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/index">
@@ -48,7 +53,21 @@
                         </li>
                     </ul>
                 </div>
-</nav>
+
+
+            </div>    
+
+
+
+        
+        
+        </nav>
+
+
+
+
+
+
 
 <!-- Risultati ricerca
 <div class="section">

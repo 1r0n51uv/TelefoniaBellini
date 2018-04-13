@@ -20,7 +20,6 @@ Route::get('/template', function (){
     return view('template');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
@@ -50,10 +49,6 @@ Route::get('/search', function() {
     return view('search');
   });
 
-
-
-
-
 Route::get('/phone/{id}', 'PhoneController@singlephone');
 
 Route::get('searcher','DemoController@liveSearch');        
@@ -68,6 +63,6 @@ Route::get('/cart/{id}', 'CartController@deleteCartItem');
 
 Route::get('/checkout', function() {
     return view('checkout');
-})->middleware('auth');
+})->middleware('auth', 'emptyCart');
 
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
