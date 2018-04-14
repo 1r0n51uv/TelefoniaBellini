@@ -21,7 +21,7 @@ class ShipmentDetailsMiddleware
 
         if(ShipmentDetails::whereUserId(Auth::user()->id)->first() == null) {
             Notification::add('error', '', 'Completa le informazioni di spedizione prima di continuare');
-            return redirect()->action('ShipmentDetailsController@returnView');
+            return redirect()->action('ShipmentDetailsController@createShipmentDetailsView');
 
         }
 

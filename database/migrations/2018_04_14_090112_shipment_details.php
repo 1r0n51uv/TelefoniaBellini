@@ -21,8 +21,8 @@ class ShipmentDetails extends Migration
             $table->string('province');
             $table->string('state');
             $table->integer('cap');
-            $table->mediumInteger('phone');
-            $table->string('description');
+            $table->bigInteger('phone');
+            $table->string('description')->nullable();
             $table->integer('user_id');
             $table->timestamps();
         });

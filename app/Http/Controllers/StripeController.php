@@ -20,8 +20,8 @@ class StripeController extends Controller
 
         $user = User::whereId($id)->first();
 
-        $customer = $stripe->customers()->find($id);       
-        
+        $customer = $stripe->customers()->find($id);
+
         $card = $stripe->cards()->create($id, $_POST['stripeToken']);
 
         $charge = $stripe->charges()->create([
@@ -39,10 +39,17 @@ class StripeController extends Controller
     public static function createStripeAccount($user) {
         $stripe = Stripe::make(env('STRIPE_SECRET'), '2018-02-28');
 
-        $customer = $stripe->customers()->create([
-            'id' => $user->id,
-            'email' => $user->email,
-        ]);
+        try {
+
+            $customer = $stripe->customers()->find($user->id);
+
+        } catch (\Cartalyst\Stripe\Exception\NotFoundException $e) {
+
+            $customer = $stripe->customers()->create([
+                'id' => $user->id,
+                'email' => $user->email,
+            ]);
+        }
 
     }
 
