@@ -6,6 +6,8 @@ use Closure;
 
 use Cart;
 use Notification;
+use Auth;
+
 
 class CartCheckout
 {
@@ -22,8 +24,8 @@ class CartCheckout
         if(Cart::total() == 0) {
             Notification::add('error', '', 'Aggiungi un elemento nel carrello');
             return redirect()->action('CartController@showCart');
-
         }
+
 
         return $next($request);
     }
