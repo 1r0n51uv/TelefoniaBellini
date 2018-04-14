@@ -63,9 +63,7 @@ Route::get('/cart/{id}', 'CartController@deleteCartItem');
 
 Route::get('/shipmentDetails', 'ShipmentDetailsController@createShipmentDetailsView')->middleware('auth');
 
-Route::get('/checkout', function() {
-    return view('checkout');
-})->middleware('auth', 'emptyCart', 'shipmentDetails');
+Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', 'emptyCart', 'shipmentDetails');
 
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 
