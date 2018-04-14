@@ -45,18 +45,38 @@
                                     </span>
                                     <input type="text" class="form-control" placeholder="Email" name="email" required>
                                 </div>
-
-
                         <div class="input-group">
                                 <span class="input-group-addon">
                                     <i class="fas fa-unlock-alt"></i>
                                 </span>
-                                <input type="password" class="form-control" placeholder="Password" name="password" required>
-                                
-                            </div>
-              
-                        
-                           
+                            <input type="password" class="form-control" placeholder="Password" name="password" required>
+
+                        </div>
+                        <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                            <input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo" required>
+                        </div>
+                        <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                            <input type="text" class="form-control" placeholder="Provincia" name="provincia" required>
+                        </div>
+                        <div class="input-group">
+                                    <span class="input-group-addon">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                            <input type="text" class="form-control" placeholder="CAP" name="cap" required>
+                        </div>
+
+
+
+
+
+
+
 
                         <!-- If you want to add a checkbox to this form, uncomment this code -->
                         <!-- <div class="checkbox">

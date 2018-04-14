@@ -47,6 +47,11 @@
                                 <i class="now-ui-icons shopping_cart-simple"></i> Ordini
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" data-toggle="tab" href="#spedizione" role="tab">
+                                <i class="now-ui-icons ui-1_settings-gear-63"></i> Spedizione {{Auth::user()->name}}
+                            </a>
+                        </li>
                        
                     </ul>
                     <div class="card-body">
@@ -58,11 +63,23 @@
                     
                                 <h3 class="title">{{Auth::user()->email}}</h3>
                                 <p class="category">Email</p>
-                                
+
                             <a href="logout"><button class="btn btn-danger">Logout</button></a>
                             </div>
                             <div class="tab-pane" id="order" role="tabpanel">
-                                <p> I will be the leader of a company that ends up being worth billions of dollars, because I got the answers. I understand culture. I am the nucleus. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. I think that’s a responsibility that I have, to push possibilities, to show people, this is the level that things could be at. </p>
+
+
+                            </div>
+                            <div class="tab-pane" id="spedizione" role="tabpanel">
+                                <h3 class="title">{{Auth::user()->indirizzo}} </h3>
+                                <p class="category">Address</p>
+
+                                <h3 class="title">{{Auth::user()->provincia}}</h3>
+                                <p class="category">Provincia</p>
+
+                                <h3 class="title">{{Auth::user()->cap}} </h3>
+                                <p class="category">CAP</p>
+
                             </div>
                             
                         </div>
