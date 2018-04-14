@@ -61,8 +61,10 @@ Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
 Route::get('/cart/{id}', 'CartController@deleteCartItem');
 
+Route::get('/shipmentDetails', 'ShipmentDetailsController@returnView');
+
 Route::get('/checkout', function() {
     return view('checkout');
-})->middleware('auth', 'emptyCart');
+})->middleware('auth', 'emptyCart', 'shipmentDetails');
 
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');

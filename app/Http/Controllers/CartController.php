@@ -43,6 +43,10 @@ class CartController extends Controller
         return view('components.payTransition');
     }
 
+    public function returnView() {
+        return view('shipmentDetails');
+    }
+
    
 
 }
