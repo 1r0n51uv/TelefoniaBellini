@@ -23,25 +23,24 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="/index">
-                                <p>Home</p>
+                                <i class="now-ui-icons objects_globe" title="Home"></i>
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/shop2">
-                                <p>Shop</p>
+                            <a class="nav-link" href="/shopping" title="Shop Now">
+                                <i class="now-ui-icons shopping_shop"></i>
                             </a>
                         </li>
                         <li class="nav-item">
                                 <a class="nav-link" href="/cart">
-                                    <p>Carrello</p>
+                                    <i class="now-ui-icons shopping_cart-simple" title="Carousel"></i>
                                 </a>
                             </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">
+                            <a class="nav-link" href="/login" title="Il tuo profilo">
 
                                 @if(isset(Auth::user()->name))
-
-                                <p>{{Auth::user()->name}}</p>
+                                    <i class="now-ui-icons users_circle-08" {{Auth::user()->name}}></i>
 
                                 @else
                                 

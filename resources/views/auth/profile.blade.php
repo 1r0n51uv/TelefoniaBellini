@@ -4,8 +4,8 @@
 @section('content')
 
 <div class="wrapper">
-    <div class="page-header page-header-small" filter-color="orange">
-        <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/bg5.jpg');">
+    <div class="page-header page-header-small" filter-color="blue">
+        <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/a.jpg');">
         </div>
         <div class="container">
             <div class="content-center">
@@ -70,6 +70,33 @@
 
 
                             </div>
+                            <div class="tab-pane" id="spedizione" role="tabpanel">
+
+                                @if (isset($shipment))
+                            <h3 class="title">{{Auth::user()->address}}</h3>
+                            <p class="category">Address</p>
+
+                            <h3 class="title">{{Auth::user()->number}}</h3>
+                            <p class="category">Number</p>
+
+                            <h3 class="title">{{Auth::user()->city}}</h3>
+                            <p class="category">City</p>
+
+                            <h3 class="title">{{Auth::user()->province}}</h3>
+                            <p class="category">Province</p>
+
+                            <h3 class="title">{{Auth::user()->state}}</h3>
+                            <p class="category">State</p>
+
+                            <h3 class="title">{{Auth::user()->cap}}</h3>
+                            <p class="category">CAP</p>
+
+
+                                    @else
+                                    <h3 class="title">Nessuna informazione di spedizione inserita</h3>
+                                    <a  href="/shipmentDetails"><button class="btn btn-warning">Inserisci i dati</button></a>
+
+                                    @endif
 
 
                             </div>
