@@ -70,15 +70,7 @@
 
 
                             </div>
-                            <div class="tab-pane" id="spedizione" role="tabpanel">
-                                <h3 class="title">{{Auth::user()->indirizzo}} </h3>
-                                <p class="category">Address</p>
 
-                                <h3 class="title">{{Auth::user()->provincia}}</h3>
-                                <p class="category">Provincia</p>
-
-                                <h3 class="title">{{Auth::user()->cap}} </h3>
-                                <p class="category">CAP</p>
 
                             </div>
                             
