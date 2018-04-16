@@ -19,7 +19,7 @@
 
                             <div class="row justify-content-center" style="border: 1px yellow solid;">
 
-                             
+
 
 
                             </div>
@@ -84,6 +84,16 @@
             </div>
 
 
+
+            <div style="text-align: center">
+
+                <div style="display: inline-block;">
+                    <ul class="pagination pagination-primary">
+                        {{ $phones->links() }}
+                    </ul>
+
+                </div>
+            </div>
 
         </div>
 

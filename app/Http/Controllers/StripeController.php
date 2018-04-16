@@ -4,9 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Stripe;
-use Cart;
 use App\User;
-use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 
 
 class StripeController extends Controller
@@ -29,7 +28,10 @@ class StripeController extends Controller
             'currency' => 'Eur',
             'amount'   => $amount,
         ]);
-    
+
+        OrderController::storeOrder();
+
+
         return redirect()->action('CartController@destroyCart');
 
     }

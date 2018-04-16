@@ -8,7 +8,7 @@ use App\Phone;
 class PhoneController extends Controller
 {
     public function index() {
-        $phones = Phone::latest()->get();
+        $phones = Phone::paginate(6);
         return view('shop2', compact('phones'));
     }
 
