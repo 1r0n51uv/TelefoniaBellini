@@ -21,9 +21,6 @@ class CreateUsersTable extends Migration
             $table->string('surname');
             $table->string('email');
             $table->string('password');
-            $table->string('indirizzo');
-            $table->string('provincia');
-            $table->string('cap');
             $table->string('fb_pic')->nullable();
             $table->string('g_pic')->nullable();
             $table->rememberToken();
