@@ -9,7 +9,7 @@ class PhoneController extends Controller
 {
     public function index() {
         $phones = Phone::latest()->get();
-        return view('shop2', compact('phones'));
+        return view('shopping', compact('phones'));
     }
 
  

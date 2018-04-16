@@ -49,11 +49,12 @@ Route::get('/search', function() {
     return view('search');
   });
 
+
 Route::get('/phone/{id}', 'PhoneController@singlephone');
 
 Route::get('searcher','DemoController@liveSearch');        
 
-Route::get('/shop2', 'PhoneController@index');
+Route::get('/shopping', 'PhoneController@index');
 
 Route::get('/addToCart/{id}', 'CartController@addToCart');
 
