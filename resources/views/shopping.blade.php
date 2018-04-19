@@ -4,7 +4,7 @@
 
 
 
-    <div class="section">
+    <div class="section"  style="background-image: url('./assets/img/blurredimage-1.jpg')">
         <div class="container">
 
 
@@ -61,7 +61,7 @@
 
                                 <div class="card-footer text-muted">
                                     <div class="text-center">
-                                        <a  href="/showDevice/{{ $phone->id }}"><button class="btn btn-warning" type="button" style="background-color: grey">
+                                        <a  href="/showDevice/{{ $phone->id }}"><button class="btn btn-warning" type="button">
                                             <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
                                         </button></a>
                                     </div>
