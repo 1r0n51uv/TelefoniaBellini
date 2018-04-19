@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="section section-signup" style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+<div class="section section-signup" style="background-image: url('assets/img/cart.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
     <div class="container">
         <div class="row">
         
@@ -49,7 +49,7 @@
 
                                 <div class="text-center">
                                         <a href="/checkout">
-                                                <button class="btn btn-primary btn-lg" type="button">
+                                                <button class="btn btn-warning btn-lg" type="button">
                                                         <i class="fas fa-credit-card"></i> Checkout
                                                     </button>
                                         </a>

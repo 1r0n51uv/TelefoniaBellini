@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-info fixed-top">
     <div class="container">
             <div class="navbar-translate" >
-                    <a class="navbar-brand" href="/index">Telefonia Bellini</a>
+              <a href="/index"><img class="n-logo" src="./assets/img/bel.png"></a>
                     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#example-navbar-info" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-bar bar1"></span>
                         <span class="navbar-toggler-bar bar2"></span>

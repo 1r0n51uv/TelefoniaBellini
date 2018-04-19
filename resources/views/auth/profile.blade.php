@@ -29,7 +29,7 @@
 
 </div>
 
-<div class="section section-tabs">
+<div class="section section-tabs" style="background-image: url('./assets/img/wear.jpg'); background-size: cover;">
     <div class="container">
         <div class="row">
             <div class="col-md-10 col-lg-8 col-xl-6 ml-auto mr-auto">

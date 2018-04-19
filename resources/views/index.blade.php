@@ -14,7 +14,6 @@
             </div>
             <div class="container">
                 <div class="content-center brand">
-                    <img class="n-logo" src="./assets/img/now-logo.png" alt="">
                     <h1 class="h1">TelefoniaBellini.</h1>
                     <h3>""""""""""""".</h3>
                 </div>

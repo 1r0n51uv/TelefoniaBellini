@@ -1116,7 +1116,7 @@
                                 </ol>
                                 <div class="carousel-inner" role="listbox">
                                     <div class="carousel-item active">
-                                        <img class="d-block" src="assets/img/bg1.jpg" alt="First slide">
+                                        <img class="d-block" src="/assets/img/bg1.jpg" alt="First slide">
                                         <div class="carousel-caption d-none d-md-block">
                                             <h5>Nature, United States</h5>
                                         </div>
