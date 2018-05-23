@@ -19,6 +19,7 @@ class PhoneController extends Controller
         $phone = Phone::whereId($id)->first();
         $specification = Specification::whereId($id)->first();
         return view('singleDevice', compact('phone', 'specification'));
+
     }
 
     

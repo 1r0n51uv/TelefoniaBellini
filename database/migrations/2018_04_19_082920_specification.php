@@ -15,6 +15,9 @@ class Specification extends Migration
     {
         Schema::create('specification', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('pic1');
+            $table->string('pic2');
+            $table->string('pic3');
             $table->string('marca');
             $table->string('model');
             $table->string('peso');

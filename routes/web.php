@@ -69,3 +69,12 @@ Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', '
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 
 Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails')->middleware('auth');
+
+
+Route::get('/device', function (){
+    return view('device');
+});
+
+Route::get('/shopnow', function (){
+    return view('shopnow');
+});

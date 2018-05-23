@@ -22,6 +22,4 @@ class DemoController extends Controller
         }
     }
 
-
-
 }
