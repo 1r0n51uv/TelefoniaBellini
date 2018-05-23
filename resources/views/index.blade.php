@@ -8,9 +8,9 @@
 
 
     <div class="wrapper">
-        <div class="page-header clear-filter" filter-color="blue">
+        <div class="page-header clear-filter" filter-color="purple">
             <div class="page-header-image" data-parallax="true"
-                 style="background-image: url('./assets/image/wall.jpg');">
+                 style="background-image: url('./assets/image/1.jpeg');">
             </div>
             <div class="container">
                 <div class="content-center brand">

@@ -21,6 +21,7 @@ class Phone extends Migration
             $table->string('color');
             $table->string('price');
             $table->string('pic');
+            $table->string('description');
             $table->timestamps();
         });
     }

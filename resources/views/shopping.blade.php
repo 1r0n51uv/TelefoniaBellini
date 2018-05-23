@@ -4,79 +4,67 @@
 
 
 
-    <div class="section"  style="background-image: url('./assets/img/blurredimage-1.jpg')">
-        <div class="container">
+    <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
 
-
-                    <div class="row">
-                        <div style="margin-left: 2%; margin-right: 2%; border-color: 1px red solid;">
-                            <ul class="navbar-nav">
-                                <li class="nav-item active">
-                                    <a class="nav-link" href="#appleDevice">
-                                        <i class="icofont icofont-brand-apple" style="height: 5%; color: black; font-size: 380%;"></i>
-                                    </a>
-                                </li>
-                                <br>
-                                <br>
-                                <br>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#samsungDevice">
-                                        <i class="icofont icofont-brand-samsung" style="height: 5%; color: black; font-size: 380%; color: blue;"></i>
-                                    </a>
-                                </li>
-                                <br>
-                                <br>
-                                <br>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="#samsungDevice" style="height: 5%; color: black; font-size: 380%; color: red">
-                                        <i class="icofont icofont-brand-huawei"></i>
-                                    </a>
-                                </li>
-                        </div>
+        <div class="row" style="margin-left: 1%; margin-top: 1%;">
+                <div class="container-fluid">
 
 
 
-                        @foreach ($phones as $phone)
 
 
+                            <div class="col-sm-12">
+                                <h4><small>Telefoni</small></h4>
+                                <hr>
 
-                        <div class="col-3">
+                                <div style="font-size: 50%">
+                                    <div class="row">
+                                        @foreach( $phones as $phone)
+                                        <div class="col-md-3 col-sm-6 col-xs-6" style=" margin-left: 5%; margin-bottom: 2%;">
 
 
+                                            <div class="card" style="background-color: transparent;">
 
-                            <div class="card" style="background-color: transparent;">
+                                                <div class="card-header" style="background-color: transparent;  border-color: grey;">
+                                                    <span class="badge badge-danger" style="border-color: grey; color: black; font-size: 100%">Novità</span>
+                                                </div>
 
-                                <div class="card-header" style="background-color: transparent;  border-color: grey;">
-                                    <span class="badge badge-danger" style="border-color: grey; color: black">Novità</span>
-                                </div>
+                                                <img class="card-img-top" src="{{ $phone->pic }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%; background-color: transparent;">
+                                                <div class="card-body" style="text-align:center;">
 
-                                <img class="card-img-top" src="{{ $phone->pic }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%; background-color: transparent;">
-                                <div class="card-body" style="text-align:center;">
+                                                    <h5 class="card-text" style="text-align: left;">
 
-                                    <h5 class="card-text"><i class="fas fa-mobile-alt"></i> {{ $phone->brand}}</h5>
-                                    <h5 class="card-text"><i class="fas fa-mobile-alt"></i> {{ $phone->model}}</h5>
-                                    <h5 class="card-text"><i class="fas fa-mobile-alt"></i> {{ $phone->price}}</h5>
+                                                        @if($phone->brand == 'Apple')
+                                                        <i class="icofont icofont-brand-apple"></i>
+                                                        @elseif($phone->brand == 'Samsung')
+                                                            <i class="icofont icofont-brand-samsung"></i>
+                                                        @elseif($phone->brand == 'Huawei')
+                                                            <i class="icofont icofont-brand-huawei"></i>
+                                                        @endif
 
-                                </div>
+                                                        {{ $phone->brand}}</h5>
+                                                    <h5 class="card-text" style="text-align: left;"><i class="fas fa-mobile-alt"></i> {{ $phone->model}}</h5>
+                                                    <h5 class="card-text" style="text-align: left;"><i class="icofont icofont-coins"></i> {{ $phone->price}}</h5>
+                                                    <h5 class="card-text" style="text-align: left;">{{ $phone->description }}</h5>
+                                                </div>
 
-                                <div class="card-footer text-muted">
-                                    <div class="text-center">
-                                        <a  href="/showDevice/{{ $phone->id }}"><button class="btn btn-warning" type="button">
-                                            <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
-                                        </button></a>
+                                                <div class="card-footer text-muted">
+                                                    <div class="text-center">
+                                                        <a  href="/showDevice/{{ $phone->id }}"><button class="btn btn-warning" type="button" style="font-size: 150%;">
+                                                                <i class="fas fa-shopping-cart" style="font-size:120%; margin-top:2%"></i> Aggiugi al carrello
+                                                            </button></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        @endforeach
+                                      </div>
                                     </div>
+                                   </div>
                                 </div>
-
-
-
+                               </div>
+                              </div>
                             </div>
-
-                    </div>
-                            @endforeach
-                </div>
-            </div>
-    </div>
-
 
 
     @endsection
