@@ -37,7 +37,7 @@ Route::get('/setPass', function() {
 
 Route::get('/index', function() {
     return view('index');
-});
+})->name('index');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
@@ -68,3 +68,5 @@ Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', '
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 
 Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails')->middleware('auth');
+
+Route::get('/afterPay', 'CartController@makeOrder');

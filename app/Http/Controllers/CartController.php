@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\ShipmentDetails;
 use Cart;
+use Illuminate\Support\Facades\Auth;
 use Notification;
 use App\Phone;
 use Illuminate\Http\Request;
+use App\Http\Controllers\OrderController;
 
 class CartController extends Controller
 {
@@ -39,7 +42,6 @@ class CartController extends Controller
     }
 
     public function destroyCart() {
-        Cart::destroy();
         return view('components.payTransition');
     }
 
@@ -47,6 +49,19 @@ class CartController extends Controller
         return view('shipmentDetails');
     }
 
+    public static function makeOrder() {
+        foreach(Cart::content() as $item ) {
+            $products = $item->id . "-";
+        }
+
+        $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
+
+        OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal());
+
+        Notification::add('success', '', 'Ordine Completato, accedi al tuo profilo per visualizzarne lo stato');
+
+        return redirect()->route('index');
+    }
    
 
 }

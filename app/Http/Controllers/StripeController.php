@@ -29,7 +29,7 @@ class StripeController extends Controller
             'amount'   => $amount,
         ]);
 
-        OrderController::storeOrder();
+        //OrderController::storeOrder();
 
 
         return redirect()->action('CartController@destroyCart');

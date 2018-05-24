@@ -131,6 +131,6 @@
                   </div>
                 </div>
               </div>
-              <script>setTimeout(function(){location.href="/profile"} , 3000);  </script>
+              <script>setTimeout(function(){location.href="/afterPay"} , 3000);  </script>
 </body>
 </html>
