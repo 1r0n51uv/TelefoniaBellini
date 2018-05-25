@@ -63,41 +63,36 @@
                             <div class="card col-md-12" style="background-color: #F7F8F9">
 
                                 <div class="header text-center">
-                                    <h4 class="title title-up" style="color: black"><i class="far fa-credit-card"></i> Checkout</h4>
+                                    <h4 class="title title-up" style="color: black"><i class="fas fa-shopping-cart"></i> Checkout</h4>
                                 </div>
 
                                 <div class="card-body">
 
 
-                                    <div class="row">
+                                    @foreach (Cart::content() as $item)
 
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                                <form action="/api/pay" method="post" id="payment-form">
-                                                    <div class="form-group">
+                                        <div class="row">
 
-                                                        <div id="card-element">
-                                                            <!-- A Stripe Element will be inserted here. -->
-                                                        </div>
-
-                                                        <!-- Used to display Element errors. -->
-                                                        <div id="card-errors" role="alert"></div>
-                                                    </div>
-
-                                                    <div class="text-center">
-                                                        <button class="btn btn-success">Submit Payment</button>
-                                                    </div>
-
-                                                    <input type="text" hidden value="{{Cart::subtotal()}}" name="amount">
-                                                    <input type="text" hidden value="{{Auth::user()->id}}" name="user">
-
-                                                </form>
+                                            <div class="col-md-2 col-sm-2 col-xs-2 text-center" style="color: black; font-size: 200%; border-right: 1px #a8a7a7 solid">
+                                                <img src="../assets/image/x.png" alt="">
                                             </div>
 
+                                            <div class="col-md-5 col-sm-5 col-xs-5 text-center" style="border-right: 1px #a8a7a7 solid">
+                                                <h5 style="color: black; margin-top:1%; ">{{$item->name}}</h5>
+                                            </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
+                                                <h5 style="color: black; margin-top:1%; ">{{$item->price}}</h5>
+                                            </div>
+
+
+
+                                            <div class="col-md-2 col-sm-2 col-xs-2 text-center">
+                                                <a href="/cart/{{$item->rowId}}">
+                                                </a>
+                                            </div>
                                         </div>
-
-
-                                    </div>
+                                    @endforeach
 
 
 
