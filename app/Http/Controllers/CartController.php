@@ -60,6 +60,8 @@ class CartController extends Controller
 
         Notification::add('success', '', 'Ordine Completato, accedi al tuo profilo per visualizzarne lo stato');
 
+        Cart::destroy();
+
         return redirect()->route('index');
     }
    
