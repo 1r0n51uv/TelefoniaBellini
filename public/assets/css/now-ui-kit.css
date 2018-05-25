@@ -3101,7 +3101,7 @@ input,
 optgroup,
 select,
 textarea {
-    font-family: "Montserrat", "Helvetica Neue", Arial, sans-serif;
+    font-family: "Raleway Medium", "Raleway ExtraLight", "Raleway ExtraLight", "Raleway ExtraLight";
 }
 
 h1,
@@ -3111,6 +3111,7 @@ h4,
 h5,
 h6 {
     font-weight: 400;
+    font-family: "Raleway Medium";
 }
 
 small {
@@ -3124,13 +3125,15 @@ a {
 a:hover,
 a:focus {
     color: #f96332;
+    font-family: "Raleway Medium";
 }
 
 h1,
 .h1 {
-    font-size: 3.5em;
+    font-size: 5em;
     line-height: 1.15;
     margin-bottom: 30px;
+    font-family: "Raleway Medium";
 }
 
 h1 small,
@@ -6018,18 +6021,17 @@ Created using IcoMoon - icomoon.io
         transition: all 0.5s cubic-bezier(0.685, 0.0473, 0.346, 1);
     }
     .sidebar-collapse .navbar-collapse:before {
-        background: #f96332;
+        background: #111135;
         /* For browsers that do not support gradients */
-        background: -webkit-linear-gradient(#f96332 0%, #000 80%);
+        background: -webkit-linear-gradient(#111135 0%, #000 80%);
         /* For Safari 5.1 to 6.0 */
-        background: -o-linear-gradient(#f96332 0%, #000 80%);
+        background: -o-linear-gradient(#111135 0%, #000 80%);
         /* For Opera 11.1 to 12.0 */
-        background: -moz-linear-gradient(#f96332 0%, #000 80%);
+        background: -moz-linear-gradient(#111135 0%, #000 80%);
         /* For Firefox 3.6 to 15 */
-        background: linear-gradient(#f96332 0%, #000 80%);
+        background: linear-gradient(#111135 0%, #000 80%);
         /* Standard syntax (must be last) */
-        opacity: 0.76;
-        filter: alpha(opacity=76);
+
         display: block;
         content: "";
         position: absolute;

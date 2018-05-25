@@ -22,9 +22,9 @@
         <div class="copyright">
 
             <br>
-            <a>&copy; Designed</a>
-            <a target="_blank">& Coded by</a>
-            <a target="_blank">SP CORPORATION</a>
+            <a></a>
+            <a target="_blank"></a>
+            <a target="_blank"></a>
         </div>
     </div>
 </footer>
