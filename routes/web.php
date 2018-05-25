@@ -75,6 +75,6 @@ Route::get('/device', function (){
     return view('device');
 });
 
-Route::get('/shopnow', function (){
-    return view('shopnow');
+Route::get('/admin', function (){
+    return view('admin.homeadmin');
 });

@@ -14,16 +14,16 @@
             </div>
             <div class="container">
                 <div class="content-center brand">
-                    <h1 class="h1">TelefoniaBellini.</h1>
-                    <h3>""""""""""""".</h3>
+                    <h1 class="h1">TelefoniaBellini</h1>
+                    <h3></h3>
                 </div>
-                <h6 class="category category-absolute">Designed by
+                <h6 class="category category-absolute">
                     <a href="pablo" target="_blank">
                         <img src="" class="invision-logo"/>
-                    </a>. Coded by
+                    </a>
                     <a href="pablo" target="_blank">
                         <img src="" class="creative-tim-logo"/>
-                    </a>.</h6>
+                    </a></h6>
             </div>
         </div>
         <div class="main">
@@ -60,9 +60,9 @@
                         </div>
                         <div class="col-md-6">
                             <a href="/shop2">
-                                <div class="">
+                                <div>
                                     <div class="">
-                                        <img src="/assets/img/airp.jpg" class="img-responsive">
+                                        <img src="/assets/img/airp.jpg" class="photo">
                                     </div>
                                 </div>
                             </a>
