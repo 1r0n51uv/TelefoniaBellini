@@ -80,3 +80,5 @@ Route::get('/admin', 'AdminController@adminHome');
 Route::get('/adminTemp', function (){
     return view('admin.templateadmin');
 });
+
+Route::get('/deleteDevice/{id}', 'PhoneController@deletePhone');

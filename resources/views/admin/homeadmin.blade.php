@@ -484,6 +484,7 @@
                                             <td>{{ $phone->brand }}</td>
                                             <td>{{ $phone->model }}</td>
                                             <td>{{ $phone->price }}€</td>
+                                            <td><a href="/deleteDevice/{{$phone->id}}"><i class="fas fa-times"></i></a></td>
 
                                         </tr>
 

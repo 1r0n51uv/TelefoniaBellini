@@ -22,6 +22,9 @@
     <!-- Morris Chart Css-->
     <link href="../adminassets/plugins/morrisjs/morris.css" rel="stylesheet" />
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+
     <!-- Custom Css -->
     <link href="../adminassets/css/style.css" rel="stylesheet">
 

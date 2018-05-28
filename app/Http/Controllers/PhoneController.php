@@ -57,9 +57,8 @@ class PhoneController extends Controller
 
     public function deletePhone($id){
 
-       $phone = Phone::whereId($id)->get();
-       $phone->delete();
-       return view('homeadmin');
+       Phone::destroy($id);
+       return redirect()->action('AdminController@adminHome');
 
     }
 
