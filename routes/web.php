@@ -75,6 +75,8 @@ Route::get('/device', function (){
     return view('device');
 });
 
-Route::get('/admin', function (){
-    return view('admin.homeadmin');
+Route::get('/admin', 'AdminController@adminHome');
+
+Route::get('/adminTemp', function (){
+    return view('admin.templateadmin');
 });
