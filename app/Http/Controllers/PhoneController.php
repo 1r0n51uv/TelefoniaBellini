@@ -10,7 +10,7 @@ class PhoneController extends Controller
 {
     public function index() {
         $phones = Phone::paginate(6);
-        return view('shop2', compact('phones'));
+        return view('shopping', compact('phones'));
     }
 
  
