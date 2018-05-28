@@ -53,7 +53,15 @@ class PhoneController extends Controller
 
         return view('homeadmin');
 
+    }
+
+    public function deletePhone($id){
+
+       $phone = Phone::whereId($id)->get();
+       $phone->delete();
+       return view('homeadmin');
 
     }
-    
+
+
 }
