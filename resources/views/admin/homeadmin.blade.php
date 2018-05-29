@@ -408,6 +408,58 @@
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
                     <div class="card">
                         <div class="header">
+                            <h2>SPECIFICATION</h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+                                <table class="table table-hover dashboard-task-infos">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Marca</th>
+                                        <th>Modello</th>
+                                        <th>Prezzo</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    @foreach($spec as $specc)
+
+
+                                        <tr>
+                                            <td>{{ $specc->id }}</td>
+                                            <td>{{ $specc->marca }}</td>
+                                            <td>{{ $specc->model }}</td>
+                                            <td>{{ $specc->peso }}€</td>
+                                            <td><a href="/deleteDevice/{{$specc->id}}"><i class="fas fa-times"></i></a></td>
+                                            <td><a href="/editphone/{{$specc->id}}"><i class="fas fa-times"></i></a></td>
+                                            <td><a href="/addphone"><i class="fas fa-times"></i></a></td>
+                                        </tr>
+
+                                    @endforeach
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="card">
+                        <div class="header">
                             <h2>SMARTPHONE</h2>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
@@ -444,7 +496,7 @@
                                             <td>{{ $phone->model }}</td>
                                             <td>{{ $phone->price }}€</td>
                                             <td><a href="/deleteDevice/{{$phone->id}}"><i class="fas fa-times"></i></a></td>
-                                            <td><a href="/editphone"><i class="fas fa-times"></i></a></td>
+                                            <td><a href="/editphone/{{$phone->id}}"><i class="fas fa-times"></i></a></td>
                                             <td><a href="/addphone"><i class="fas fa-times"></i></a></td>
                                         </tr>
 

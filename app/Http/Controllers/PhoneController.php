@@ -14,7 +14,7 @@ class PhoneController extends Controller
         return view('shopping', compact('phones'));
     }
 
- 
+
 
     public function showSingle($id) {
         $phone = Phone::whereId($id)->first();
@@ -56,38 +56,44 @@ class PhoneController extends Controller
 
     public function addPhone(Request $request){
 
+        /*
+                    $this->validate($request, [
 
-            $this->validate($request, [
+                        'marca' => 'required',
+                        'model' => 'required',
+                        'storage' => 'required',
+                        'color' => 'required',
+                        'price' => 'required',
+                        'description' => 'required',
+                    ]);
+        */
 
-                'marca' => 'required',
-                'model' => 'required',
-                'storage' => 'required',
-                'color' => 'required',
-                'price' => 'required',
-                'description' => 'required',
-            ]);
+        $values = $request->all();
 
-                $values = $request->all();
-                var_dump($values);
+        $phone = new Phone();
 
-                $phone = new Phone();
 
-            if(isset($values['marca'])&& $values['marca'] = null) {
-                $phone->marca = $request->input('marca');
-            }
-            if(isset($values['model'])&& $values['model'] = null) {
-                $phone->model = $request->input('model');
-            }if(isset($values['storage'])&& $values['storage'] = null) {
-                $phone->storage = $request->input('storage');
-            }if(isset($values['color'])&& $values['color'] = null) {
-                $phone->color = $request->input('color');
-            }if(isset($values['price'])&& $values['price'] = null) {
-                $phone->price = $request->input('price');
-            }if(isset($values['description'])&& $values['description'] = null) {
-                $phone->description = $request->input('description');
-            }
-            $phone->save();
+        $phone['brand'] = $values['marca'];
 
+
+        $phone['model'] = $values['model'];
+
+
+        $phone['storage'] = $values['storage'];
+
+
+        $phone['color'] = $values['color'];
+
+
+        $phone['price'] = $values['price'];
+
+
+        $phone['pic'] = $values['description'];
+
+
+        $phone->save();
+
+        return redirect()->action('AdminController@adminHome');
 
     }
 
@@ -134,24 +140,24 @@ class PhoneController extends Controller
         if(isset($values['camera'])&& $values['camera'] != null) {
             $specification->camera = $request->input('camera');
         }
-            $specification->save();
+        $specification->save();
 
-/*
-        $phone = Phone::find($id);
-        $phone -> color = $request->input('color');
-        $phone -> price = $request->input('price');
-        $phone -> memory = $request->input('description');
-        $phone->save();
+        /*
+                $phone = Phone::find($id);
+                $phone -> color = $request->input('color');
+                $phone -> price = $request->input('price');
+                $phone -> memory = $request->input('description');
+                $phone->save();
+        */
+        return redirect()->action('AdminController@adminHome');
 
-        //return view('/admin');
-*/
     }
 
 
     public function deletePhone($id){
 
-       Phone::destroy($id);
-       return redirect()->action('AdminController@adminHome');
+        Phone::destroy($id);
+        return redirect()->action('AdminController@adminHome');
 
     }
 
