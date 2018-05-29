@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Order;
 use App\Phone;
 
 class AdminController extends Controller
@@ -10,7 +10,13 @@ class AdminController extends Controller
 
     public function adminHome() {
         $phones = Phone::all();
-        return view('admin.homeadmin', compact('phones'));
+        $orders = Order::all();
+        foreach ($orders as $order) {
+          OrderController::extractDeviceFromOrder($order->id);
+
+        }
+
+        //return view('admin.homeadmin', compact('phones', 'orders'));
 
 
     }

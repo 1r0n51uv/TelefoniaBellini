@@ -465,6 +465,8 @@
                         </div>
                         <div class="body">
                             <div class="table-responsive">
+
+
                                 <table class="table table-hover dashboard-task-infos">
                                     <thead>
                                     <tr>
@@ -493,6 +495,68 @@
 
                                     </tbody>
                                 </table>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                    <div class="card">
+                        <div class="header">
+                            <h2>Ordini</h2>
+                            <ul class="header-dropdown m-r--5">
+                                <li class="dropdown">
+                                    <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                        <i class="material-icons">more_vert</i>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                        <li><a href="javascript:void(0);">Action</a></li>
+                                        <li><a href="javascript:void(0);">Another action</a></li>
+                                        <li><a href="javascript:void(0);">Something else here</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="body">
+                            <div class="table-responsive">
+
+
+                                <table class="table table-hover dashboard-task-infos">
+                                    <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Destinatario</th>
+                                        <th>Destinazione</th>
+                                        <th>Dispositivi</th>
+                                        <th>Totale</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+
+                                    @foreach($orders as $order)
+
+
+                                        <tr>
+                                            <td>{{ $order->id }}</td>
+                                            <td>{{ $order->brand }}</td>
+                                            <td>{{ $order->model }}</td>
+                                            <td>{{ $order->price }}€</td>
+
+                                            <td><a href="/deleteDevice/{{$phone->id}}"><i class="fas fa-times"></i></a></td>
+
+                                        </tr>
+
+                                    @endforeach
+
+
+                                    </tbody>
+                                </table>
+
+
+
                             </div>
                         </div>
                     </div>
