@@ -402,48 +402,7 @@
             </div>
 
             <!-- Widgets -->
-            <div class="row clearfix">
-                <a  href="/index"><div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-blue-grey hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">home</i>
-                        </div>
-                        <div class="content">
-                            <div class="text" style="font-size: 150%;">VAI AL SITO!</div>
-                        </div>
-                    </div>
-                </div></a>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-green hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">add</i>
-                        </div>
-                        <div class="content">
-                            <div class="text" style="font-size: 150%;">AGGIUNGI UN TELEFONO.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-light-blue hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">edit</i>
-                        </div>
-                        <div class="content">
-                            <div class="text" style="font-size: 150%;">MODIFICA UN TELEFONO.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                    <div class="info-box bg-red hover-expand-effect">
-                        <div class="icon">
-                            <i class="material-icons">delete</i>
-                        </div>
-                        <div class="content">
-                            <div class="text" style="font-size: 150%;">ELIMINA UN TELEFONO.</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
             <div class="row clearfix">
                 <!-- Task Info -->
                 <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
@@ -485,7 +444,8 @@
                                             <td>{{ $phone->model }}</td>
                                             <td>{{ $phone->price }}€</td>
                                             <td><a href="/deleteDevice/{{$phone->id}}"><i class="fas fa-times"></i></a></td>
-
+                                            <td><a href="/editphone"><i class="fas fa-times"></i></a></td>
+                                            <td><a href="/addphone"><i class="fas fa-times"></i></a></td>
                                         </tr>
 
                                     @endforeach
