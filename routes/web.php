@@ -82,3 +82,14 @@ Route::get('/adminTemp', function (){
 });
 
 Route::get('/deleteDevice/{id}', 'PhoneController@deletePhone');
+
+
+Route::get('/editphone/{id}', 'PhoneController@editPhone');
+
+Route::post('/updatePhone/{id}', 'PhoneController@updatePhone');
+
+Route::get('/addphone', function (){
+            return view('admin.addphone');
+});
+
+Route::post('/addPhone', 'PhoneController@addPhone');
