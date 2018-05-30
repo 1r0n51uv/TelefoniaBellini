@@ -66,41 +66,64 @@
 
                                     <a href="logout"><button class="btn btn-danger">Logout</button></a>
                                 </div>
-                                <div class="tab-pane" id="order" role="tabpanel">
-                                    @foreach($orders as $order)
 
-                                        <h4>{{ $order->id }}</h4>
+                          @if(isset($orders))
+                                    <div class="tab-pane" id="order" role="tabpanel">
+                                        @foreach($orders as $order)
 
-                                    @endforeach
+                                            <h4>{{ $order->id }}</h4>
 
-                                </div>
-                                <div class="tab-pane" id="spedizione" role="tabpanel">
+                                        @endforeach
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
+                                    </div>
+                              @else
+                                    <div class="tab-pane" id="order" role="tabpanel">
 
-                                    <h3 class="title">{{$shipment->number}}</h3>
-                                    <p class="category">Numero</p>
+                                        <h3 class="title">Nessun ordine presente</h3>
 
-                                    <h3 class="title">{{$shipment->city}}</h3>
-                                    <p class="category">Città</p>
+                                    </div>
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
+                              @endif
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
+                               @if(isset($hipment))
+                                    <div class="tab-pane" id="spedizione" role="tabpanel">
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
+                                        <h3 class="title">{{$shipment->address}}</h3>
+                                        <p class="category">Indirizzo</p>
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
+                                        <h3 class="title">{{$shipment->number}}</h3>
+                                        <p class="category">Numero</p>
 
-                                </div>
+                                        <h3 class="title">{{$shipment->city}}</h3>
+                                        <p class="category">Città</p>
+
+                                        <h3 class="title">{{$shipment->address}}</h3>
+                                        <p class="category">Indirizzo</p>
+
+                                        <h3 class="title">{{$shipment->address}}</h3>
+                                        <p class="category">Indirizzo</p>
+
+                                        <h3 class="title">{{$shipment->address}}</h3>
+                                        <p class="category">Indirizzo</p>
+
+                                        <h3 class="title">{{$shipment->address}}</h3>
+                                        <p class="category">Indirizzo</p>
+
+                                        <h3 class="title">{{$shipment->address}}</h3>
+                                        <p class="category">Indirizzo</p>
+
+                                    </div>
+                                   @else
+                                    <div class="tab-pane" id="spedizione" role="tabpanel">
+
+                                        <h3 class="title">Nessun indirizzo di spedizione</h3>
+
+                                    </div>
+                                   @endif
+
+
+
 
 
                             </div>

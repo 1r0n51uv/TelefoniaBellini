@@ -50,9 +50,13 @@ class CartController extends Controller
     }
 
     public static function makeOrder() {
+
+        $products = "";
+
         foreach(Cart::content() as $item ) {
-            $products = $item->id . "-";
+            $products .= $item->id . "-";
         }
+
 
         $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
 

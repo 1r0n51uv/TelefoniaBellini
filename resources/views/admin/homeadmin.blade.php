@@ -540,12 +540,24 @@
 
 
                                         <tr>
-                                            <td>{{ $order->id }}</td>
-                                            <td>{{ $order->brand }}</td>
-                                            <td>{{ $order->model }}</td>
-                                            <td>{{ $order->price }}€</td>
 
-                                            <td><a href="/deleteDevice/{{$phone->id}}"><i class="fas fa-times"></i></a></td>
+                                            <td>{{ $order->id }}</td>
+                                            <td>{{ \App\User::whereId($order->user_id)->first()->name . ' ' .  \App\User::whereId($order->user_id)->first()->surname }}</td>
+                                            <td>{{ $order->shipment_id }}</td>
+
+                                            <td>
+                                            @foreach(\App\Http\Controllers\OrderController::extractDeviceFromOrder($order->id) as $dev_id)
+
+
+                                                    <a href="/showDevice/{{$dev_id}}">{{ $dev_id }}</a>
+
+                                                @endforeach
+                                            </td>
+
+
+                                            <td>{{ $order->total }}€</td>
+
+
 
                                         </tr>
 
