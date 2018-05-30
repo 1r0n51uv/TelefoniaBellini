@@ -65,11 +65,11 @@
           <div class="row">
                         <div class="col-6">
 
-                    <h5 class="card-text"><i class=""></i>Marca: {{ $specification->marca}} </h5>
+                    <h5 class="card-text"><i class=""></i>Marca: {{ $specification->brand}} </h5>
                     <h5 class="card-text"><i class=""></i>Modello: {{ $specification->model}}</h5>
-                    <h5 class="card-text"><i class=""></i>Peso: {{ $specification->peso}}</h5>
+                    <h5 class="card-text"><i class=""></i>Peso: {{ $specification->weight}}</h5>
                     <h5 class="card-text"><i class=""></i>Memoria: {{ $specification->memory}}</h5>
-                    <h5 class="card-text"><i class=""></i>Sistema Operativo: {{ $specification->sistem}}</h5>
+                    <h5 class="card-text"><i class=""></i>Sistema Operativo: {{ $specification->system}}</h5>
                     <h5 class="card-text"><i class=""></i>Processore: {{ $specification->processor}}</h5>
                     <h5 class="card-text"><i class=""></i>Dimensione Schermo: {{ $specification->screen}}</h5>
 
