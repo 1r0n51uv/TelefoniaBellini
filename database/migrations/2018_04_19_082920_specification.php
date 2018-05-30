@@ -18,12 +18,12 @@ class Specification extends Migration
             $table->string('pic1');
             $table->string('pic2');
             $table->string('pic3');
-            $table->string('marca');
+            $table->string('brand');
             $table->string('model');
-            $table->string('peso');
-            $table->string('anno');
+            $table->string('weight');
+            $table->string('year');
             $table->string('memory');
-            $table->string('sistem');
+            $table->string('system');
             $table->string('processor');
             $table->string('screen');
             $table->string('display');

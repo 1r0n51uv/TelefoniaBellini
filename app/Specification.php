@@ -10,6 +10,6 @@ class Specification extends Model
     protected $table = 'specification';
 
     protected $fillable = [
-        'pic1', 'pic2', 'pic3', 'marca', 'model', 'peso', 'anno', 'memory', 'sistem', 'processor', 'screen', 'display', 'resolution', 'camera', 'media', 'autofocus', 'bluetooth',
+        'pic1', 'pic2', 'pic3', 'brand', 'model', 'weight', 'year', 'memory', 'system', 'processor', 'screen', 'display', 'resolution', 'camera', 'media', 'autofocus', 'bluetooth',
     ];
 }
