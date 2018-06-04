@@ -93,3 +93,7 @@ Route::get('/addphone', function (){
 });
 
 Route::post('/addPhone', 'PhoneController@addPhone');
+
+Route::get('/home', function (){
+    return view('admin.home');
+});

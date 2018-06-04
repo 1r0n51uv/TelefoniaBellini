@@ -4,7 +4,7 @@
 @section('content')
 
     <div class="wrapper">
-        <div class="page-header page-header-small" filter-color="orange">
+        <div class="page-header page-header-small" filter-color="blue">
             <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/bg5.jpg');">
             </div>
             <div class="container">
@@ -85,20 +85,7 @@
                                     <h3 class="title">{{$shipment->city}}</h3>
                                     <p class="category">Città</p>
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
-
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
-
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
-
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
 
                                 </div>
 
