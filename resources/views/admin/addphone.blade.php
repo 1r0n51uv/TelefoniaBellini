@@ -1,51 +1,71 @@
 @extends('layouts.admin')
 
 @section('content')
-    <nav class="navbar" style="background-color: #1d75b3">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
-                <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="/admin">ADMINBSB - MATERIAL DESIGN</a>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
 
-            </div>
-        </div>
-    </nav>
+    <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
 
-    <<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-    <form action="/addPhone" method="post" style="border: 1px #1d75b3 solid; margin-top: 10%; padding: 3%; background-color: darkgray">
+        <div class="row" style="margin-left: 1%; margin-top: 1%;">
+    <div class="col-xs-8 col-sm-8 col-md-4 col-lg-4">
+    <form action="/addPhone" method="post" style="border: 1px whitesmoke solid; margin-top: 10%; padding: 3%; background-color: floralwhite;">
         {{ csrf_field() }}
         <div class="form-group">
-            <label for="exampleInputEmail1">Brand</label>
+            <label>Brand</label>
             <input type="text" class="form-control" name="marca">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Modello</label>
+            <label>Modello</label>
             <input type="text" class="form-control" name="model" >
 
         </div>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Memoria</label>
-            <input type="text" class="form-control"  name="storage">
+        <div class>Peso</label>
+            <input type="text" class="form-control"  name="peso">
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Colore</label>
-            <input type="text" class="form-control" name="color" >
+            <label>Anno</label>
+            <input type="text" class="form-control" name="year" >
 
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Prezzo</label>
-            <input type="text" class="form-control" name="price" >
+            <label>Memoria</label>
+            <input type="text" class="form-control" name="memory" >
         </div>
         <div class="form-group">
-            <label for="exampleInputEmail1">Descrizione</label>
-            <input type="text" class="form-control" name="description">
+            <label>Sistema Operativo</label>
+            <input type="text" class="form-control" name="system">
+
+        </div>
+        <div class="form-group">
+            <label>Processore</label>
+            <input type="text" class="form-control" name="processor">
+        </div>
+        <div class="form-group">
+            <label >Schermo</label>
+            <input type="text" class="form-control" name="screen" >
+
+        </div>
+        <div class="form-group">
+            <label>Display</label>
+            <input type="text" class="form-control"  name="display">
+        </div>
+        <div class="form-group">
+            <label >Risoluzione</label>
+            <input type="text" class="form-control" name="resolution">
+
+        </div>
+        <div class="form-group">
+            <label>Fotocamera</label>
+            <input type="text" class="form-control" name="camera" >
+        </div>
+        <div class="form-group">
+            <label>Media</label>
+            <input type="text" class="form-control" name="media">
 
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-info">Submit</button>
+        <a href="/admin"><button type="submit" class="btn btn-primary">Torna alla home</button></a>
     </form>
 </div>
+        </div>
+    </div>
 @endsection
