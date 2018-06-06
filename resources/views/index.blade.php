@@ -5,16 +5,14 @@
 
 
 
-
-
     <div class="wrapper">
-        <div class="page-header clear-filter" filter-color="purple">
+        <div class="page-header clear-filter" filter-color="blue">
             <div class="page-header-image" data-parallax="true"
-                 style="background-image: url('./assets/image/1.jpeg');">
+                 style="background-image: url('/assets/image/1.jpeg');">
             </div>
             <div class="container">
                 <div class="content-center brand">
-                    <h1 class="h1">TelefoniaBellini</h1>
+                    <h1 class="h1" style="font-size: 336%">TelefoniaBellini</h1>
                     <h3></h3>
                 </div>
                 <h6 class="category category-absolute">
@@ -28,7 +26,7 @@
         </div>
         <div class="main">
             <div class="section section-images"
-                 style="background-image: url(/assets/img/blurredimage-1.jpg); background-size: cover; ">
+                 style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover; ">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -46,20 +44,21 @@
                 </div>
             </div>
 
-            <div class="section section-tabs">
-                <div class="container" style="margin-left: 4%; margin-bottom: -3%; margin-top: -3%;">
+            <div class="section section-tabs" style="background-image: url('/assets/img/blurredimage-1.jpg');">
+                <div class="container" style="margin-left: 0%; margin-bottom: -3%; margin-top: -3%;">
+
                     <div class="row">
                         <div class="col-md-6">
-                              <a href="/shop2">
+                              <a href="/shopping">
                                   <div class="">
-                                    <div class="text-center">
+                                    <div class="">
                                       <img src="/assets/img/i8.png" class="img-responsive">
                                     </div>
                                 </div>
                             </a>
                         </div>
                         <div class="col-md-6">
-                            <a href="/shop2">
+                            <a href="/shopping">
                                 <div>
                                     <div class="">
                                         <img src="/assets/img/airp.jpg" class="photo">
