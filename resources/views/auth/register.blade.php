@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="section section-signup" style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+<div class="section section-signup" style="background-image: url('assets/img/blurredimage-1.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
     <div class="container">
         <div class="row">
             <div class="card card-signup" data-background-color="black" style="margin-top:-3%">
@@ -11,14 +11,11 @@
                     <div class="header text-center">
                         <h4 class="title title-up">Sign In</h4>
                         <div class="social-line">
-                            <a href="#pablo" class="btn btn-neutral btn-twitter btn-icon btn-round">
-                                <i class="fab fa-twitter" style="font-size:120%; margin-top:25%"></i>
-                            </a>
-                            <a href="#pablo" class="btn btn-neutral btn-facebook btn-icon btn-lg btn-round">
-                                <i class="fab fa-facebook-square" style="font-size:170%; margin-top:25%"></i>
-                            </a>
-                            <a href="#pablo" class="btn btn-neutral btn-google btn-icon btn-round">
+                            <a href="login/google" class="btn btn-neutral btn-google btn-icon btn-round">
                                 <i class="fab fa-google-plus-g" style="font-size:120%; margin-top:25%"></i>
+                            </a>
+                            <a href="login/google" class="btn btn-neutral btn-facebook btn-icon btn-round">
+                                <i class="fab fa-facebook-square" style="font-size:120%; margin-top:25%"></i>
                             </a>
                         </div>
                     </div>
