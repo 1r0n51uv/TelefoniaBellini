@@ -2,19 +2,21 @@
 
 @section('content')
 
+
+
     <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
 
-        <div class="row" style="margin-left: 1%; margin-top: 1%;">
+        <div class="row">
 
                 <div class="container-fluid">
 
-                    <div class="row content">
+                    <div class="row justify-content-center">
                         <div class="col-sm-5 sidenav">
-                            <form action="/updatePhone/{{ $specification->id }}" method="post" style="border: 1px whitesmoke solid; margin-top: 10%; padding: 3%; background-color: floralwhite;">
+                            <form action="/updateSpecification/{{ $specification->id }}" method="post" style="border: 1px whitesmoke solid; margin-top: 10%; padding: 3%; background-color: white;">
                                 {{ csrf_field() }}
                                 <div class="form-group">
                                     <label>Brand</label>
-                                    <input type="text" class="form-control" name="marca" placeholder="{{ $specification->marca }}">
+                                    <input type="text" class="form-control" name="brand" placeholder="{{ $specification->brand }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Modello</label>
@@ -23,11 +25,11 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Peso</label>
-                                    <input type="text" class="form-control"  name="peso" placeholder="{{ $specification->peso }}">
+                                    <input type="text" class="form-control"  name="weight" placeholder="{{ $specification->weight }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Anno</label>
-                                    <input type="text" class="form-control" name="anno" placeholder="{{ $specification->anno }}">
+                                    <input type="text" class="form-control" name="year" placeholder="{{ $specification->year }}">
 
                                 </div>
                                 <div class="form-group">
@@ -37,7 +39,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Sistema Operativo</label>
-                                    <input type="text" class="form-control" name="sistem" placeholder="{{ $specification->sistem }}">
+                                    <input type="text" class="form-control" name="system" placeholder="{{ $specification->system }}">
                                 </div>
                                 <div class="form-group">
                                     <label >Processore</label>
@@ -51,7 +53,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label>Display</label>
-                                    <input type="text" class="form-control"  placeholder="{{ $specification->display }}">
+                                    <input type="text" class="form-control"  name="display" placeholder="{{ $specification->display }}">
                                 </div>
                                 <div class="form-group">
                                     <label>Risoluzione</label>
@@ -63,10 +65,24 @@
                                     <input type="text" class="form-control"  name="camera" placeholder="{{ $specification->camera }}">
 
                                 </div>
+
                                 <div class="form-group">
-                                    <label>Media</label>
-                                    <input type="text" class="form-control"  placeholder="{{ $specification->media }}">
+                                    <label>Colore</label>
+                                    <input type="text" class="form-control"  name="color" placeholder="{{ $specification->color }}">
+
                                 </div>
+
+                                <div class="form-group">
+                                    <label>Condizione</label>
+                                    <input type="text" class="form-control"  name="status" placeholder="{{ $specification->status }}">
+
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Prezzo</label>
+                                    <input type="number" class="form-control"  name="price" placeholder="{{ $specification->price }}">
+                                </div>
+
                                 <button type="submit" class="btn btn-info">Submit</button>
                                 <a href="/admin"><button type="submit" class="btn btn-primary">Torna alla home</button></a>
                             </form>

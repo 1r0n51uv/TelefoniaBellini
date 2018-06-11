@@ -29,9 +29,9 @@ class Specification extends Migration
             $table->string('display');
             $table->string('resolution');
             $table->string('camera');
-            $table->string('media');
-            $table->string('autofocus');
-            $table->string('bluetooth');
+            $table->string('color');
+            $table->string('status');
+            $table->integer('price');
             $table->timestamps();
         });
     }

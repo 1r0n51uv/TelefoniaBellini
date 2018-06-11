@@ -86,13 +86,13 @@ Route::get('/deleteDevice/{id}', 'PhoneController@deletePhone');
 
 Route::get('/editphone/{id}', 'PhoneController@editPhone');
 
-Route::post('/updatePhone/{id}', 'PhoneController@updatePhone');
+Route::post('/updateSpecification/{id}', 'PhoneController@updateSpecification');
 
 Route::get('/addphone', function (){
             return view('admin.addphone');
 });
 
-Route::post('/addPhone', 'PhoneController@addPhone');
+Route::post('/addSpecification', 'PhoneController@addSpecification');
 
 Route::get('/home', function (){
     return view('admin.home');

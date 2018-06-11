@@ -93,6 +93,7 @@
                         <div class="col-md-12">
                             <div class="hero-images-container">
                                 <img src="assets/img/hero-image-1.png" alt="">
+                                <img src="assets/img/hero-image-1.png" alt="">
                             </div>
                             <div class="hero-images-container-1">
                                 <img src="assets/img/hero-image-2.png" alt="">

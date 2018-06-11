@@ -29,69 +29,25 @@ class PhoneController extends Controller
 
         $specification = new Specification();
 
-        $specification['pic1'] = $input['pic1'];
-        $specification['pic2'] = $input['pic2'];
-        $specification['pic3'] = $input['pic3'];
-        $specification['marca'] = $input['marca'];
+        $specification['pic1'] = "";
+        $specification['pic2'] = "";
+        $specification['pic3'] = "";
+        $specification['brand'] = $input['brand'];
         $specification['model'] = $input['model'];
-        $specification['peso'] = $input['peso'];
-        $specification['anno'] = $input['anno'];
+        $specification['weight'] = $input['weight'];
+        $specification['year'] = $input['year'];
         $specification['memory'] = $input['memory'];
-        $specification['sistem'] = $input['sistem'];
+        $specification['system'] = $input['system'];
         $specification['processor'] = $input['processor'];
         $specification['screen'] = $input['screen'];
-        $specification['disply'] = $input['display'];
+        $specification['display'] = $input['display'];
         $specification['resolution'] = $input['resolution'];
         $specification['camera'] = $input['camera'];
-        $specification['media'] = $input['media'];
-        $specification['autofocus'] = $input['autofocus'];
-        $specification['bluetooth'] = $input['bluetooth'];
-        $specification['phone_id'] = Phone::phone()->id;
+        $specification['price'] = $input['price'];
+        $specification['status'] = $input['status'];
+        $specification['color'] = $input['color'];
 
         $specification->save();
-
-        Notification::add('success', '', 'Un nuovo telefono è stato aggiunto');
-
-    }
-
-    public function addPhone(Request $request){
-
-        /*
-                    $this->validate($request, [
-
-                        'marca' => 'required',
-                        'model' => 'required',
-                        'storage' => 'required',
-                        'color' => 'required',
-                        'price' => 'required',
-                        'description' => 'required',
-                    ]);
-        */
-
-        $values = $request->all();
-
-        $phone = new Phone();
-
-
-        $phone['brand'] = $values['marca'];
-
-
-        $phone['model'] = $values['model'];
-
-
-        $phone['storage'] = $values['storage'];
-
-
-        $phone['color'] = $values['color'];
-
-
-        $phone['price'] = $values['price'];
-
-
-        $phone['pic'] = $values['description'];
-
-
-        $phone->save();
 
         return redirect()->action('AdminController@adminHome');
 
@@ -99,31 +55,31 @@ class PhoneController extends Controller
 
 
 
-    public function updatePhone(Request $request, $id){
+    public function updateSpecification(Request $request, $id){
 
 
         $values = $request->all();
-        var_dump($values);
+
         $specification = Specification::find($id);
 
 
-        if(isset($values['marca'])&& $values['marca'] != null) {
-            $specification->marca = $request->input('marca');
+        if(isset($values['brand'])&& $values['brand'] != null) {
+            $specification->brand = $request->input('brand');
         }
         if(isset($values['model'])&& $values['model'] != null) {
             $specification->model = $request->input('model');
         }
-        if(isset($values['peso'])&& $values['peso'] != null) {
-            $specification->peso = $request->input('peso');
+        if(isset($values['weight'])&& $values['weight'] != null) {
+            $specification->weight = $request->input('weight');
         }
-        if(isset($values['anno'])&& $values['anno'] != null) {
-            $specification->anno = $request->input('anno');
+        if(isset($values['year'])&& $values['year'] != null) {
+            $specification->year = $request->input('year');
         }
         if(isset($values['memory'])&& $values['memory'] != null) {
             $specification->memory = $request->input('memory');
         }
-        if(isset($values['sistem'])&& $values['sistem'] != null) {
-            $specification->sistem = $request->input('sistem');
+        if(isset($values['system'])&& $values['system'] != null) {
+            $specification->system = $request->input('system');
         }
         if(isset($values['processor'])&& $values['processor'] != null) {
             $specification->processor = $request->input('processor');
@@ -140,15 +96,14 @@ class PhoneController extends Controller
         if(isset($values['camera'])&& $values['camera'] != null) {
             $specification->camera = $request->input('camera');
         }
+        if(isset($values['price'])&& $values['price'] != null) {
+            $specification->price = $request->input('price');
+        }
+        if(isset($values['status'])&& $values['status'] != null) {
+            $specification->status = $request->input('status');
+        }
         $specification->save();
 
-        /*
-                $phone = Phone::find($id);
-                $phone -> color = $request->input('color');
-                $phone -> price = $request->input('price');
-                $phone -> memory = $request->input('description');
-                $phone->save();
-        */
         return redirect()->action('AdminController@adminHome');
 
     }
