@@ -43,6 +43,6 @@ class Specification extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('specification');
     }
 }

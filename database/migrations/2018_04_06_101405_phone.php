@@ -33,6 +33,6 @@ class Phone extends Migration
      */
     public function down()
     {
-        //
+        Schema::dropIfExists('phone');
     }
 }
