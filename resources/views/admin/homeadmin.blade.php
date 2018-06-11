@@ -13,14 +13,14 @@
                     <div class="row">
 
                         <div class="col-md-6">
-                            <h4>I TUOI TELEFONI</h4>
+                            <h4>Magazzino</h4>
                             <hr>
 
 
 
-                            <div class="card" style="background-color: floralwhite">
+                            <div class="card" style="background-color: white">
                                 <div class="header">
-                                  <h2 style="margin-left: 1%"><small>SPECIFICATION</small></h2>
+                                  <h2 style="margin-left: 1%"><small>Dispositivi</small></h2>
 
                                 </div>
                                 <div class="body">
@@ -32,8 +32,7 @@
                                                 <th>Marca</th>
                                                 <th>Modello</th>
                                                 <th>Memoria</th>
-                                                <th>Schermo</th>
-                                                <th>Fotocamera</th>
+
                                             </tr>
                                             </thead>
                                             <tbody>

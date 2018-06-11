@@ -20,6 +20,17 @@ class OrderController extends Controller
 
     }
 
+    public static function extractDeviceFromOrder($order_id) {
+
+        $order = Order::whereId($order_id)->first();
+
+        $devices = explode("-", $order['products_id']);
+
+        return $devices;
+
+
+    }
+
 
 
 }
