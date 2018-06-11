@@ -4,9 +4,9 @@
 
     <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
 
-        <div class="row" style="margin-left: 1%; margin-top: 1%;">
+        <div class="row justify-content-center">
             <div class="col-xs-8 col-sm-8 col-md-4 col-lg-4">
-                <form action="/addSpecification" method="post" style="border: 1px whitesmoke solid; margin-top: 10%; padding: 3%; background-color: floralwhite;">
+                <form action="/addSpecification" method="post" style="border: 1px whitesmoke solid; margin-top: 10%; padding: 3%; background-color: white;">
                     {{ csrf_field() }}
                     <div class="form-group">
                         <label>Marca</label>
@@ -73,10 +73,13 @@
                         <input type="number" class="form-control" name="price" required>
                     </div>
 
+                    <div class="text-center">
 
-                    <button type="submit" class="btn btn-info">Submit</button>
-                    <a href="/admin"><button type="submit" class="btn btn-primary">Torna alla home</button></a>
-                </form>
+                        <button type="submit" class="btn btn-info">Aggiungi</button>
+                        <button type="reset" class="btn btn-primary">Resetta i campi</button>
+
+                    </div>
+                     </form>
             </div>
         </div>
     </div>
