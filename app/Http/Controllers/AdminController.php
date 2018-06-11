@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Order;
 use App\Specification;
 use App\Phone;
+use App\User;
 
 class AdminController extends Controller
 {
@@ -13,7 +14,8 @@ class AdminController extends Controller
         $phones = Phone::all();
         $spec = Specification::all();
         $orders = Order::all();
-        return view('admin.homeadmin', compact('phones', 'spec', 'orders'));
+        $users = User::all();
+        return view('admin.homeadmin', compact('phones', 'spec', 'orders', 'users'));
 
 
     }

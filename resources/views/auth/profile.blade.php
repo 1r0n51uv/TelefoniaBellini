@@ -76,14 +76,25 @@
                                 </div>
                                 <div class="tab-pane" id="spedizione" role="tabpanel">
 
-                                    <h3 class="title">{{$shipment->address}}</h3>
-                                    <p class="category">Indirizzo</p>
+                                    @if(isset($shipment))
 
-                                    <h3 class="title">{{$shipment->number}}</h3>
-                                    <p class="category">Numero</p>
+                                        <h3 class="title">{{$shipment->address}}</h3>
+                                        <p class="category">Indirizzo</p>
 
-                                    <h3 class="title">{{$shipment->city}}</h3>
-                                    <p class="category">Città</p>
+                                        <h3 class="title">{{$shipment->number}}</h3>
+                                        <p class="category">Numero</p>
+
+                                        <h3 class="title">{{$shipment->city}}</h3>
+                                        <p class="category">Città</p>
+
+                                    @else
+
+                                        <h3>Nessuna info</h3>
+
+
+
+                                        @endif
+
 
 
 
