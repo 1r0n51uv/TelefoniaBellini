@@ -29,6 +29,8 @@ Route::get('/profile', 'ProfileController@getProfile')->middleware('auth');
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->where(['provider' => 'facebook|google']);
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->where(['provider' => 'facebook|google']);
 
+
+
 Route::get('/setPass', function() {
     return view('auth.setPass');
 });
@@ -38,10 +40,6 @@ Route::get('/index', function() {
 })->name('index');
 
 Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
-Route::get('/shop', function(){
-    return view('shop');
-});
 
 Route::get('/search', function() {
     return view('search');
@@ -75,7 +73,7 @@ Route::get('/device', function (){
     return view('device');
 });
 
-Route::get('/admin', 'AdminController@adminHome');
+Route::get('/admin', 'AdminController@adminHome')->middleware('admin');
 
 Route::get('/adminTemp', function (){
     return view('admin.templateadmin');
@@ -94,6 +92,3 @@ Route::get('/addphone', function (){
 
 Route::post('/addSpecification', 'PhoneController@addSpecification');
 
-Route::get('/home', function (){
-    return view('admin.home');
-});

@@ -23,6 +23,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('auth.profile');
+        return view('index');
     }
+
+
 }

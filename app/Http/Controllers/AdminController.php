@@ -6,6 +6,8 @@ use App\Order;
 use App\Specification;
 use App\Phone;
 use App\User;
+use Illuminate\Http\Request;
+use Notification;
 
 class AdminController extends Controller
 {
