@@ -11,21 +11,7 @@
 
         <div class="collapse navbar-collapse justify-content-end" id="example-navbar-info">
             <ul class="navbar-nav">
-                <li class="nav-item dropdown">
 
-
-
-                    <!-- search box container ends  -->
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <div id="txtHint" class="title-color" style="text-align:center;" ></div>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin">
-                        <i class="now-ui-icons objects_globe" title="Home"></i>
-                        Home
-                    </a>
-                </li>
             </ul>
         </div>
 

@@ -18,7 +18,7 @@ class Order extends Migration
             $table->string('products_id');
             $table->string('user_id');
             $table->string('shipment_id');
-            $table->mediumInteger('total');
+            $table->string('total');
             $table->timestamps();
         });
     }
