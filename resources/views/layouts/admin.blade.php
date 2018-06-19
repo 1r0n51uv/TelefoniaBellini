@@ -32,13 +32,11 @@
 
 <body class="index-page sidebar-collapse">
 @notifications
-@include('components.navbaradmin')
 
 
 
 @yield('content')
 
-@include('components.footer')
 
 
 <!--   Core JS Files   -->

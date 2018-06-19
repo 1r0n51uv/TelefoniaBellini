@@ -26,7 +26,7 @@
                                 <div class="col-md-12">
                                     <div class="card">
 
-                                        <div class="card-header-pills">
+                                        <div class="card-header-pills">sh
                                             <ul class="nav nav-tabs justify-content-center" role="tablist">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">
@@ -137,7 +137,7 @@
                                                                             @if(strcmp($dev_id, null) == 0)
 
 
-                                                                                @else
+                                                                            @else
 
                                                                                 <a  href="/showDevice/{{$dev_id}}">
 
