@@ -65,7 +65,6 @@ Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', '
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 
 
-Route::get('/afterPay', 'CartController@makeOrder');
 
 
 Route::get('/device', function (){
@@ -97,6 +96,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/profile', 'ProfileController@getProfile');
     Route::get('/shipmentDetails', 'ShipmentDetailsController@createShipmentDetailsView');
     Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails');
+    Route::get('/afterPay', 'CartController@makeOrder');
 
 
 

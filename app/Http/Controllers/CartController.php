@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\ShipmentDetails;
+use App\Specification;
 use Cart;
 use Illuminate\Support\Facades\Auth;
 use Notification;
@@ -54,6 +55,7 @@ class CartController extends Controller
 
         foreach(Cart::content() as $item ) {
             $products .= $item->id . "-";
+            self::removeFromStock($item->id);
         }
 
         $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
@@ -65,6 +67,15 @@ class CartController extends Controller
         Cart::destroy();
 
         return redirect()->route('index');
+    }
+
+    public static function removeFromStock($id) {
+
+        $device = Specification::whereId($id)->first();
+        $device['qty'] -= 1;
+        $device->save();
+
+
     }
    
 
