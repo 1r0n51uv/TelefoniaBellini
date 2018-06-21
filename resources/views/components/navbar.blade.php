@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg bg-info fixed-top">
+<nav class="navbar navbar-expand-lg bg-telbel fixed-top" >
     <div class="container">
         <div class="navbar-translate">
-            <a href="/index"><img class="n-logo" src="../assets/img/bel.png"></a>
+            <a href="/index" class="navbar-brand" style="font-size: 100%"><i class="fas fa-mobile" style="font-size: 200%"></i> Telefonia Bellini</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#example-navbar-info" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-bar bar1"></span>
                 <span class="navbar-toggler-bar bar2"></span>
@@ -46,7 +46,7 @@
                             <i class="now-ui-icons users_circle-08"></i>
                             {{Auth::user()->name}}
                         @else
-
+                            <i class="now-ui-icons users_circle-08"></i>
                             <p>Login</p>
 
                         @endif

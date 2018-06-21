@@ -11,8 +11,7 @@
 |
 */
 
-Route::get('/'
-, function () {
+Route::get('/', function () {
     return view('index');
 });
 
@@ -24,7 +23,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/profile', 'ProfileController@getProfile')->middleware('auth');
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->where(['provider' => 'facebook|google']);
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->where(['provider' => 'facebook|google']);
@@ -43,28 +41,29 @@ Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/search', function() {
     return view('search');
-  });
+});
 
 
 Route::get('/phone/{id}', 'PhoneController@singlephone');
 
-Route::get('searcher','DemoController@liveSearch');        
+Route::get('searcher','DemoController@liveSearch');
 
 Route::get('/shopping', 'PhoneController@index');
 
-Route::get('/addToCart/{id}', 'CartController@addToCart');
 
+
+//CART ROUTES
+
+Route::get('/addToCart/{id}', 'CartController@addToCart');
 Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
 Route::get('/cart/{id}', 'CartController@deleteCartItem');
 
-Route::get('/shipmentDetails', 'ShipmentDetailsController@createShipmentDetailsView')->middleware('auth');
 
 Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', 'emptyCart', 'shipmentDetails');
 
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 
-Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails')->middleware('auth');
 
 Route::get('/afterPay', 'CartController@makeOrder');
 
@@ -73,22 +72,32 @@ Route::get('/device', function (){
     return view('device');
 });
 
-Route::get('/admin', 'AdminController@adminHome')->middleware('admin');
 
 Route::get('/adminTemp', function (){
     return view('admin.templateadmin');
 });
 
-Route::get('/deleteDevice/{id}', 'PhoneController@deletePhone');
 
 
-Route::get('/editphone/{id}', 'PhoneController@editPhone');
 
-Route::post('/updateSpecification/{id}', 'PhoneController@updateSpecification');
+Route::group(['middleware' => ['admin', 'auth']], function () {
 
-Route::get('/addphone', function (){
-            return view('admin.addphone');
+    Route::post('/addSpecification', 'PhoneController@addSpecification');
+    Route::get('/deleteDevice/{id}', 'PhoneController@deletePhone');
+    Route::get('/editphone/{id}', 'PhoneController@editPhone');
+    Route::post('/updateSpecification/{id}', 'PhoneController@updateSpecification');
+    Route::get('/addphone', function (){
+        return view('admin.addphone');
+    });
+    Route::get('/admin', 'AdminController@adminHome');
+
 });
 
-Route::post('/addSpecification', 'PhoneController@addSpecification');
+Route::group(['middleware' => ['auth']], function () {
+    Route::get('/profile', 'ProfileController@getProfile');
+    Route::get('/shipmentDetails', 'ShipmentDetailsController@createShipmentDetailsView');
+    Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails');
 
+
+
+});

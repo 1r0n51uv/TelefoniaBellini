@@ -5532,6 +5532,10 @@ a.bg-info:hover {
     background-color: #ffc107!important
 }
 
+.bg-telbel {
+    background-color: #355c7d!important
+}
+
 a.bg-warning:focus,
 a.bg-warning:hover {
     background-color: #d39e00!important

@@ -73,17 +73,21 @@
 
                                         <div class="row">
 
-                                            <div class="col-md-2 col-sm-2 col-xs-2 text-center" style="color: black; font-size: 200%; border-right: 1px #a8a7a7 solid">
-                                                <img src="../assets/image/x.png" alt="">
-                                            </div>
-
                                             <div class="col-md-5 col-sm-5 col-xs-5 text-center" style="border-right: 1px #a8a7a7 solid">
+                                                <p class="category">Prodotto</p>
                                                 <h5 style="color: black; margin-top:1%; ">{{$item->name}}</h5>
                                             </div>
 
                                             <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
+                                                <p class="category">Prezzo</p>
                                                 <h5 style="color: black; margin-top:1%; ">{{$item->price}}</h5>
                                             </div>
+
+                                            <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
+                                                <p class="category">Quantità</p>
+                                                <h5 style="color: black; margin-top:1%; ">{{$item->qty}}</h5>
+                                            </div>
+
 
 
 
