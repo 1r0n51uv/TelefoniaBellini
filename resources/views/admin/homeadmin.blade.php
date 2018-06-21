@@ -26,7 +26,7 @@
                                 <div class="col-md-12">
                                     <div class="card">
 
-                                        <div class="card-header-pills">sh
+                                        <div class="card-header-pills">
                                             <ul class="nav nav-tabs justify-content-center" role="tablist">
                                                 <li class="nav-item">
                                                     <a class="nav-link active" data-toggle="tab" href="#profile" role="tab">
@@ -261,6 +261,7 @@
                         <div class="col-md-12 text-center">
                             <a href="/addphone"><button class="btn btn-success btn-lg">Aggiungi un dispositivo</button></a>
                             <a href="/index"><button class="btn btn-warning btn-lg">Vai al sito!</button></a>
+                            <a href="{{route('logout')}}"><button class="btn btn-danger btn-lg">Logout</button></a>
 
                         </div>
 

@@ -67,11 +67,22 @@
                                     <a href="logout"><button class="btn btn-danger">Logout</button></a>
                                 </div>
                                 <div class="tab-pane" id="order" role="tabpanel">
-                                    @foreach($orders as $order)
 
-                                        <h4>{{ $order->id }}</h4>
+                                    @if(isset($orders))
 
-                                    @endforeach
+                                        @foreach($orders as $order)
+
+                                            <h4>{{ $order->id }}</h4>
+
+                                        @endforeach
+
+                                        @else
+
+                                        <h4>Nessun ordine</h4>
+
+                                        @endif
+
+
 
                                 </div>
                                 <div class="tab-pane" id="spedizione" role="tabpanel">

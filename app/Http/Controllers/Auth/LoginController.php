@@ -3,7 +3,9 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Http\Request;
 use Socialite;
 use Notification;
 use App\Http\Controllers\SocialUserController;
@@ -85,4 +87,38 @@ class LoginController extends Controller
         return $user;
 
     }
+
+    public function login(Request $request) {
+
+        $input = $request->all();
+
+        if((User::whereEmail($input['email'])->first() != null)) {
+
+            $user = User::whereEmail($input['email'])->first();
+
+            if (strcmp($user->password, $input['password']) == 0 ) {
+
+                if ($user->admin == 1) {
+                    Auth::login($user);
+                    return redirect()->action('AdminController@adminHome');
+                } else {
+                    Auth::login($user);
+                    return view('components.loginTransition');
+                }
+
+            } else {
+                Notification::add('error', '', 'Password errata');
+                return redirect('/login');
+            }
+
+
+        } else {
+
+            Notification::add('error', '', 'Email errata');
+            return redirect('/login');
+        }
+
+    }
+
+
 }
