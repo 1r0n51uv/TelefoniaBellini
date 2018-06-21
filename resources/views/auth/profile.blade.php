@@ -49,7 +49,7 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" data-toggle="tab" href="#spedizione" role="tab">
-                                    <i class="now-ui-icons ui-1_settings-gear-63"></i> Spedizione {{Auth::user()->name}}
+                                    <i class="now-ui-icons shopping_delivery-fast"></i> Indirizzo di spedizione
                                 </a>
                             </li>
 
