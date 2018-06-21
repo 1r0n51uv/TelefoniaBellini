@@ -10,7 +10,7 @@ use function Symfony\Component\Console\Tests\Command\createClosure;
 class PhoneController extends Controller
 {
     public function index() {
-        $phones = Phone::paginate(6);
+        $phones = Specification::paginate(8);
         return view('shopping', compact('phones'));
     }
 

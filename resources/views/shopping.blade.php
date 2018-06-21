@@ -85,6 +85,14 @@
                         </div>
                     </div>
 
+                    <div class="row justify-content-center">
+
+                        <div>
+                            {{ $phones->links() }}
+                        </div>
+
+                    </div>
+
 
                 </div>
             </div>
