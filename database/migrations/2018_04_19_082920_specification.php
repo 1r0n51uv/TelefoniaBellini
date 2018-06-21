@@ -32,6 +32,7 @@ class Specification extends Migration
             $table->string('color');
             $table->string('status');
             $table->integer('price');
+            $table->integer('qty');
             $table->timestamps();
         });
     }
