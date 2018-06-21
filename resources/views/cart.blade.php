@@ -25,7 +25,8 @@
 
 
                                     <div class="col-md-3 col-sm-3 col-xs-1 text-center" style="color: black; font-size: 200%; border-right: 1px #a8a7a7 solid">
-                                        <img src="{{App\Phone::whereId($item->id)->first()->pic}}" alt="">
+
+                                        <img class="card-img-top" src="{{App\Phone::whereId($item->id)->first()->pic}}" alt="Card image cap" l>
                                     </div>
 
                                     <div class="col-md-5 col-sm-5 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid;">

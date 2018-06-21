@@ -13,7 +13,7 @@
                             <a href="login/google" class="btn btn-neutral btn-google btn-icon btn-round">
                                 <i class="fab fa-google-plus-g" style="font-size:120%; margin-top:25%"></i>
                             </a>
-                            <a href="login/google" class="btn btn-neutral btn-facebook btn-icon btn-round">
+                            <a href="login/facebook" class="btn btn-neutral btn-facebook btn-icon btn-round">
                                 <i class="fab fa-facebook-square" style="font-size:120%; margin-top:25%"></i>
                             </a>
                         </div>

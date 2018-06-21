@@ -68,7 +68,7 @@
                                 </div>
                                 <div class="tab-pane" id="order" role="tabpanel">
 
-                                    @if(isset($orders))
+                                    @if(isset($orders) && count($orders) > 0)
 
                                         @foreach($orders as $order)
 
@@ -76,11 +76,11 @@
 
                                         @endforeach
 
-                                        @else
+                                    @else
 
                                         <h4>Nessun ordine</h4>
 
-                                        @endif
+                                    @endif
 
 
 
@@ -98,13 +98,35 @@
                                         <h3 class="title">{{$shipment->city}}</h3>
                                         <p class="category">Città</p>
 
+                                        <h3 class="title">{{$shipment->province}}</h3>
+                                        <p class="category">Provincia</p>
+
+                                        <h3 class="title">{{$shipment->state}}</h3>
+                                        <p class="category">Stato</p>
+
+                                        <h3 class="title">{{$shipment->cap}}</h3>
+                                        <p class="category">CAP</p>
+
+                                        <h3 class="title">{{$shipment->phone}}</h3>
+                                        <p class="category">Telefono</p>
+
+                                        <h3 class="title">{{$shipment->description}}</h3>
+                                        <p class="category">Note</p>
+
+
                                     @else
 
-                                        <h3>Nessuna info</h3>
+                                        <h4>Nessuna informazione di spedizione</h4>
+
+                                        <a href="/shipmentDetails">
+                                            <button class="btn btn-primary btn-round" type="button">
+                                                <i class="fas fa-shipping-fast" style="font-size: 120%"></i> Inserisci
+                                            </button>
+                                        </a>
 
 
 
-                                        @endif
+                                    @endif
 
 
 
@@ -116,6 +138,7 @@
 
                         </div>
                     </div>
+
                 </div>
             </div>
 
