@@ -46,7 +46,7 @@
                             <i class="now-ui-icons users_circle-08"></i>
                             {{Auth::user()->name}}
                         @else
-
+                            <i class="now-ui-icons users_circle-08"></i>
                             <p>Login</p>
 
                         @endif

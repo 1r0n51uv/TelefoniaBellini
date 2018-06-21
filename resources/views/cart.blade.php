@@ -6,7 +6,7 @@
         <div class="container">
             <div class="row">
 
-                <div class="card col-md-7" data-background-color="white" style="margin-top:-3%">
+                <div class="card col-md-8 col-sm-12" data-background-color="white" style="margin-top:-3%">
 
                     <div class="header text-center">
                         <h4 class="title title-up" style="color: black"><i class="fas fa-shopping-cart"></i> Carrello</h4>
@@ -14,40 +14,75 @@
 
                     <div class="card-body" style="border-bottom: 1px #a8a7a7 solid">
 
-                        @foreach (Cart::content() as $item)
+
+                        @if(count(Cart::content()) > 0)
+
+                            @foreach (Cart::content() as $item)
 
 
-                            <div class="row" style="margin-top: 2%">
 
-                                <div class="col-md-2 col-sm-2 col-xs-2 text-center" style="color: black; font-size: 200%; border-right: 1px #a8a7a7 solid">
-                                    <img src="{{App\Phone::whereId($item->id)->first()->pic}}" alt="">
+                                <div class="row justify-content-center" style="margin-top: 2%">
+
+
+                                    <div class="col-md-3 col-sm-3 col-xs-1 text-center" style="color: black; font-size: 200%; border-right: 1px #a8a7a7 solid">
+                                        <img src="{{App\Phone::whereId($item->id)->first()->pic}}" alt="">
+                                    </div>
+
+                                    <div class="col-md-5 col-sm-5 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid;">
+                                        <p style="color: black;">Modello</p>
+                                        <h5 style="color: black; margin-top:1%;">{{$item->name}}</h5>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-4 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
+                                        <p style="color: black;">Prezzo</p>
+                                        <h5 style="color: black; margin-top:1%; ">{{$item->price}}€</h5>
+                                    </div>
+
+                                    <div class="col-md-3 col-sm-4">
+
+                                    </div>
+
+                                    <div class="col-md-5 col-sm-4 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid;">
+                                        <p style="color: black;">Quantità</p>
+                                        <h5 style="color: black; margin-top:1%; ">{{$item->qty}}</h5>
+                                    </div>
+
+                                    <div class="col-md-4 col-sm-4 col-xs-1 text-center" style="border-right: 1px #a8a7a7 solid;">
+                                        <p style="color: black;">Rimuovi dal carrello</p>
+                                        <a href="/cart/{{$item->rowId}}">
+                                            <button class="btn btn-danger btn-icon btn-round" type="button">
+                                                <i class="fas fa-times" style="font-size: 150%;"></i>
+                                            </button>
+                                        </a>
+                                    </div>
+
                                 </div>
 
-                                <div class="col-md-2 col-sm-2 col-xs-2 text-center" style="border-right: 1px #a8a7a7 solid">
-                                    <p style="color: black;">Modello</p>
-                                    <h5 style="color: black; margin-top:1%; ">{{$item->name}}</h5>
-                                </div>
+                            @endforeach
 
-                                <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
-                                    <p style="color: black;">Prezzo</p>
-                                    <h5 style="color: black; margin-top:1%; ">{{$item->price}}</h5>
-                                </div>
-                                <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
-                                    <p style="color: black;">Quantità</p>
-                                    <h5 style="color: black; margin-top:1%; ">{{$item->qty}}</h5>
-                                </div>
+                        @else
+
+
+                            <div class="row justify-content-center" style="margin-top: 2%">
 
 
 
-                                <div class="col-md-2 col-sm-2 col-xs-2 text-center">
-                                    <a href="/cart/{{$item->rowId}}">
-                                        <button class="btn btn-danger btn-icon btn-round" type="button">
-                                            <i class="fas fa-times" style="font-size: 150%; margin-top:5%"></i>
-                                        </button>
-                                    </a>
+
+                                <div class="col-12 text-center">
+                                    <h5 style="color: black;"></h5>
+
                                 </div>
+
+
                             </div>
-                        @endforeach
+
+                        @endif
+
+
+
+
+
+
                     </div>
 
 

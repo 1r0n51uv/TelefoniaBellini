@@ -50,8 +50,11 @@ Route::get('searcher','DemoController@liveSearch');
 
 Route::get('/shopping', 'PhoneController@index');
 
-Route::get('/addToCart/{id}', 'CartController@addToCart');
 
+
+//CART ROUTES
+
+Route::get('/addToCart/{id}', 'CartController@addToCart');
 Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
 Route::get('/cart/{id}', 'CartController@deleteCartItem');

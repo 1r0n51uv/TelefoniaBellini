@@ -20,7 +20,7 @@ class PhoneTableSeeder extends Seeder
                     'color'=>'Black',
                     'price'=>'899',
                     'description'=>'',
-                    'pic' => '',
+                    'pic' => '../assets/image/ix.png',
                 ),array(
                     'id'=>'2',
                     'brand'=>'Samsung',
@@ -29,7 +29,7 @@ class PhoneTableSeeder extends Seeder
                     'color'=>'Black',
                     'price'=>'899',
                     'description'=>'',
-                    'pic' => '',
+                    'pic' => '../assets/image/ix.png',
                 ),array(
                     'id'=>'3',
                     'brand'=>'Samsung',
@@ -38,7 +38,7 @@ class PhoneTableSeeder extends Seeder
                     'color'=>'Black',
                     'price'=>'899',
                     'description'=>'',
-                    'pic' => '',
+                    'pic' => '../assets/image/ix.png',
                 ),
 
 
