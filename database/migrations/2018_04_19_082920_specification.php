@@ -32,6 +32,7 @@ class Specification extends Migration
             $table->string('camera');
             $table->string('color');
             $table->string('status');
+            $table->string('description');
             $table->integer('price');
             $table->integer('qty');
             $table->timestamps();

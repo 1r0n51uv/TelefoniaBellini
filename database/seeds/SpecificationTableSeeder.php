@@ -33,6 +33,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'2',
                 'pic1'=>'../assets/image/catalogotelefoni/samsungs8plus/1.jpeg',
@@ -54,6 +55,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'3',
                 'pic1'=>'../assets/image/catalogotelefoni/samsungj3/1.jpeg',
@@ -75,6 +77,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'4',
                 'pic1'=>'../assets/image/catalogotelefoni/samsungj5/1.jpeg',
@@ -96,6 +99,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'5',
                 'pic1'=>'../assets/image/catalogotelefoni/applei7/1.jpeg',
@@ -117,6 +121,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'grey',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'6',
                 'pic1'=>'../assets/image/catalogotelefoni/applei8/1.jpeg',
@@ -138,6 +143,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'7',
                 'pic1'=>'../assets/image/catalogotelefoni/applei8plus/1.jpeg',
@@ -159,6 +165,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'8',
                 'pic1'=>'../assets/image/catalogotelefoni/appleiX/1.jpeg',
@@ -180,6 +187,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'9',
                 'pic1'=>'../assets/image/catalogotelefoni/huaweip8lite17/1.jpeg',
@@ -201,6 +209,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'10',
                 'pic1'=>'../assets/image/catalogotelefoni/huaweim10pro/1.jpeg',
@@ -222,6 +231,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'11',
                 'pic1'=>'../assets/image/catalogotelefoni/huaweip10lite/1.jpeg',
@@ -243,6 +253,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'12',
                 'pic1'=>'../assets/image/catalogotelefoni/huaweip20/1.jpeg',
@@ -264,6 +275,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'13',
                 'pic1'=>'../assets/image/catalogotelefoni/huaweip20pro/1.jpeg',
@@ -285,6 +297,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),array(
                 'id'=>'14',
                 'pic1'=>'../assets/image/catalogotelefoni/huwaweip20lite/1.jpeg',
@@ -306,6 +319,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
+                'description' => '',
             ),
 
         ));
