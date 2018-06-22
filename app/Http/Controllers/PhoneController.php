@@ -11,9 +11,13 @@ class PhoneController extends Controller
 {
     public function index() {
         $phones = Specification::paginate(8);
-        return view('shopping', compact('phones'));
+        $paginate = true;
+        return view('shopping', compact('phones', 'paginate'));
     }
 
+    public function indexEmpty() {
+        return view('shopping');
+    }
 
 
     public function showSingle($id) {
@@ -115,6 +119,20 @@ class PhoneController extends Controller
 
     }
 
+    public function shopFilter($filter) {
+
+        if (strcmp($filter, 'Apple') == 0 || strcmp($filter, 'Samsung') == 0 || strcmp($filter, 'Huawei') == 0) {
+
+            $phones = Specification::wherebrand($filter)->get();
+            $paginate = false;
+            return view('shopping', compact('phones', 'paginate'));
+
+
+        }
+
+    }
+
+
     public function editPhone($id){
 
         $phone = Phone::find($id);
@@ -123,6 +141,7 @@ class PhoneController extends Controller
 
 
     }
+
 
 
 

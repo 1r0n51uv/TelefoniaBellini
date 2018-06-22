@@ -6,18 +6,54 @@
 
     <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
 
-        <div class="row" style="margin-left: 1%; margin-top: 1%;">
+        <div class="row justify-content-center">
             <div class="container-fluid">
 
-
-
-
-
                 <div class="col-sm-12">
-                    <h4><small>Telefoni</small></h4>
                     <hr>
 
+                    <div class="row justify-content-center" style="text-align: center">
 
+                        <div class="row justify-content-center">
+
+                            <div class="col-12">
+
+                                <h5>Scegli tra i migliori brand</h5>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row justify-content-center">
+
+                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
+
+                                <a href="/shopfilter/Huawei">
+                                    <img src="../assets/image/huawei.png" alt="Raised Image" class="img-raise" width="60%">
+
+                                </a>
+
+
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
+                                <a href="/shopfilter/Samsung">
+                                    <img src="../assets/image/samsara.png" alt="Raised Image" class="img-raise" width="60%">
+
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
+                                <a href="/shopfilter/Apple">
+                                    <img src="../assets/image/appleb.png" alt="Raised Image" class="img-raise" width="60%">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <hr>
 
                     <div>
 
@@ -62,13 +98,14 @@
 
 
                                                 <h5 class="card-text"> {{ $phone->model}}</h5>
-                                                <h5 class="card-text"> {{ $phone->price}}</h5>
+                                                <h5 class="card-text"> {{ $phone->price}}€</h5>
                                                 <h5 class="card-text" >{{ $phone->description }}</h5>
+                                                <h5 class="card-text" >{{ $phone->color }}</h5>
                                             </div>
 
                                             <div class="card-footer text-muted">
                                                 <div class="text-center">
-                                                    <a  href="/addToCart/{{ $phone->id }}"><button class="btn btn-success" type="button">
+                                                    <a  href="/addToCart/{{ $phone->id }}"><button class="btn btn-shop" type="button">
                                                             <i class="fas fa-shopping-cart" style="font-size:150%; margin-top:2%"></i> Aggiungi
                                                         </button></a>
                                                 </div>
@@ -87,14 +124,26 @@
 
                     <div class="row justify-content-center">
 
-                        <div>
-                            {{ $phones->links() }}
-                        </div>
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination pagination-primary">
+                                @if($paginate == true)
+
+                                    {{ $phones->links() }}
+
+                                @else
+
+                                @endif
+                            </ul>
+
+                        </nav>
+
 
                     </div>
 
 
                 </div>
+
             </div>
         </div>
     </div>

@@ -101,3 +101,5 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 });
+
+Route::get('/shopfilter/{filter}', 'PhoneController@shopFilter')->where(['filter' => 'Samsung|Apple|Huawei']);
