@@ -101,3 +101,5 @@ Route::group(['middleware' => ['auth']], function () {
 
 
 });
+
+Route::get('/mailtest', 'MailController@email');
