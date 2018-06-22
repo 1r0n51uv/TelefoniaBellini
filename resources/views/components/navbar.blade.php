@@ -13,7 +13,7 @@
             <ul class="navbar-nav">
                 <li class="nav-item dropdown">
 
-                    <input type="text" id="search" data-toggle="dropdown" placeholder="Search. . ." class="form-control form-control-success" style="margin-top: 2%; border-color: grey;" autocomplete="off">
+                    <input type="text" id="search" data-toggle="dropdown" placeholder="&#xF002 Ricerca.." class="form-control form-control-success" style="margin-top: 3%; border-color: white; font-family: FontAwesome, 'Arial';" autocomplete="off">
 
 
                     <!-- search box container ends  -->

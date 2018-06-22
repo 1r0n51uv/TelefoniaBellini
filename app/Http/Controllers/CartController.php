@@ -16,7 +16,7 @@ class CartController extends Controller
     
 
     public function addToCart($id) {
-        $item = Phone::whereId($id)->first();
+        $item = Specification::whereId($id)->first();
 
         //var_dump($item);
 

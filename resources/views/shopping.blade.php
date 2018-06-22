@@ -44,7 +44,7 @@
 
                                             </div>
 
-                                            <img class="card-img-top" src="{{ $phone->pic }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%; background-color: transparent;">
+                                            <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%; background-color: transparent;">
 
                                             <div class="card-body" style="text-align:center;">
 
@@ -69,7 +69,7 @@
                                             <div class="card-footer text-muted">
                                                 <div class="text-center">
                                                     <a  href="/addToCart/{{ $phone->id }}"><button class="btn btn-success" type="button">
-                                                            <i class="fas fa-shopping-cart" style="font-size:150%; margin-top:2%"></i>
+                                                            <i class="fas fa-shopping-cart" style="font-size:150%; margin-top:2%"></i> Aggiungi
                                                         </button></a>
                                                 </div>
                                             </div>
