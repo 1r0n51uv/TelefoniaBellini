@@ -10,16 +10,19 @@ use function Symfony\Component\Console\Tests\Command\createClosure;
 class PhoneController extends Controller
 {
     public function index() {
-        $phones = Phone::paginate(6);
-        return view('shopping', compact('phones'));
+        $phones = Specification::paginate(8);
+        $paginate = true;
+        return view('shopping', compact('phones', 'paginate'));
+    }
+
+    public function indexEmpty() {
+        return view('shopping');
     }
 
 
-
     public function showSingle($id) {
-        $phone = Phone::whereId($id)->first();
         $specification = Specification::whereId($id)->first();
-        return view('singleDevice', compact('phone', 'specification'));
+        return view('singleDevice', compact('specification'));
 
     }
 
@@ -116,6 +119,20 @@ class PhoneController extends Controller
 
     }
 
+    public function shopFilter($filter) {
+
+        if (strcmp($filter, 'Apple') == 0 || strcmp($filter, 'Samsung') == 0 || strcmp($filter, 'Huawei') == 0) {
+
+            $phones = Specification::wherebrand($filter)->get();
+            $paginate = false;
+            return view('shopping', compact('phones', 'paginate'));
+
+
+        }
+
+    }
+
+
     public function editPhone($id){
 
         $phone = Phone::find($id);
@@ -124,6 +141,7 @@ class PhoneController extends Controller
 
 
     }
+
 
 
 

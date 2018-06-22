@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Specification;
 use Illuminate\Http\Request;
-use App\Phone;
 
 class DemoController extends Controller
 {
@@ -16,7 +16,7 @@ class DemoController extends Controller
         }
         else
         {
-            $phones = Phone::where('brand','LIKE',"%{$search}%")->orWhere('model','LIKE',"%{$search}%")->get();
+            $phones = Specification::where('brand','LIKE',"%{$search}%")->orWhere('model','LIKE',"%{$search}%")->get();
 
             return view('searchajax')->withPhones($phones);
         }

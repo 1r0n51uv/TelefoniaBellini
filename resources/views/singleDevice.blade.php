@@ -59,7 +59,7 @@
                     <h4><small>CARATTERISTICHE TELEFONO</small></h4>
                     <hr>
 
-                    <h2>{{ $phone->brand }} {{ $phone->model }}</h2>
+                    <h2>{{ $specification->brand }} {{ $specification->model }}</h2>
 
                     <div style="font-size: 50%">
           <div class="row">
@@ -88,7 +88,7 @@
 
                         <div class="row justify-content">
                             <div class="col-3">
-                              <a href="/addToCart/{{$phone->id}}"><button class="btn btn-warning" type="button" style="margin-left: 188%; margin-top: 60%; font-size: 170%;">
+                              <a href="/addToCart/{{$specification->id}}"><button class="btn btn-warning" type="button" style="margin-left: 188%; margin-top: 60%; font-size: 170%;">
                                     <i class="fas fa-shopping-cart" style="font-size:150%; margin-top:2%;"></i>Procedi All'acquisto
                                 </button></a>
                             </div>
