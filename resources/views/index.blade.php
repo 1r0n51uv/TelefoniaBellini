@@ -12,7 +12,10 @@
             </div>
             <div class="container">
                 <div class="content-center brand">
-                    <h1 class="h1" style="font-size: 336%">TelefoniaBellini</h1>
+                    <a href="/index" target="_blank">
+                        <img src="/assets/image/logo.png" class=""/>
+                    </a>
+
                     <h3></h3>
                 </div>
                 <h6 class="category category-absolute">
