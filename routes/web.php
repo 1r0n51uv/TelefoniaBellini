@@ -102,4 +102,8 @@ Route::group(['middleware' => ['auth']], function () {
 
 });
 
+
 Route::get('/mailtest', 'MailController@email');
+
+Route::post('/upload', 'UploadController@upload')->name('upload');
+Route::get('/uploadV', 'UploadController@uploadView');
