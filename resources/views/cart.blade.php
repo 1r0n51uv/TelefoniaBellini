@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="section section-signup" style="background-image: url('assets/img/blurredimage-1.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+    <div class="section section-signup" style="background-image: url('assets/img/cart.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
         <div class="container">
             <div class="row">
 

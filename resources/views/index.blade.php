@@ -12,11 +12,7 @@
             </div>
             <div class="container">
                 <div class="content-center brand">
-                    <a href="/index" target="_blank">
-                        <img src="/assets/image/logo.png" class=""/>
-                    </a>
-
-                    <h3></h3>
+                    <img src="/assets/image/logo.png" class=""/>
                 </div>
                 <h6 class="category category-absolute">
                     <a href="pablo" target="_blank">
@@ -48,19 +44,19 @@
             </div>
 
             <div class="section section-tabs" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
-                <div class="container" style="margin-left: 13%; margin-bottom: -3%; margin-top: -3%;">
+                <div class="container">
 
                     <div class="row">
-                        <div class="col-md-6">
-                              <a href="/shopping">
-                                  <div class="">
+                        <div class="col-md-6" style="display: inline-block;">
+                            <a href="/shopping">
+                                <div class="">
                                     <div class="">
-                                      <img src="/assets/img/i8.png" class="img-responsive">
+                                        <img src="/assets/img/i8.png" class="img-responsive">
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-6" style="display: inline-block;">
                             <a href="/shopping">
                                 <div>
                                     <div class="">
