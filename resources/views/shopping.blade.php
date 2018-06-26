@@ -74,15 +74,18 @@
                                                 @if(strcmp($phone->description, 'Novità') == 0)
 
                                                     <span class="badge badge-danger">Novità</span>
+
+                                                @elseif(strcmp($phone->description, 'Usato') == 0)
+                                                    <span class="badge badge-warning">Usato</span>
                                                 @else
 
-                                                    <span> </span>
+                                                    <span class="badge badge-danger" style="color: #F7F7F7; border-color: #F7F7F7">Pelo </span>
                                                 @endif
 
 
                                             </div>
 
-                                                <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto;">
+                                                <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; margin-top: 2%">
 
 
 
@@ -133,6 +136,7 @@
 
                             @endforeach
                         </div>
+
                     </div>
 
                     <div class="row justify-content-center">

@@ -43,27 +43,33 @@
                 </div>
             </div>
 
+
             <div class="section section-tabs" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
                 <div class="container">
 
                     <div class="row">
-                        <div class="col-md-6" style="display: inline-block;">
-                            <a href="/shopping">
-                                <div class="">
-                                    <div class="">
-                                        <img src="/assets/img/i8.png" class="img-responsive">
+
+                        <div class="col-md-12" style="display: inline-block;">
+                            <div class="section section-images"
+                                 style="background-image: url('/assets/image/xwall.png'); background-size: cover; ">
+                                <div class="container">
+                                    <div class="row">
+
+                                        <div class="col-md-12" style="text-align: center;">
+                                            <h1 style="color: whitesmoke; font-size: 800%; vertical-align: central"><b>X</b></h1>
+                                            <a href=""><button class="btn btn-shop">Acquista ora</button></a>
+                                        </div>
+
+
                                     </div>
                                 </div>
-                            </a>
+                            </div>
+
                         </div>
-                        <div class="col-md-6" style="display: inline-block;">
-                            <a href="/shopping">
-                                <div>
-                                    <div class="">
-                                        <img src="/assets/img/airp.jpg" class="photo">
-                                    </div>
-                                </div>
-                            </a>
+
+
+                        <div class="col-md-12" style="display: inline-block;">
+
                         </div>
 
                     </div>
@@ -72,6 +78,9 @@
                 </div>
 
             </div>
+
+
+
         </div>
     </div>
 
