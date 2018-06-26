@@ -18,6 +18,7 @@ class Specification extends Migration
             $table->string('pic1');
             $table->string('pic2');
             $table->string('pic3');
+            $table->string('pic4');
             $table->string('brand');
             $table->string('model');
             $table->string('weight');
@@ -31,6 +32,7 @@ class Specification extends Migration
             $table->string('camera');
             $table->string('color');
             $table->string('status');
+            $table->string('description');
             $table->integer('price');
             $table->integer('qty');
             $table->timestamps();

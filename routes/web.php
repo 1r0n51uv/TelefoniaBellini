@@ -107,3 +107,9 @@ Route::get('/mailtest', 'MailController@email');
 
 Route::post('/upload', 'UploadController@upload')->name('upload');
 Route::get('/uploadV', 'UploadController@uploadView');
+
+Route::get('/shopfilter/{filter}', 'PhoneController@shopFilter')->where(['filter' => 'Samsung|Apple|Huawei']);
+
+Route::get('/mailtest', 'MailController@email');
+
+

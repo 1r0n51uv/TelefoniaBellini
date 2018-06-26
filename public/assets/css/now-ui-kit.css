@@ -1835,6 +1835,11 @@ fieldset[disabled] .btn-info.active {
     color: #FFFFFF;
 }
 
+.btn-shop {
+    background-color: #F16A43;
+    color: #ffffff;
+}
+
 .btn-warning:hover,
 .btn-warning:focus,
 .btn-warning:active,

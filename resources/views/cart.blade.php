@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="section section-signup" style="background-image: url('assets/img/blurredimage-1.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+    <div class="section section-signup" style="background-image: url('assets/img/cart.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
         <div class="container">
             <div class="row">
 
@@ -26,7 +26,7 @@
 
                                     <div class="col-md-3 col-sm-3 col-xs-1 text-center" style="color: black; font-size: 200%; border-right: 1px #a8a7a7 solid">
 
-                                        <img class="card-img-top" src="{{App\Phone::whereId($item->id)->first()->pic}}" alt="Card image cap" l>
+                                        <img class="card-img-top" src="{{App\Specification::whereId($item->id)->first()->pic4}}" alt="Card image cap" l>
                                     </div>
 
                                     <div class="col-md-5 col-sm-5 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid;">

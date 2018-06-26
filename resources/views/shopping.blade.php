@@ -4,47 +4,91 @@
 
 
 
-    <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
+    <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover; " >
 
-        <div class="row" style="margin-left: 1%; margin-top: 1%;">
+        <div class="row justify-content-center">
             <div class="container-fluid">
 
-
-
-
-
                 <div class="col-sm-12">
-                    <h4><small>Telefoni</small></h4>
                     <hr>
 
+                    <div class="row justify-content-center" style="text-align: center">
 
+                        <div class="row justify-content-center">
+
+                            <div class="col-12">
+
+                                <h5>Scegli tra i migliori brand</h5>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row justify-content-center">
+
+                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
+
+                                <a href="/shopfilter/Huawei">
+                                    <img src="../assets/image/huawei.png" alt="Raised Image" class="img-raise" width="60%">
+
+                                </a>
+
+
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
+                                <a href="/shopfilter/Samsung">
+                                    <img src="../assets/image/samsara.png" alt="Raised Image" class="img-raise" width="60%">
+
+                                </a>
+                            </div>
+                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
+                                <a href="/shopfilter/Apple">
+                                    <img src="../assets/image/appleb.png" alt="Raised Image" class="img-raise" width="60%">
+                                </a>
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+
+                    <hr>
 
                     <div>
 
-                        <div class="row justify-content-center">
+                        <div class="row justify-content-center" >
                             @foreach( $phones as $phone)
+
+
 
                                 <a href="/showDevice/{{ $phone->id }}" style="text-decoration: none; color: #16181b">
 
                                     <div class="col-md-3 col-sm-6 col-xs-6">
 
 
-                                        <div class="card" style="background-color: transparent;">
+                                        <div class="card" >
 
-                                            <div class="card-header " style="background-color: ghostwhite;">
+                                            <div class="card-header ">
 
                                                 @if(strcmp($phone->description, 'Novità') == 0)
 
                                                     <span class="badge badge-danger">Novità</span>
+
+                                                @elseif(strcmp($phone->description, 'Usato') == 0)
+                                                    <span class="badge badge-warning">Usato</span>
                                                 @else
 
-                                                    <span> </span>
+                                                    <span class="badge badge-danger" style="color: #F7F7F7; border-color: #F7F7F7">Pelo </span>
                                                 @endif
 
 
                                             </div>
 
-                                            <img class="card-img-top" src="{{ $phone->pic }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%; background-color: transparent;">
+                                                <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; margin-top: 2%">
+
+
+
 
                                             <div class="card-body" style="text-align:center;">
 
@@ -62,15 +106,27 @@
 
 
                                                 <h5 class="card-text"> {{ $phone->model}}</h5>
-                                                <h5 class="card-text"> {{ $phone->price}}</h5>
-                                                <h5 class="card-text" >{{ $phone->description }}</h5>
+                                                <h5 class="card-text"> {{ $phone->price}}€</h5>
+                                                <h5 class="card-text" >{{ $phone->color }}</h5>
                                             </div>
 
                                             <div class="card-footer text-muted">
                                                 <div class="text-center">
-                                                    <a  href="/addToCart/{{ $phone->id }}"><button class="btn btn-success" type="button">
-                                                            <i class="fas fa-shopping-cart" style="font-size:150%; margin-top:2%"></i>
-                                                        </button></a>
+
+                                                    @if($phone->qty > 0)
+
+                                                        <a  href="/addToCart/{{ $phone->id }}"><button class="btn btn-shop" type="button">
+                                                                <i class="fas fa-shopping-cart" style="font-size:150%; margin-top:2%"></i> Aggiungi</button>
+                                                        </a>
+
+                                                    @else
+
+                                                        <a href="#"><button class="btn btn-default" disabled type="button">
+                                                                <i class="fas fa-shopping-cart" style="font-size:150%; margin-top:2%"></i> Non disponibile</button>
+                                                        </a>
+
+                                                    @endif
+
                                                 </div>
                                             </div>
 
@@ -78,15 +134,33 @@
                                     </div>
                                 </a>
 
-
-
-
                             @endforeach
                         </div>
+
+                    </div>
+
+                    <div class="row justify-content-center">
+
+
+                        <nav aria-label="Page navigation example">
+                            <ul class="pagination pagination-primary">
+                                @if($paginate == true)
+
+                                    {{ $phones->links() }}
+
+                                @else
+
+                                @endif
+                            </ul>
+
+                        </nav>
+
+
                     </div>
 
 
                 </div>
+
             </div>
         </div>
     </div>
