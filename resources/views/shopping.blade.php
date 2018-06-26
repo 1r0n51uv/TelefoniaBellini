@@ -82,9 +82,8 @@
 
                                             </div>
 
-                                            <div style="background-image: url('/assets/img/blur.jpg'); background-size: cover;">
-                                                <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; padding-top: 5%; background-color: transparent;">
-                                            </div>
+                                                <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto;">
+
 
 
 
