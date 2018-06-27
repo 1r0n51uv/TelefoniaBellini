@@ -105,5 +105,6 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::get('/shopfilter/{filter}', 'PhoneController@shopFilter')->where(['filter' => 'Samsung|Apple|Huawei']);
 
-Route::get('/mailtest', 'MailController@email');
+Route::get('/mail', 'MailController@index');
+Route::post('/postEmail', 'MailController@postEmail')->name('postEmail');
 
