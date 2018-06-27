@@ -49,7 +49,7 @@
                     <div class="row">
 
                         <div class="col-md-12">
-                            <a href="/shopping"><div class="section section-images" style="background-image: url('/assets/image/c1.png'); background-size: cover; margin-top: 1%; margin-bottom: 1%;">
+                            <a href="/shopping"><div class="section section-images" style="background-image: url('/assets/image/c.png'); background-size: cover; margin-top: 1%; margin-bottom: 1%;">
                                 <div class="container">
                                     <div class="row">
 
