@@ -80,7 +80,7 @@
 
                                             <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
                                                 <p class="category">Prezzo</p>
-                                                <h5 style="color: black; margin-top:1%; ">{{$item->price}}</h5>
+                                                <h5 style="color: black; margin-top:1%; ">{{$item->price}} €</h5>
                                             </div>
 
                                             <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
