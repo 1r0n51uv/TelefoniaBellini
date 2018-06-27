@@ -6,11 +6,11 @@
 
     <div class="section" style="background-image: url('/assets/img/blurredimage-1.jpg'); background-size: cover;">
 
-        <div class="row" style="margin-left: 1%; margin-top: 1%;">
+        <div class="row" style="margin-left: 1%; margin-top: 1%; width: 95%;">
             <div class="col-12">
                 <div class="container-fluid">
 
-                    <div class="row content">
+                    <div class="row content" style="">
                         <div class="col-sm-5 sidenav">
                             <h4>Pics</h4>
                             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
@@ -26,7 +26,7 @@
 
                                         </div>
                                     </div>
-                                    <div class="carousel-item" style="background-color: white">
+                                    <div class="carousel-item" style="background-color: white;">
                                         <img class="d-block" src="{{ $specification->pic2 }}" alt="Second slide" style="width: 60%; display:block; margin:auto;">
                                         <div class="carousel-caption d-none d-md-block">
 
@@ -87,12 +87,11 @@
                                     </div>
                                 </div>
 
+                    </div>
 
-
-
-                            </div>
                         </div>
                     </div>
+                </div>
 
                 </div>
 
