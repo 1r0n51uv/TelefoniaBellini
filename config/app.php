@@ -147,6 +147,7 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
 
+
         /*
          * Package Service Providers...
          */
@@ -163,6 +164,7 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Gloudemans\Notify\LaravelNotifyServiceProvider::class,
         Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
+
 
     ],
 
@@ -216,6 +218,8 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Notification' => Gloudemans\Notify\Notifications\NotificationFacade::class,
         'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
+
+
     ],
 
 ];

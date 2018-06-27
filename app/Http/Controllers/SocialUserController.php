@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
  
 use Illuminate\Http\Request; 
 use App\User; 
-use Illuminate\Foundation\Auth\AuthenticatesUsers; 
-use Socialite; 
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Hash;
+use Socialite;
 use App\Http\Controllers\StripeController;
  
 class SocialUserController extends Controller 
@@ -27,14 +28,16 @@ class SocialUserController extends Controller
     private static function storeUser($user, $provider) {
 
         $dbUser = new User; 
-         
+
+        $pass = str_random(8);
+
         switch($provider) { 
             case 'google': 
                  
                 $dbUser['name'] = $user['name']['givenName']; 
                 $dbUser['surname'] = $user['name']['familyName']; 
                 $dbUser['email'] = $user->getEmail(); 
-                $dbUser['password'] = "pelo"; 
+                $dbUser['password'] = Hash::make($pass);
                 $dbUser['g_id'] = $user->getId(); 
                 $dbUser['g_pic'] = "https://pikmail.herokuapp.com/" . $user->getId() . "?size=1024"; 
                 break; 
@@ -42,13 +45,14 @@ class SocialUserController extends Controller
                 $dbUser['name'] = $user['first_name']; 
                 $dbUser['surname'] = $user['last_name']; 
                 $dbUser['email'] = $user->getEmail(); 
-                $dbUser['password'] = "pelo"; 
+                $dbUser['password'] = Hash::make($pass);
                 $dbUser['fb_id'] = $user->getId(); 
                 $dbUser['fb_pic'] = "https://graph.facebook.com/" . $user->getId() ."/picture?width=9999"; 
                 break; 
             } 
              
-            $dbUser->save(); 
+            $dbUser->save();
+            MailController::passCreation($user->getEmail(), $pass);
             return $dbUser; 
                  
         } 

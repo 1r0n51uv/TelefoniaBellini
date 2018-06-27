@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\User;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 use Socialite;
 use Notification;
 use App\Http\Controllers\SocialUserController;
@@ -96,7 +97,7 @@ class LoginController extends Controller
 
             $user = User::whereEmail($input['email'])->first();
 
-            if (strcmp($user->password, $input['password']) == 0 ) {
+            if (Hash::check($input['password'], $user->password)) {
 
                 if ($user->admin == 1) {
                     Auth::login($user);
