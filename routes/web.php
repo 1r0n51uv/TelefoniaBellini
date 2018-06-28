@@ -11,9 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'HomeController@index');
 
 Route::get('/template', function (){
     return view('template');
@@ -88,7 +86,9 @@ Route::group(['middleware' => ['admin', 'auth']], function () {
     Route::get('/addphone', function (){
         return view('admin.addphone');
     });
+
     Route::get('/admin', 'AdminController@adminHome');
+    Route::get('/updateOrderStatus/{id}/{status}', 'AdminController@changeOrderStaut')->where(['status' => 'Spedito|Cancellato|In lavorazione|Ricevuto']);
 
 });
 

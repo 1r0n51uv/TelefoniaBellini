@@ -66,7 +66,7 @@ class CartController extends Controller
 
         Cart::destroy();
 
-        return redirect()->route('index');
+        return redirect()->action('HomeController@index');
     }
 
     public static function removeFromStock($id) {

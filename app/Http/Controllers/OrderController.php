@@ -15,6 +15,7 @@ class OrderController extends Controller
         $order['shipment_id'] = $shipment->id;
         $order['products_id'] = $products;
         $order['total'] = $total;
+        $order['status'] = "Ricevuto";
 
         $order->save();
 

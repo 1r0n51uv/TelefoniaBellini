@@ -22,6 +22,18 @@ class AdminController extends Controller
 
     }
 
+    public function changeOrderStaut($id, $status) {
+
+        $order = Order::whereId($id)->first();
+
+        $order['status'] = $status;
+
+        $order->save();
+
+        return redirect()->action('AdminController@adminHome');
+
+    }
+
 
 
 }
