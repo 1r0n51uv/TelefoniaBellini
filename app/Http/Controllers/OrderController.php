@@ -19,6 +19,8 @@ class OrderController extends Controller
 
         $order->save();
 
+        return $order;
+
     }
 
     public static function extractDeviceFromOrder($order_id) {

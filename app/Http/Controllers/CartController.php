@@ -60,11 +60,13 @@ class CartController extends Controller
 
         $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
 
-        OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal());
+        $order = OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal());
 
         Notification::add('success', '', 'Ordine Completato, accedi al tuo profilo per visualizzarne lo stato');
 
         Cart::destroy();
+
+        MailController::mailOrder(Auth::user()->email, $order);
 
         return redirect()->action('HomeController@index');
     }

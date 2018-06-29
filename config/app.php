@@ -164,6 +164,8 @@ return [
         Gloudemans\Shoppingcart\ShoppingcartServiceProvider::class,
         Gloudemans\Notify\LaravelNotifyServiceProvider::class,
         Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
+        Snowfire\Beautymail\BeautymailServiceProvider::class,
+
 
 
     ],
