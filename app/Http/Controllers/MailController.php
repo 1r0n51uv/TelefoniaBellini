@@ -82,6 +82,28 @@ public static function mailOrder($email, $order) {
 
 }
 
+public static function deleteOrder($email, $order) {
+
+    $data = [
+
+        'email' => $email,
+        'subject' => 'Cancellazione Ordine n°: ' . $order->id,
+        'id' => $order->id,
+        'products_id' => $order->products_id,
+        'user_id' => $order->user_id,
+        'shipment_id' => $order->shipment_id,
+        'total' => $order->total,
+    ];
+
+    Mail::send('mail.delete', $data, function ($message) use ($data) {
+
+        $message->from('spcorporation69@gmail.com', 'Ordine Cancellato');
+        $message->to($data['email']);
+        $message->subject($data['subject']);
+
+    });
+
+}
 
 
 }

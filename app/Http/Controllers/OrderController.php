@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 use App\Order;
@@ -54,6 +55,7 @@ class OrderController extends Controller
             $order['status'] = 'Cancellato';
             $order->save();
             Notification::add('success', '', "Il tuo ordine è stato cancellato con successo");
+            MailController::deleteOrder(User::whereId($order->user_id)->first()->email, $order);
             return redirect()->action('HomeController@index');
 
         } else {
