@@ -11,7 +11,9 @@
 |
 */
 
-Route::get('/', 'HomeController@index');
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::get('/template', function (){
     return view('template');
@@ -93,7 +95,7 @@ Route::group(['middleware' => ['auth']], function () {
     Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails');
     Route::get('/afterPay', 'CartController@makeOrder');
     Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
-
+    Route::get('/deleteOrder/{id}', 'OrderController@deleteOrder');
 
 
 });

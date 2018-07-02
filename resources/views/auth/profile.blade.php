@@ -153,7 +153,12 @@
                                                         <td>
                                                             <a href="#" data-toggle="tooltip" data-placement="top" title="L'ordine è stato completato, riceverai una mail di conferma nelle prossime ore" data-container="body" data-animation="true"
                                                                data-delay="100"><i class="far fa-check-circle" style="font-size: 200%; color: forestgreen"></i></a>
+
+                                                            <a href="/deleteOrder/{{ $order->id }}" data-toggle="tooltip" data-placement="top" title="Hai 24h di tempo per cancellare il tuo ordine" data-container="body" data-animation="true"
+                                                               data-delay="100"><i class="fas fa-times-circle" style="font-size: 200%; color: darkred"></i></a>
                                                         </td>
+
+
                                                         @break
 
                                                     @endswitch

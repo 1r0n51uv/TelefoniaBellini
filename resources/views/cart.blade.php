@@ -31,7 +31,19 @@
 
                                     <div class="col-md-5 col-sm-5 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid;">
                                         <p style="color: black;">Modello</p>
-                                        <h5 style="color: black; margin-top:1%;">{{$item->name}}</h5>
+                                        <h5 style="color: black; margin-top:1%;">{{
+                                        $item->name['brand'] . ' ' . $item->name['model']}}
+
+                                            <br>
+
+                                            {{ $item->name['memory']}}
+
+                                            <br>
+
+                                            {{ $item->name['color'] }}
+
+
+                                        </h5>
                                     </div>
 
                                     <div class="col-md-4 col-sm-4 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">

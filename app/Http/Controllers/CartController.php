@@ -18,9 +18,7 @@ class CartController extends Controller
     public function addToCart($id) {
         $item = Specification::whereId($id)->first();
 
-        //var_dump($item);
-
-        Cart::add($item->id, $item->model, 1, $item->price);
+        Cart::add($item->id, $item, 1, $item->price);
 
         //echo "addedd";
 

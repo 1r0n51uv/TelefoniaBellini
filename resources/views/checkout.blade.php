@@ -75,7 +75,19 @@
 
                                             <div class="col-md-5 col-sm-5 col-xs-5 text-center" style="border-right: 1px #a8a7a7 solid">
                                                 <p class="category">Prodotto</p>
-                                                <h5 style="color: black; margin-top:1%; ">{{$item->name}}</h5>
+                                                <h5 style="color: black; margin-top:1%;">{{
+                                        $item->name['brand'] . ' ' . $item->name['model']}}
+
+                                                    <br>
+
+                                                    {{ $item->name['memory']}}
+
+                                                    <br>
+
+                                                    {{ $item->name['color'] }}
+
+
+                                                </h5>
                                             </div>
 
                                             <div class="col-md-3 col-sm-3 col-xs-3 text-center" style="border-right: 1px #a8a7a7 solid">
@@ -98,9 +110,22 @@
                                         </div>
                                     @endforeach
 
+                                        <hr>
+
+                                        <div class="row justify-content-center">
+
+                                            <div class="col-md-12" style="text-align: center">
+                                                <p class="category">Totale</p>
+                                                <h4 class="title">{{ Cart::subtotal() }} €</h4>
+
+                                            </div>
+
+                                        </div>
 
 
                                 </div>
+
+
 
 
 
