@@ -113,6 +113,12 @@
                                         <h3 class="title">{{$shipment->description}}</h3>
                                         <p class="category">Note</p>
 
+                                        <p>Modifica indirizzo di spedizione</p>
+                                    <a href="/shipmentDetails">
+                                        <button class="btn btn-info btn-icon btn-round" type="button">
+                                            <i class="fas fa-edit" style="color: white;  font-size: 150%;"></i>
+                                        </button>
+                                    </a>
 
                                     @else
 
