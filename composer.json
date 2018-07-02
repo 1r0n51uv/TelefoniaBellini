@@ -14,7 +14,8 @@
         "laravel/socialite": "^3.0",
         "laravel/tinker": "^1.0",
         "snowfire/beautymail": "dev-master",
-        "stripe/stripe-php": "^6.5"
+        "stripe/stripe-php": "^6.5",
+        "thomaswelton/laravel-gravatar": "~1.0"
     },
     "require-dev": {
         "filp/whoops": "^2.0",

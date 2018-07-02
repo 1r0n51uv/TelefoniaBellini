@@ -165,6 +165,7 @@ return [
         Gloudemans\Notify\LaravelNotifyServiceProvider::class,
         Cartalyst\Stripe\Laravel\StripeServiceProvider::class,
         Snowfire\Beautymail\BeautymailServiceProvider::class,
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
 
 
 
@@ -220,6 +221,7 @@ return [
         'Cart' => Gloudemans\Shoppingcart\Facades\Cart::class,
         'Notification' => Gloudemans\Notify\Notifications\NotificationFacade::class,
         'Stripe' => Cartalyst\Stripe\Laravel\Facades\Stripe::class,
+        'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
 
 
     ],
