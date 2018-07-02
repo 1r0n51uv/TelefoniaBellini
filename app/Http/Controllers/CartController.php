@@ -18,9 +18,7 @@ class CartController extends Controller
     public function addToCart($id) {
         $item = Specification::whereId($id)->first();
 
-        //var_dump($item);
-
-        Cart::add($item->id, $item->model, 1, $item->price);
+        Cart::add($item->id, $item, 1, $item->price);
 
         //echo "addedd";
 
@@ -60,13 +58,15 @@ class CartController extends Controller
 
         $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
 
-        OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal());
+        $order = OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal());
 
         Notification::add('success', '', 'Ordine Completato, accedi al tuo profilo per visualizzarne lo stato');
 
         Cart::destroy();
 
-        return redirect()->route('index');
+        MailController::mailOrder(Auth::user()->email, $order);
+
+        return redirect()->action('HomeController@index');
     }
 
     public static function removeFromStock($id) {

@@ -29,15 +29,10 @@ Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCall
 
 
 
-Route::get('/setPass', function() {
-    return view('auth.setPass');
-});
-
 Route::get('/index', function() {
     return view('index');
 })->name('index');
 
-Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 Route::get('/search', function() {
     return view('search');
@@ -88,7 +83,9 @@ Route::group(['middleware' => ['admin', 'auth']], function () {
     Route::get('/addphone', function (){
         return view('admin.addphone');
     });
+
     Route::get('/admin', 'AdminController@adminHome');
+    Route::get('/updateOrderStatus/{id}/{status}', 'AdminController@changeOrderStaut')->where(['status' => 'Spedito|Cancellato|In lavorazione|Ricevuto']);
 
 });
 
@@ -97,7 +94,8 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/shipmentDetails', 'ShipmentDetailsController@createShipmentDetailsView');
     Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails');
     Route::get('/afterPay', 'CartController@makeOrder');
-
+    Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');
+    Route::get('/deleteOrder/{id}', 'OrderController@deleteOrder');
 
 
 });
@@ -105,12 +103,10 @@ Route::group(['middleware' => ['auth']], function () {
 
 Route::get('/mailtest', 'MailController@email');
 
-Route::post('/upload', 'UploadController@upload')->name('upload');
-Route::get('/uploadV', 'UploadController@uploadView');
-
 Route::get('/shopfilter/{filter}', 'PhoneController@shopFilter')->where(['filter' => 'Samsung|Apple|Huawei']);
 
 Route::get('/mail', 'MailController@index');
+
 Route::post('/postEmail', 'MailController@postEmail')->name('postEmail');
 
-
+Route::get('/beauty', 'MailController@beautyMail');

@@ -33,7 +33,7 @@ class ShipmentDetailsController extends Controller
 
         Notification::add('success', '', 'Informazioni inserite con successo');
 
-        return view('index');
+        return redirect()->action('CartController@showCart');
 
 
     }

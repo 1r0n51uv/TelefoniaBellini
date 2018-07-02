@@ -108,6 +108,7 @@
                                                                 <th>Destinazione</th>
                                                                 <th>Dispositivi</th>
                                                                 <th>Totale</th>
+                                                                <th>Stato</th>
                                                             </tr>
                                                             </thead>
                                                             <tbody>
@@ -142,11 +143,11 @@
                                                                                 <a  href="/showDevice/{{$dev_id}}">
 
                                                                                     <button type="button" class="btn btn-info btn-tooltip" data-toggle="tooltip"
-                                                                                            data-placement="left" title="{{ \App\Phone::whereId($dev_id)->first()['brand'] }} -
-                                                                                                                     {{ \App\Phone::whereId($dev_id)->first()['model'] }} -
-                                                                                                                     {{ \App\Phone::whereId($dev_id)->first()['storage'] }}GB -
-                                                                                                                     {{ \App\Phone::whereId($dev_id)->first()['color'] }} -
-                                                                                                                     {{ \App\Phone::whereId($dev_id)->first()['price'] }}€" data-container="body"
+                                                                                            data-placement="left" title="{{ \App\Specification::whereId($dev_id)->first()['brand'] }} -
+                                                                                                                     {{ \App\Specification::whereId($dev_id)->first()['model'] }} -
+                                                                                                                     {{ \App\Specification::whereId($dev_id)->first()['memory'] }} -
+                                                                                                                     {{ \App\Specification::whereId($dev_id)->first()['color'] }} -
+                                                                                                                     {{ \App\Specification::whereId($dev_id)->first()['price'] }}€" data-container="body"
                                                                                             data-animation="true" data-delay="100">{{ $dev_id }}
 
                                                                                     </button>
@@ -169,6 +170,18 @@
 
                                                                     <td>{{ $order->total }}€</td>
 
+                                                                    <td>
+                                                                        <div class=" btn-group">
+                                                                            <button type="button" class="btn btn-default">{{ $order->status }}</button>
+                                                                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                                            </button>
+                                                                            <ul class="dropdown-menu">
+                                                                                <li><a href="/updateOrderStatus/{{ $order->id }}/Spedito">Spedito</a></li>
+                                                                                <li><a href="/updateOrderStatus/{{ $order->id }}/Cancellato">Cancellato</a></li>
+                                                                                <li><a href="/updateOrderStatus/{{ $order->id }}/In lavorazione">In lavorazione</a></li>
+                                                                                <li><a href="/updateOrderStatus/{{ $order->id }}/Ricevuto">Ricevuto</a></li>
+                                                                            </ul>
+                                                                        </div></td>
 
 
                                                                 </tr>
