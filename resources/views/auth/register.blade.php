@@ -9,7 +9,7 @@
                 <form class="form" method="POST" action="{{ route('register') }}">
                     {{ csrf_field() }}
                     <div class="header text-center">
-                        <h4 class="title title-up">Sign In</h4>
+                        <h4 class="title title-up">Registrati</h4>
                         <div class="social-line">
                             <a href="login/google" class="btn btn-neutral btn-google btn-icon btn-round">
                                 <i class="fab fa-google-plus-g" style="font-size:120%; margin-top:25%"></i>
@@ -20,6 +20,16 @@
                         </div>
                     </div>
                     <div class="card-body">
+
+                        @if ($errors->any())
+                            <div class="alert alert-danger">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
 
 
                         <div class="input-group">
@@ -49,39 +59,7 @@
                             <input type="password" class="form-control" placeholder="Password" name="password" required>
 
                         </div>
-                        <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                            <input type="text" class="form-control" placeholder="Indirizzo" name="indirizzo" required>
-                        </div>
-                        <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                            <input type="text" class="form-control" placeholder="Provincia" name="provincia" required>
-                        </div>
-                        <div class="input-group">
-                                    <span class="input-group-addon">
-                                        <i class="fas fa-user"></i>
-                                    </span>
-                            <input type="text" class="form-control" placeholder="CAP" name="cap" required>
-                        </div>
 
-
-
-
-
-
-
-
-                        <!-- If you want to add a checkbox to this form, uncomment this code -->
-                        <!-- <div class="checkbox">
-                          <input id="checkboxSignup" type="checkbox">
-                              <label for="checkboxSignup">
-                              Unchecked
-                              </label>
-                            </div> -->
                     </div>
                     <div class="footer text-center">
                             

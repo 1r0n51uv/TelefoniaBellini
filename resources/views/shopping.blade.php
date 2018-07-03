@@ -85,7 +85,7 @@
 
                                             </div>
 
-                                                <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; margin-top: 2%">
+                                            <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap" style="width: 60%; display:block; margin:auto; margin-top: 2%">
 
 
 
