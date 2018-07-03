@@ -5,7 +5,7 @@
 
     <div class="wrapper">
         <div class="page-header page-header-small" filter-color="blue">
-            <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/img/bg5.jpg');">
+            <div class="page-header-image" data-parallax="true" style="background-image: url('../assets/image/02.jpg'); background-repeat: repeat">
             </div>
             <div class="container">
                 <div class="content-center">
