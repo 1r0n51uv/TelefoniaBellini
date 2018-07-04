@@ -223,7 +223,7 @@
                                         <p class="category">Note</p>
 
                                         <p>Modifica indirizzo di spedizione</p>
-                                    <a href="/shipmentDetails">
+                                    <a href="/updateDetailsView/{{ $shipment->id }}">
                                         <button class="btn btn-info btn-icon btn-round" type="button">
                                             <i class="fas fa-edit" style="color: white;  font-size: 150%;"></i>
                                         </button>

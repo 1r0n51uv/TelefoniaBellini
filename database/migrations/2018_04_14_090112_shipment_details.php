@@ -24,6 +24,8 @@ class ShipmentDetails extends Migration
             $table->bigInteger('phone');
             $table->string('description')->nullable();
             $table->integer('user_id');
+            $table->integer('updated_at');
+            $table->integer('created_at');
             $table->timestamps();
         });
     }
