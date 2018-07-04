@@ -112,3 +112,5 @@ Route::get('/mail', 'MailController@index');
 Route::post('/postEmail', 'MailController@postEmail')->name('postEmail');
 
 Route::get('/beauty', 'MailController@beautyMail');
+
+Route::post('/resetPassword', 'ProfileController@resetPassword')->name('resetPass');
