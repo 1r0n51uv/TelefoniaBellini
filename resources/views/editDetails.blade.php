@@ -13,7 +13,7 @@
                             <h4 class="title title-up" style="color: black"><i class="fas fa-truck"></i> Informazioni di spedizione</h4>
                         </div>
 
-                        <form action="{{ route('insertShipmentDetails') }}" method="post">
+                        <form action="{{ route('/updateDetails/' . $details->id ) }}" method="post">
                             {{ csrf_field() }}
 
                             <div class="card-body">
@@ -68,6 +68,16 @@
                                             <div class="input-group form-group-no-border" >
 
                                                 <textarea type="text" class="form-control" placeholder="{{ $details->description }}" name="description"></textarea>
+                                            </div>
+
+                                            <div class="input-group form-group-no-border" >
+
+                                                <input type="number" class="form-control" placeholder="{{ $details->updated_at }}" name="updated_at" required>
+                                            </div>
+
+                                            <div class="input-group form-group-no-border" >
+
+                                                <textarea type="text" class="form-control" placeholder="{{ $details->created_at }}" name="created_at"></textarea>
                                             </div>
 
 
