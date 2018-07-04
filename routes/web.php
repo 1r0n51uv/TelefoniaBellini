@@ -96,12 +96,9 @@ Route::group(['middleware' => ['auth']], function () {
     Route::get('/profile', 'ProfileController@getProfile');
     Route::get('/shipmentDetails', 'ShipmentDetailsController@createShipmentDetailsView');
     Route::post('/insertShipmentDetails', 'ShipmentDetailsController@storeDetails')->name('insertShipmentDetails');
-    Route::get('/editDetailsView/{id}', 'ShipmentDetailsController@updateDetailsView');
+    Route::get('/updateDetailsView/{id}', 'ShipmentDetailsController@updateDetailsView');
     Route::post('/editDetails/{id}', 'ShipmentDetailsController@updateDetails');
-
-
     Route::get('/afterPay', 'CartController@makeOrder');
-
 
 
 });

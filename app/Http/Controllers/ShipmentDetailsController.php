@@ -53,11 +53,12 @@ class ShipmentDetailsController extends Controller
 
         $values = $request->all();
 
-        $details = ShipmentDetails::find($id);
+        
+        $details = ShipmentDetails::whereId($id)->first();
 
 
         if(isset($values['address'])&& $values['address'] != null) {
-            $details->addres = $request->input('address');
+            $details->address = $request->input('address');
         }
         if(isset($values['number'])&& $values['number'] != null) {
             $details->number = $request->input('number');
@@ -87,6 +88,7 @@ class ShipmentDetailsController extends Controller
             $details->created_at = $request->input('created_at');
         }
 
+        $details->save();
 
         return redirect()->action('ProfileController@getProfile');
 
