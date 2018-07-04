@@ -106,4 +106,25 @@ public static function deleteOrder($email, $order) {
 }
 
 
+public static function resetPassword($email, $pass) {
+
+    $data = [
+
+        'email' => $email,
+        'subject' => 'Comunicazione nuova password: ',
+        'pass' => $pass,
+
+    ];
+
+    Mail::send('mail.pass', $data, function ($message) use ($data) {
+
+        $message->from('spcorporation69@gmail.com', 'Comunicazione nuova password');
+        $message->to($data['email']);
+        $message->subject($data['subject']);
+
+    });
+
+
+}
+
 }
