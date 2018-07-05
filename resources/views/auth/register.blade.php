@@ -2,6 +2,7 @@
 
 @section('content')
 
+
 <div class="section section-signup" style="background-image: url('assets/image/registration.png'); background-size: cover; background-position: top center; min-height: 700px;">
     <div class="container">
         <div class="row">
@@ -14,6 +15,10 @@
                             <a href="login/google" class="btn btn-neutral btn-google btn-icon btn-round">
                                 <i class="fab fa-google-plus-g" style="font-size:120%; margin-top:25%"></i>
                             </a>
+                            &nbsp
+                            &nbsp
+                            &nbsp
+                            &nbsp
                             <a href="login/facebook" class="btn btn-neutral btn-facebook btn-icon btn-round">
                                 <i class="fab fa-facebook-square" style="font-size:120%; margin-top:25%"></i>
                             </a>
