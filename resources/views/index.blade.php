@@ -2,9 +2,6 @@
 
 @section('content')
 
-
-
-
     <div class="wrapper">
         <div class="page-header clear-filter" filter-color="blue">
             <div class="page-header-image" data-parallax="true"

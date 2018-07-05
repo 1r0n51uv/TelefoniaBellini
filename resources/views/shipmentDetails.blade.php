@@ -4,6 +4,7 @@
 
 
         <div class="section section-signup" style="background-image: url('/assets/image/shipment.png'); background-size: cover; background-position: top center; min-height: 700px;">
+
             <div class="container">
                 <div class="row justify-content-center">
 
