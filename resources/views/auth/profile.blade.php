@@ -219,13 +219,19 @@
                                         <h3 class="title">{{$shipment->phone}}</h3>
                                         <p class="category">Telefono</p>
 
-                                        <h3 class="title">{{$shipment->description}}</h3>
-                                        <p class="category">Note</p>
+                                    @if($shipment->description != null)
+                                            <h3 class="title">{{$shipment->description}}</h3>
+                                            <p class="category">Note</p>
+                                        @else
 
-                                        <p>Modifica indirizzo di spedizione</p>
+
+                                        @endif
+
+
+
                                     <a href="/updateDetailsView/{{$shipment->id}}">
-                                        <button class="btn btn-info btn-icon btn-round" type="button">
-                                            <i class="fas fa-edit" style="color: white;  font-size: 150%;"></i>
+                                        <button class="btn btn-info btn-round" type="button">
+                                            <i class="fas fa-edit" style="color: white;  font-size: 150%;"></i>Modifica indirizzo di spedizione
                                         </button>
                                     </a>
 

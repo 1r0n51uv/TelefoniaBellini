@@ -2,9 +2,9 @@
 
 @section('content')
 
-    <div class="section">
 
-        <div class="section section-signup" style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+
+        <div class="section section-signup" style="background-image: url('/assets/image/shipment.png'); background-size: cover; background-position: top center; min-height: 700px;">
             <div class="container">
                 <div class="row justify-content-center">
 
@@ -117,7 +117,7 @@
         </div>
 
 
-    </div>
+
 
 
 

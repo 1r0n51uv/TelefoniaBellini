@@ -2,9 +2,8 @@
 
 @section('content')
 
-    <div class="section">
 
-        <div class="section section-signup" style="background-image: url('assets/img/bg11.jpg'); background-size: cover; background-position: top center; min-height: 700px;">
+        <div class="section section-signup" style="background-image: url('/assets/image/shipment.png'); background-size: cover; background-position: top center; min-height: 700px;">
             <div class="container">
                 <div class="row justify-content-center">
 
@@ -24,25 +23,27 @@
 
                                         <div class="form-group">
 
+                                            <span style="color: white">Indirizzo</span>
                                             <div class="input-group form-group-no-border" >
 
-                                                <input type="text" class="form-control" placeholder="{{ $details->address }}" name="address" required>
+                                                <input type="text" class="form-control"  name="address" required>
                                             </div>
 
+                                            <span style="color: white">Numero</span>
                                             <div class="input-group form-group-no-border" >
 
-                                                <input type="text" class="form-control" placeholder="{{ $details->number }}" name="number" required>
+                                                <input type="text" class="form-control"  name="number" required>
                                             </div>
-
+                                            <span style="color: white">Città</span>
                                             <div class="input-group form-group-no-border" >
 
 
-                                                <input type="text" class="form-control" placeholder="{{ $details->city }}" name="city" required>
+                                                <input type="text" class="form-control"  name="city" required>
                                             </div>
-
+                                            <span style="color: white">Provincia</span>
                                             <div class="input-group form-group-no-border" >
 
-                                                <input type="text" class="form-control" placeholder="{{ $details->province }}" name="province" required>
+                                                <input type="text" class="form-control"  name="province" required>
                                             </div>
 
 
@@ -54,20 +55,20 @@
                                     <div class="col-md-6">
 
                                         <div class="form-group">
-
+                                            <span style="color: white">CAP</span>
                                             <div class="input-group form-group-no-border"  >
 
-                                                <input type="number" class="form-control" placeholder="{{ $details->cap }}" name="cap" required>
+                                                <input type="number" class="form-control"  name="cap" required >
                                             </div>
-
+                                            <span style="color: white">Telefono</span>
                                             <div class="input-group form-group-no-border" >
 
-                                                <input type="number" class="form-control" placeholder="{{ $details->phone }}" name="phone" required>
+                                                <input type="number" class="form-control"  name="phone" required >
                                             </div>
-
+                                            <span style="color: white">Note</span>
                                             <div class="input-group form-group-no-border" >
 
-                                                <textarea type="text" class="form-control" placeholder="{{ $details->description }}" name="description"></textarea>
+                                                <textarea type="text" class="form-control"  name="description"></textarea>
                                             </div>
 
 
@@ -86,6 +87,9 @@
 
                                         <button type="submit" class="btn btn-info">Inserisci dati</button>
 
+                                        <a href="/profile">
+                                            <button class="btn btn-danger">Annulla</button>
+                                        </a>
                                     </div>
 
                                 </div>
@@ -112,9 +116,9 @@
         </div>
 
 
-    </div>
 
 
-    <script src="./assets/js/stripeui.js" type="text/javascript"></script>
+
+
 
 @endsection

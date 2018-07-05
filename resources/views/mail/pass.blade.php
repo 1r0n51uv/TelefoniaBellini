@@ -30,6 +30,7 @@
             <br>
             Via Passanti 268, San Giuseppe Vesuviano (NA) - 80047
         </li>
+    </ul>
 
 @stop
 
