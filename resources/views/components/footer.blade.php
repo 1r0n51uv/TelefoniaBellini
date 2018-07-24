@@ -24,6 +24,9 @@
                     P.IVA 08875171210
                     <br>
                     <br>
+                    <a href="/privacypolicy">Informativa sulla privacy</a>
+                    <br>
+                    <br>
                     Contatti
                     <br>
                     0812158318
