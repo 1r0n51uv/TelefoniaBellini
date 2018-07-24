@@ -39,6 +39,10 @@ Route::get('/search', function() {
     return view('search');
 });
 
+Route::get('/privacypolicy', function() {
+    return view('privacypolicy');
+});
+
 
 Route::get('/phone/{id}', 'PhoneController@singlephone');
 
