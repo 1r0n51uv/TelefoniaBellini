@@ -31,15 +31,19 @@ class SocialUserController extends Controller
 
         $pass = str_random(8);
 
+
         switch($provider) { 
-            case 'google': 
-                 
-                $dbUser['name'] = $user['name']['givenName']; 
-                $dbUser['surname'] = $user['name']['familyName']; 
+            case 'google':
+                $NameArray = explode(' ',$user['name']);
+                $First_name = $NameArray[0];
+                $Last_name = $NameArray[1];
+
+                $dbUser['name'] = $First_name;
+                $dbUser['surname'] = $Last_name;
                 $dbUser['email'] = $user->getEmail(); 
                 $dbUser['password'] = Hash::make($pass);
                 $dbUser['g_id'] = $user->getId(); 
-                $dbUser['g_pic'] = "https://pikmail.herokuapp.com/" . $user->getId() . "?size=1024"; 
+                $dbUser['g_pic'] = $user->getAvatar();
                 break; 
             case 'facebook': 
                 $dbUser['name'] = $user['first_name']; 
@@ -47,7 +51,7 @@ class SocialUserController extends Controller
                 $dbUser['email'] = $user->getEmail(); 
                 $dbUser['password'] = Hash::make($pass);
                 $dbUser['fb_id'] = $user->getId(); 
-                $dbUser['fb_pic'] = "https://graph.facebook.com/" . $user->getId() ."/picture?width=9999"; 
+                $dbUser['fb_pic'] = $user->getAvatar();
                 break; 
             } 
              

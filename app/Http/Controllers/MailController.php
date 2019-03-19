@@ -105,7 +105,6 @@ public static function deleteOrder($email, $order) {
 
 }
 
-
 public static function resetPassword($email, $pass) {
 
     $data = [
@@ -124,6 +123,26 @@ public static function resetPassword($email, $pass) {
 
     });
 
+
+}
+
+public static function mailtest(){
+
+    $data = [
+
+        'email' => 'galaxysiuv@gmail.com',
+        'subject' => 'telbel',
+        'message' => 'oeeeee',
+
+    ];
+
+    Mail::send('mail.test', $data, function ($message) use ($data) {
+
+        $message->from('spcorporation69@gmail.com', 'Mail Test');
+        $message->to($data['email']);
+        $message->subject($data['subject']);
+
+    });
 
 }
 

@@ -65,19 +65,13 @@ Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', '
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 
 
-
-
 Route::get('/device', function (){
     return view('device');
 });
 
-
 Route::get('/adminTemp', function (){
     return view('admin.templateadmin');
 });
-
-
-
 
 Route::group(['middleware' => ['admin', 'auth']], function () {
 
@@ -107,7 +101,7 @@ Route::group(['middleware' => ['auth']], function () {
 });
 
 
-Route::get('/mailtest', 'MailController@email');
+Route::get('/mailtest', 'MailController@mailtest');
 
 Route::get('/shopfilter/{filter}', 'PhoneController@shopFilter')->where(['filter' => 'Samsung|Apple|Huawei']);
 
