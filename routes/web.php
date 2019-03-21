@@ -20,6 +20,10 @@ Route::get('/template', function (){
     return view('template');
 });
 
+Route::get('/slider', function (){
+   return view('components.homeSlider');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
