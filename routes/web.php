@@ -21,7 +21,7 @@ Route::get('/template', function (){
 });
 
 Route::get('/slider', function (){
-   return view('components.homeSlider');
+   return view('components.brandHome');
 });
 
 Auth::routes();

@@ -32,6 +32,8 @@
 
     <link href="../assets/carousel/carousel.css" rel="stylesheet" />
 
+    <link href="../assets/brandHome/brand_home.css" rel="stylesheet" />
+
 
 
 </head>
@@ -98,6 +100,14 @@
     });
 </script>
 
+<script>
+    /* Demo purposes only */
+    $("figure").mouseleave(
+        function() {
+            $(this).removeClass("hover");
+        }
+    );
+</script>
 
 </body>
 </html>
