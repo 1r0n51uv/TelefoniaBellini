@@ -14,7 +14,6 @@
 
 Route::get('/', 'PhoneController@evidence');
 
-
 Route::get('/template', function (){
     return view('template');
 });
@@ -79,6 +78,7 @@ Route::get('/adminTemp', function (){
 
 Route::group(['middleware' => ['admin', 'auth']], function () {
 
+
     Route::post('/addSpecification', 'PhoneController@addSpecification');
     Route::get('/deleteDevice/{id}', 'PhoneController@deletePhone');
     Route::get('/editphone/{id}', 'PhoneController@editPhone');
@@ -86,10 +86,11 @@ Route::group(['middleware' => ['admin', 'auth']], function () {
     Route::get('/addphone', function (){
         return view('admin.addphone');
     });
-
     Route::get('/admin', 'AdminController@adminHome');
     Route::get('/updateOrderStatus/{id}/{status}', 'AdminController@changeOrderStaut')->where(['status' => 'Spedito|Cancellato|In lavorazione|Ricevuto']);
-
+    Route::get('/manageSlider', function (){
+        return view('react');
+    });
 });
 
 Route::group(['middleware' => ['auth']], function () {
