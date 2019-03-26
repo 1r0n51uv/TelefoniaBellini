@@ -9,6 +9,13 @@ use function Symfony\Component\Console\Tests\Command\createClosure;
 
 class PhoneController extends Controller
 {
+
+    public function evidence() {
+        $evidence = Specification::where('description', '!=', ' ')->get();
+        $paginate = false;
+        return view('index', compact('evidence', 'paginate'));
+    }
+
     public function index() {
         $phones = Specification::paginate(8);
         $paginate = true;

@@ -1,10 +1,5 @@
-
-
-
-
-
 <div class="row justify-content-center">
-    <div class="col-md-4 col-xs-12" style="margin-top: 1%">
+    <div class="col-md-4 col-xs-12" style="margin-top: 3%">
 
         <figure class="snip1104 apple" style="margin: 0 auto">
             <div>
@@ -18,7 +13,7 @@
         </figure>
 
     </div>
-    <div class="col-md-4" style="margin-top: 1%">
+    <div class="col-md-4" style="margin-top: 3%">
 
         <figure class="snip1104 samsung" style="margin: 0 auto">
             <img src="https://firebasestorage.googleapis.com/v0/b/telbel.appspot.com/o/home%2FsamsungHome.png?alt=media&token=d443b57d-0a42-4660-8b25-917bc44652b3" alt="sample33" />
@@ -29,7 +24,7 @@
         </figure>
 
     </div>
-    <div class="col-md-4" style="margin-top: 1%">
+    <div class="col-md-4" style="margin-top: 3%">
 
         <figure class="snip1104 huawei" style="margin: 0 auto">
             <img src="https://firebasestorage.googleapis.com/v0/b/telbel.appspot.com/o/home%2FhuaweiHome.png?alt=media&token=89bccf46-6305-4588-af1b-da8df6675b6a" alt="sample33" />

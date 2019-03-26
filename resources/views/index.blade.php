@@ -18,8 +18,9 @@
                 <div class="container">
                     @include('components.brandHome')
                 </div>
-
             </div>
+
+            @include('homeEvidence')
 
 
         </div>

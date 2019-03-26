@@ -34,10 +34,11 @@ Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCall
 
 
 
-Route::get('/index', function() {
+/*Route::get('/index', function() {
     return view('index');
 })->name('index');
-
+*/
+Route::get('/index', 'PhoneController@evidence');
 
 Route::get('/search', function() {
     return view('search');
