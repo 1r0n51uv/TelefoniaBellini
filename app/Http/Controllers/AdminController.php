@@ -19,7 +19,7 @@ class AdminController extends Controller
         $orders = Order::all();
         $users = User::all();
 
-        return view('admin.homeadmin', compact('phones', 'spec', 'orders', 'users'));
+        return view('admin.homeadmin', compact('spec', 'orders', 'users'));
 
 
     }
