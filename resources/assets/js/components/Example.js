@@ -6,12 +6,12 @@ import { FirestoreProvider } from 'react-firestore';
 import Home from './home';
 
 const config = {
-    apiKey: "AIzaSyBsTpMjxGaxO5wgjojRt28NwLqe7b4sSak",
-    authDomain: "telbel.firebaseapp.com",
-    databaseURL: "https://telbel.firebaseio.com",
-    projectId: "telbel",
-    storageBucket: "telbel.appspot.com",
-    messagingSenderId: "354507874547"
+    apiKey: process.env.MIX_API_KEY,
+    authDomain: process.env.MIX_AUTH_DOMAIN,
+    databaseURL: process.env.MIX_DATABASE_URL,
+    projectId: process.env.MIX_PROJECT_ID,
+    storageBucket: process.env.MIX_STORAGE_BUCKET,
+    messagingSenderId: process.env.MIX_MESSAGING_SENDER_ID
 };
 
 firebase.initializeApp(config);
