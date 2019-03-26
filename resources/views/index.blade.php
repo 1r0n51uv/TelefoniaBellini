@@ -20,7 +20,7 @@
                 </div>
             </div>
 
-            @include('homeEvidence')
+            @include('components.homeEvidence')
 
 
         </div>

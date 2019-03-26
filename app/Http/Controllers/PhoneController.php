@@ -12,8 +12,14 @@ class PhoneController extends Controller
 
     public function evidence() {
         $evidence = Specification::where('description', '!=', ' ')->get();
-        $paginate = false;
-        return view('index', compact('evidence', 'paginate'));
+        if ($evidence != null) {
+            $paginate = false;
+            return view('index', compact('evidence', 'paginate'));
+        } else {
+            return view('index');
+        }
+
+
     }
 
     public function index() {
