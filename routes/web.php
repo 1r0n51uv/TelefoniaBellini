@@ -12,9 +12,8 @@
 */
 
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PhoneController@evidence');
+
 
 Route::get('/template', function (){
     return view('template');
