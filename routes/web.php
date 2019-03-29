@@ -12,7 +12,12 @@
 */
 
 
-Route::get('/', 'PhoneController@evidence');
+//HOME ROUTES
+
+Route::get('/', 'HomeController@index');
+Route::get('/index', 'HomeController@index');
+Route::get('/HOME', 'HomeController@index');
+
 
 Route::get('/template', function (){
     return view('template');
@@ -24,19 +29,11 @@ Route::get('/slider', function (){
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
-
 
 Route::get('login/{provider}', 'Auth\LoginController@redirectToProvider')->where(['provider' => 'facebook|google']);
 Route::get('login/{provider}/callback', 'Auth\LoginController@handleProviderCallback')->where(['provider' => 'facebook|google']);
 
 
-
-/*Route::get('/index', function() {
-    return view('index');
-})->name('index');
-*/
-Route::get('/index', 'PhoneController@evidence');
 
 Route::get('/search', function() {
     return view('search');
@@ -61,9 +58,9 @@ Route::get('/addToCart/{id}', 'CartController@addToCart');
 Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
 Route::get('/cart/{id}', 'CartController@deleteCartItem');
-
-
 Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', 'emptyCart', 'shipmentDetails');
+
+
 
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 
@@ -76,8 +73,9 @@ Route::get('/adminTemp', function (){
     return view('admin.templateadmin');
 });
 
-Route::group(['middleware' => ['admin', 'auth']], function () {
 
+
+Route::group(['middleware' => ['admin', 'auth']], function () {
 
     Route::post('/addSpecification', 'PhoneController@addSpecification');
     Route::get('/deleteDevice/{id}', 'PhoneController@deletePhone');
@@ -88,9 +86,7 @@ Route::group(['middleware' => ['admin', 'auth']], function () {
     });
     Route::get('/admin', 'AdminController@adminHome');
     Route::get('/updateOrderStatus/{id}/{status}', 'AdminController@changeOrderStaut')->where(['status' => 'Spedito|Cancellato|In lavorazione|Ricevuto']);
-    Route::get('/manageSlider', function (){
-        return view('react');
-    });
+    Route::get('/manageSlider', 'SliderController@editSlider');
 });
 
 Route::group(['middleware' => ['auth']], function () {
@@ -117,3 +113,9 @@ Route::post('/postEmail', 'MailController@postEmail')->name('postEmail');
 Route::get('/beauty', 'MailController@beautyMail');
 
 Route::post('/resetPassword', 'ProfileController@resetPassword')->name('resetPass');
+
+
+//IMAGE UPLOAD
+//Route::get('image-upload', 'ImageUploadController@imageUpload')->name('image.upload');
+
+Route::post('image-upload', 'SliderController@imageUploadPost')->name('image.upload.post');

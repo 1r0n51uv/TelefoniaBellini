@@ -13,7 +13,7 @@
         <div class="carousel-inner skyblue">
 
             <!-- first slide -->
-            <div class="carousel-item active" style="background-image: url('/assets/image/home/iphonexr.jpg'); background-size: cover; background-position: 50% 50% ">
+            <div class="carousel-item active" style="background-image: url({{$slider->pic1}}); background-size: cover; background-position: 50% 50% ">
                 <div class="carousel-caption d-md-block">
                     <h3 data-animation="animated bounceInRight" style="background-color: #345C7D">
                         This is the caption for slide 1
@@ -23,7 +23,7 @@
             </div>
 
             <!-- second slide -->
-            <div class="carousel-item skyblue" style="background-image: url('/assets/image/home/s10.jpg'); background-size: cover; background-position: 50% 50% ">
+            <div class="carousel-item skyblue" style="background-image: url({{$slider->pic2}}); background-size: cover; background-position: 50% 50% ">
 
                 <div class="carousel-caption d-md-block" >
                     <h3 data-animation="animated bounceInUp" style="background-color: #345C7D">
@@ -34,7 +34,15 @@
             </div>
 
             <!-- third slide -->
-            <div class="carousel-item skyblue">
+            <div class="carousel-item skyblue" style="background-image: url({{$slider->pic3}}); background-size: cover; background-position: 50% 50% ">
+
+                <div class="carousel-caption d-md-block" >
+                    <h3 data-animation="animated bounceInUp" style="background-color: #345C7D">
+                        This is the caption for slide 2
+                    </h3>
+                    <button class="btn btn-primary btn-lg" data-animation="animated zoomInRight">Button</button>
+                </div>
+            </div>
                 <div class="carousel-caption d-md-block">
                     <h3 class="icon-container" data-animation="animated zoomInLeft">
                         <span class="fa fa-glass"></span>

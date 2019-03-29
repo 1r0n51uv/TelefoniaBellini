@@ -33,7 +33,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
-                'description' => '',
+                'description' => 'Novità',
             ),array(
                 'id'=>'2',
                 'pic1'=>'../assets/image/catalogotelefoni/samsungs8plus/1.png',
@@ -55,7 +55,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
-                'description' => '',
+                'description' => 'Usato',
             ),array(
                 'id'=>'3',
                 'pic1'=>'../assets/image/catalogotelefoni/samsungj3/1.png',
@@ -77,7 +77,7 @@ class SpecificationTableSeeder extends Seeder
                 'color' => 'black',
                 'status' => 'nuovo',
                 'qty' => '1',
-                'description' => '',
+                'description' => 'Novità',
             ),array(
                 'id'=>'4',
                 'pic1'=>'../assets/image/catalogotelefoni/samsungj5/1.png',

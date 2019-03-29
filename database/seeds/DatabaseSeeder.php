@@ -13,5 +13,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(SpecificationTableSeeder::class);
         $this->call(AdminSeeder::class);
+        $this->call(SliderSeeder::class);
+
     }
 }

@@ -250,16 +250,7 @@
                                                 <div class="tab-pane" id="imgManager" role="tabpanel">
 
                                                     <div class="body">
-                                                        <div class="row justify-content-center">
-                                                            <h2>Scegli quale immagini modificare</h2>
-                                                            <div class="col-md-12 text-center">
-                                                                <a href="/manageSlider"><button class="btn btn-info btn-lg">Slider</button></a>
-                                                                <a href="#"><button class="btn btn-default btn-lg">Prodotti</button></a>
-
-
-                                                            </div>
-
-                                                        </div>
+                                                        @include('admin.editSlider')
                                                     </div>
 
                                                 </div>
