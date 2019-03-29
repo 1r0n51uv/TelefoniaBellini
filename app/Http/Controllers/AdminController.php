@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\ShipmentDetails;
-use App\Slider;
 use App\Specification;
 use App\Phone;
 use App\User;
@@ -19,9 +18,8 @@ class AdminController extends Controller
         $spec = Specification::all();
         $orders = Order::all();
         $users = User::all();
-        $slider = Slider::all()->first();
 
-        return view('admin.homeadmin', compact('phones', 'spec', 'orders', 'users','slider'));
+        return view('admin.homeadmin', compact('spec', 'orders', 'users'));
 
 
     }
