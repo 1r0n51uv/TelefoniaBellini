@@ -11,16 +11,11 @@
 
             <div class="row">
                 @include('components.homeSlider')
+                @include('components.brandHome')
+                @include('components.homeEvidence')
+                @include('components.indexNews')
             </div>
 
-
-            <div class="row justify-content-center">
-                <div class="container">
-                    @include('components.brandHome')
-                </div>
-            </div>
-
-            @include('components.homeEvidence')
 
 
         </div>

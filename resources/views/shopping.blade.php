@@ -15,41 +15,8 @@
                     <div class="row justify-content-center" style="text-align: center">
 
                         <div class="row justify-content-center">
-
-                            <div class="col-12">
-
-                                <h5>Scegli tra i migliori brand</h5>
-
-                            </div>
-
+                            @include('components.brandHome')
                         </div>
-
-                        <div class="row justify-content-center">
-
-                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
-
-                                <a href="/shopfilter/Huawei">
-                                    <img src="../assets/image/huawei.png" alt="Raised Image" class="img-raise" width="60%">
-
-                                </a>
-
-
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
-                                <a href="/shopfilter/Samsung">
-                                    <img src="../assets/image/samsara.png" alt="Raised Image" class="img-raise" width="60%">
-
-                                </a>
-                            </div>
-                            <div class="col-md-2 col-sm-4 col-xs-12" style="display: inline-block;">
-                                <a href="/shopfilter/Apple">
-                                    <img src="../assets/image/appleb.png" alt="Raised Image" class="img-raise" width="60%">
-                                </a>
-                            </div>
-
-                        </div>
-
-
 
                     </div>
 

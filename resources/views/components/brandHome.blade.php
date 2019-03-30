@@ -9,7 +9,7 @@
             <figcaption>
                 <h2><span>Apple</span></h2>
             </figcaption>
-            <a href="#"></a>
+            <a href="/shopfilter/Apple"></a>
         </figure>
 
     </div>
@@ -20,7 +20,7 @@
             <figcaption>
                 <h2><span>Samsung</span></h2>
             </figcaption>
-            <a href="#"></a>
+            <a href="/shopfilter/Samsung"></a>
         </figure>
 
     </div>
@@ -31,7 +31,7 @@
             <figcaption>
                 <h2><span>Huawei</span></h2>
             </figcaption>
-            <a href="#"></a>
+            <a href="/shopfilter/Huawei"></a>
         </figure>
 
     </div>
