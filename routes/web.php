@@ -59,7 +59,7 @@ Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
 Route::get('/cart/{id}', 'CartController@deleteCartItem');
 Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', 'emptyCart', 'shipmentDetails');
-
+Route::post('/switchDestination', 'CheckoutController@switchDestination')->middleware('auth', 'emptyCart', 'shipmentDetails');
 
 
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
@@ -119,3 +119,5 @@ Route::post('/resetPassword', 'ProfileController@resetPassword')->name('resetPas
 //Route::get('image-upload', 'ImageUploadController@imageUpload')->name('image.upload');
 
 Route::post('image-upload', 'SliderController@imageUploadPost')->name('image.upload.post');
+
+Route::get('/reactCheck', 'CheckoutController@testReact')->middleware('auth', 'emptyCart', 'shipmentDetails');
