@@ -64,7 +64,7 @@ class CartController extends Controller
 
         Cart::destroy();
 
-        MailController::mailOrder(Auth::user()->email, $order);
+        //MailController::mailOrder(Auth::user()->email, $order);
 
         return redirect()->action('HomeController@index');
     }

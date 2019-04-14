@@ -58,11 +58,11 @@ Route::get('/addToCart/{id}', 'CartController@addToCart');
 Route::get('/cartDestroy', 'CartController@destroyCart');
 Route::get('/cart', 'CartController@showCart');
 Route::get('/cart/{id}', 'CartController@deleteCartItem');
-Route::get('/checkout', 'CheckoutController@goToCheckout')->middleware('auth', 'emptyCart', 'shipmentDetails');
-Route::get('/switchDestination/{destination}', 'CheckoutController@selectDestination')
-    ->middleware('auth', 'emptyCart', 'shipmentDetails')
-    ->where(['destination' => 'ritiro|spedizione']);;
 
+Route::group(['middleware' => ['emptyCart', 'auth', 'shipmentDetails']], function () {
+    Route::get('/switchDestination/{destination}', 'CheckoutController@selectDestination')->where(['destination' => 'ritiro|spedizione']);
+    Route::get('/checkout', 'CheckoutController@goToCheckout');
+});
 
 Route::get('/showDevice/{id}', 'PhoneController@showSingle');
 

@@ -11,7 +11,6 @@
 
                 <div class="col-md-6">
 
-
                     <div class="row">
 
                         <div class="card col-md-12" style="background-color: #F7F8F9">
@@ -74,18 +73,18 @@
                                             <h4>Articoli: <b>{{ Cart::subtotal()}} €</b></h4>
                                             <h4>Spedizione: <b>10€</b></h4>
                                             <hr>
-                                        <div style="text-align: center">
-                                            <p class="category">Totale</p>
-                                            <h2>{{ Cart::subtotal() + 10.00}} €</h2>
-                                        </div>
+                                            <div style="text-align: right">
+                                                <p class="category">Totale</p>
+                                                <h2 class="title">{{ Cart::subtotal() + 10.00}} €</h2>
+                                            </div>
 
-                                            @else
+                                        @else
                                             <h4>Articoli: <b>{{ Cart::subtotal()}} €</b></h4>
                                             <h4>Spedizione: <b>Gratis</b></h4>
                                             <hr>
-                                            <div style="text-align: center">
+                                            <div style="text-align: right">
                                                 <p class="category">Totale</p>
-                                                <h2>{{ Cart::subtotal() }} €</h2>
+                                                <h2 class="title">{{ Cart::subtotal() }} €</h2>
                                             </div>
 
                                         @endif
@@ -100,9 +99,6 @@
 
                             </div>
 
-                            <div class="card-footer" style="text-align: center">
-                                <button class="btn btn-lg btn-success">Vai al pagamento <i class="far fa-credit-card"></i></button>
-                            </div>
 
                         </div>
 
@@ -122,6 +118,8 @@
 
 
                     @include('components.chooseDestination')
+
+                    @include('components.paymentView')
 
                 </div>
 

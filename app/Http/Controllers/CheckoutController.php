@@ -19,7 +19,7 @@ class CheckoutController extends Controller
     public function selectDestination($destination) {
         session()->put('dest', $destination);
         return back();
-
     }
+
 
 }

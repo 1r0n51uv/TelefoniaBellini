@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\ShipmentDetails;
 use Illuminate\Http\Request;
 use Stripe;
 use App\User;
@@ -19,6 +20,7 @@ class StripeController extends Controller
 
         $user = User::whereId($id)->first();
 
+
         $customer = $stripe->customers()->find($id);
 
         $card = $stripe->cards()->create($id, $_POST['stripeToken']);
@@ -28,10 +30,6 @@ class StripeController extends Controller
             'currency' => 'Eur',
             'amount'   => $amount,
         ]);
-
-        //OrderController::storeOrder();
-
-
         return redirect()->action('CartController@destroyCart');
 
     }
@@ -53,6 +51,10 @@ class StripeController extends Controller
             ]);
         }
 
+    }
+
+    public function ciao() {
+        echo 'ciao';
     }
 
 

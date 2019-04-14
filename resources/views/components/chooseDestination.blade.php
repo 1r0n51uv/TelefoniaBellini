@@ -1,6 +1,6 @@
 <div class="row">
 
-    <div class="card col-md-12" style="margin-top:-3%; background-color: #F7F8F9">
+    <div class="card col-md-12" style="background-color: #F7F8F9">
 
 
         <div class="card-body">
@@ -20,6 +20,14 @@
                         <p>Puoi ritirare il tuo ordine gratuitamente presso il nostro punto vendita</p>
 
                         @if(session()->get('dest') == 'ritiro')
+
+                            <li class="nav-item" style="display:inline-block">
+                                <a class="nav-link active" href="/switchDestination/ritiro">
+                                    <i class="fas fa-people-carry" style="font-size: 170%"></i>
+                                </a>
+                            </li>
+
+                            @elseif(session()->get('dest') == null)
 
                             <li class="nav-item" style="display:inline-block">
                                 <a class="nav-link active" href="/switchDestination/ritiro">
