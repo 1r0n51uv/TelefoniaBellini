@@ -40,6 +40,9 @@ class Kernel extends HttpKernel
         'api' => [
             'throttle:60,1',
             'bindings',
+            'auth:api',
+            'emptyCart',
+            'shipmentDetails'
         ],
     ];
 
@@ -62,5 +65,6 @@ class Kernel extends HttpKernel
         'emptyCart' => \App\Http\Middleware\CartCheckout::class,
         'shipmentDetails' => \App\Http\Middleware\ShipmentDetailsMiddleware::class,
         'admin' => \App\Http\Middleware\AdminMiddleware::class,
+        'ajax' => \App\Http\Middleware\RequestIsAjax::class,
     ];
 }

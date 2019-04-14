@@ -34,6 +34,9 @@
 
     <link href="../assets/brandHome/brand_home.css" rel="stylesheet" />
 
+    <link href="../assets/sass/checkbox.sass" rel="stylesheet" />
+
+    <link href="../assets/css/checkbox.css" rel="stylesheet">
 
 
 </head>

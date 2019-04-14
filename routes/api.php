@@ -13,9 +13,18 @@ use Illuminate\Http\Request;
 |
 */
 
+/*
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+*/
 
 
-Route::post('/pay', 'StripeController@pay');
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::post('/pay', 'StripeController@pay');
+    Route::get('/shipmentDetails', 'CheckoutController@retrieveShipmentDetails');
+    Route::get('/user', function (Request $request) {
+        return $request->user();
+    });
+});
