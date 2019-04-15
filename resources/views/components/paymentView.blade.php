@@ -25,6 +25,9 @@
 
                             <div class="text-center">
                                 <button type="submit" class="btn btn-success">Acquista</button>
+
+
+
                             </div>
 
                             @if(session()->get('dest') == 'spedizione')
@@ -35,6 +38,17 @@
                             <input type="text" hidden value="{{Auth::user()->id}}" name="user">
 
                         </form>
+                    </div>
+
+                    <div class="col-md-12" style="text-align: center">
+                        <hr>
+                        <h2><i class="fab fa-cc-visa"></i>
+                            <i class="fab fa-cc-mastercard"></i>
+                            <i class="fab fa-cc-discover"></i>
+                            <i class="fab fa-cc-amex"></i>
+                        </h2>
+
+
                     </div>
 
                 </div>
