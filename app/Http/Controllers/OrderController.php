@@ -10,7 +10,7 @@ use Notification;
 
 class OrderController extends Controller
 {
-    public static function storeOrder($user, $shipment, $products, $total) {
+    public static function storeOrder($user, $shipment, $products, $total, $dest) {
 
         $order = new Order;
 
@@ -19,6 +19,7 @@ class OrderController extends Controller
         $order['products_id'] = $products;
         $order['total'] = $total;
         $order['status'] = "Ricevuto";
+        $order['destination'] = $dest;
 
         $order->save();
 

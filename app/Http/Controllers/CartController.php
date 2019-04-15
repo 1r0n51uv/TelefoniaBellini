@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\OrderController;
 use App\ShipmentDetails;
 use App\Specification;
 use Cart;
@@ -9,7 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Notification;
 use App\Phone;
 use Illuminate\Http\Request;
-use App\Http\Controllers\OrderController;
+
 
 class CartController extends Controller
 {
@@ -19,8 +20,6 @@ class CartController extends Controller
         $item = Specification::whereId($id)->first();
 
         Cart::add($item->id, $item, 1, $item->price);
-
-        //echo "addedd";
 
         Notification::add('success', '', 'Elemento aggiunto al carrello');
 
@@ -32,8 +31,7 @@ class CartController extends Controller
     }
 
     public function deleteCartItem($id) {
-        
-        //echo $id;
+
         Cart::remove($id);
         Notification::add('error', '', 'Elemento rimosso dal carrello');
         return redirect()->action('CartController@showCart');
@@ -58,7 +56,13 @@ class CartController extends Controller
 
         $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
 
-        $order = OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal());
+        if (session()->get('dest') == 'spedizione') {
+            OrderController::storeOrder(Auth::user(), $shipment, $products, intval(str_replace(",","",Cart::subtotal())) + 10, session()->get('dest'));
+        } else {
+            OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal(), session()->get('dest'));
+        }
+
+
 
         Notification::add('success', '', 'Ordine Completato, accedi al tuo profilo per visualizzarne lo stato');
 

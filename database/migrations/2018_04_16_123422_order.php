@@ -20,6 +20,7 @@ class Order extends Migration
             $table->string('shipment_id');
             $table->string('total');
             $table->string('status');
+            $table->string('destination');
             $table->timestamps();
         });
     }

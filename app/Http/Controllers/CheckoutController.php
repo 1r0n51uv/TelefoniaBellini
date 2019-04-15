@@ -12,6 +12,7 @@ class CheckoutController extends Controller
 
     public function goToCheckout() {
         $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
+
         return view('checkout', compact('shipment'));
 
     }

@@ -75,7 +75,7 @@
                                             <hr>
                                             <div style="text-align: right">
                                                 <p class="category">Totale</p>
-                                                <h2 class="title">{{ Cart::subtotal() + 10.00}} €</h2>
+                                                <h2 class="title">{{ intval(str_replace(",","",Cart::subtotal())) + 10}}.00 €</h2>
                                             </div>
 
                                         @else
@@ -119,17 +119,49 @@
 
                     @include('components.chooseDestination')
 
-                    @include('components.paymentView')
 
                 </div>
 
             </div>
 
+            <div class="row">
+
+                <div class="col-md-6">
+
+                    @if(session()->get('dest') == 'spedizione')
+
+                        @include('components.shipmentDetailsCheckout')
+                    @endif
+                </div>
+
+                <div class="col-md-1">
+
+                </div>
+
+
+
+                <div class="col-md-5">
+
+                    @include('components.paymentView')
+
+                </div>
+
+
+
+
+
+
+            </div>
+
+
+
         </div>
 
-
-
     </div>
+
+
+
+
 
 
     <script src="./assets/js/stripeui.js" type="text/javascript"></script>
