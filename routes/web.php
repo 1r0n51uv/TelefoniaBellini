@@ -16,7 +16,7 @@
 
 Route::get('/', 'HomeController@index');
 Route::get('/index', 'HomeController@index');
-Route::get('/HOME', 'HomeController@index');
+Route::get('/home', 'HomeController@index');
 
 
 Route::get('/template', function (){

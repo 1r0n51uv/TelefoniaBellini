@@ -28,11 +28,10 @@
                             </div>
 
                             @if(session()->get('dest') == 'spedizione')
-                                <input type="text" hidden value="{{Cart::subtotal() + 10}}" name="amount">
+                                <input type="text" hidden value="{{intval(str_replace(",","",Cart::subtotal())) + 10}}" name="amount">
                             @else
                                 <input type="text" hidden value="{{Cart::subtotal()}}" name="amount">
                             @endif
-
                             <input type="text" hidden value="{{Auth::user()->id}}" name="user">
 
                         </form>

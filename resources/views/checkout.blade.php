@@ -75,7 +75,7 @@
                                             <hr>
                                             <div style="text-align: right">
                                                 <p class="category">Totale</p>
-                                                <h2 class="title">{{ Cart::subtotal() + 10.00}} €</h2>
+                                                <h2 class="title">{{ intval(str_replace(",","",Cart::subtotal())) + 10}}.00 €</h2>
                                             </div>
 
                                         @else
