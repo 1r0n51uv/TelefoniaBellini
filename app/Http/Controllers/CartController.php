@@ -20,8 +20,6 @@ class CartController extends Controller
 
         Cart::add($item->id, $item, 1, $item->price);
 
-        //echo "addedd";
-
         Notification::add('success', '', 'Elemento aggiunto al carrello');
 
         return redirect()->action('PhoneController@index');
@@ -32,8 +30,7 @@ class CartController extends Controller
     }
 
     public function deleteCartItem($id) {
-        
-        //echo $id;
+
         Cart::remove($id);
         Notification::add('error', '', 'Elemento rimosso dal carrello');
         return redirect()->action('CartController@showCart');
@@ -58,7 +55,7 @@ class CartController extends Controller
 
         $shipment = ShipmentDetails::whereUserId(Auth::user()->id)->first();
 
-        $order = OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal());
+        OrderController::storeOrder(Auth::user(), $shipment, $products, Cart::subtotal(), session()->get('dest'));
 
         Notification::add('success', '', 'Ordine Completato, accedi al tuo profilo per visualizzarne lo stato');
 

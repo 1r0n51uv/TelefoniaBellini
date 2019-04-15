@@ -18,14 +18,13 @@ class StripeController extends Controller
         $amount = $request['amount'];
         $id = $request['user'];
 
-        $user = User::whereId($id)->first();
+        User::whereId($id)->first();
 
+        $stripe->customers()->find($id);
 
-        $customer = $stripe->customers()->find($id);
+        $stripe->cards()->create($id, $_POST['stripeToken']);
 
-        $card = $stripe->cards()->create($id, $_POST['stripeToken']);
-
-        $charge = $stripe->charges()->create([
+        $stripe->charges()->create([
             'customer' => $id,
             'currency' => 'Eur',
             'amount'   => $amount,
@@ -41,11 +40,11 @@ class StripeController extends Controller
 
         try {
 
-            $customer = $stripe->customers()->find($user->id);
+            $stripe->customers()->find($user->id);
 
         } catch (\Cartalyst\Stripe\Exception\NotFoundException $e) {
 
-            $customer = $stripe->customers()->create([
+            $stripe->customers()->create([
                 'id' => $user->id,
                 'email' => $user->email,
             ]);
