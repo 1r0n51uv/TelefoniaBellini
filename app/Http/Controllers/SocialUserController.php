@@ -64,11 +64,11 @@ class SocialUserController extends Controller
         private static function updateSocialUser($EXTuser, $provider, $toadd) { 
             if($provider == 'google') { 
                 $EXTuser['g_id'] = $toadd->getId(); 
-                $EXTuser['g_pic'] = "https://pikmail.herokuapp.com/" . $toadd->getId() . "?size=1024"; 
+                $EXTuser['g_pic'] = $toadd->getAvatar();
                 $EXTuser->save(); 
             } else if($provider == 'facebook') { 
                 $EXTuser['fb_id'] = $toadd->getId(); 
-                $EXTuser['fb_pic'] = "https://graph.facebook.com/" . $toadd->getId() ."/picture?width=9999"; 
+                $EXTuser['fb_pic'] = $toadd->getAvatar();
                 $EXTuser->save(); 
             } else { 
                 echo "non va"; 
