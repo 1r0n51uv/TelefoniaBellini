@@ -26,6 +26,18 @@ class AdminController extends Controller
 
     }
 
+    public function adminHome2() {
+
+        $spec = Specification::all();
+        $orders = Order::all();
+        $users = User::all();
+        $slider = Slider::all()->first();
+
+        return view('admin.homeAdmin2', compact('spec', 'orders', 'users', 'slider'));
+
+
+    }
+
     public function changeOrderStaut($id, $status) {
 
         $order = Order::whereId($id)->first();

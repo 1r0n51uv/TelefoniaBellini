@@ -87,6 +87,7 @@ Route::group(['middleware' => ['admin', 'auth']], function () {
         return view('admin.addphone');
     });
     Route::get('/admin', 'AdminController@adminHome');
+    Route::get('/admin2', 'AdminController@adminHome2');
     Route::get('/updateOrderStatus/{id}/{status}', 'AdminController@changeOrderStaut')->where(['status' => 'Spedito|Cancellato|In lavorazione|Ricevuto']);
     Route::get('/manageSlider', 'SliderController@editSlider');
 });

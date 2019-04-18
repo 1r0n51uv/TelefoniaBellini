@@ -27,8 +27,6 @@
                         <div class="row justify-content-center" >
                             @foreach( $phones as $phone)
 
-
-
                                 @include('components.singleProduct')
 
                             @endforeach

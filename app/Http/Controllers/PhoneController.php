@@ -50,6 +50,8 @@ class PhoneController extends Controller
         $specification['price'] = $input['price'];
         $specification['status'] = $input['status'];
         $specification['color'] = $input['color'];
+        $specification['description'] = $input['description'];
+        $specification['qty'] = $input['qty'];
 
         $specification->save();
 
@@ -106,6 +108,12 @@ class PhoneController extends Controller
         if(isset($values['status'])&& $values['status'] != null) {
             $specification->status = $request->input('status');
         }
+        if(isset($values['description'])&& $values['description'] != null) {
+            $specification->description = $request->input('description');
+        }
+        if(isset($values['qty'])&& $values['qty'] != null) {
+            $specification->qty = $request->input('qty');
+        }
         $specification->save();
 
         return redirect()->action('AdminController@adminHome');
@@ -115,7 +123,7 @@ class PhoneController extends Controller
 
     public function deletePhone($id){
 
-        Phone::destroy($id);
+        Specification::destroy($id);
         return redirect()->action('AdminController@adminHome');
 
     }
@@ -136,9 +144,8 @@ class PhoneController extends Controller
 
     public function editPhone($id){
 
-        $phone = Phone::find($id);
         $specification = Specification::find($id);
-        return view('admin.editphone', compact('phone', 'specification'));
+        return view('admin.editphone', compact( 'specification'));
 
 
     }

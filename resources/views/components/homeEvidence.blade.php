@@ -3,9 +3,9 @@
 @if(isset($evidence))
     <div class="row justify-content-center" >
 
-        <div class="col-md-12">
+        <div class="col-md-12" style="text-align: center">
             <hr>
-            <h1>Ultimi arrrivi</h1>
+            <h1 class="title">Ultimi arrivi</h1>
             <hr>
 
         </div>
@@ -22,13 +22,13 @@
 
                             @if(strcmp($phone->description, 'Novità') == 0)
 
-                                <span class="badge badge-danger">Novità</span>
+                                <span style="font-size: 80%" class="badge badge-danger">Novità</span>
 
                             @elseif(strcmp($phone->description, 'Usato') == 0)
-                                <span class="badge badge-warning">Usato</span>
+                                <span style="font-size: 80%" class="badge badge-warning">Usato</span>
                             @else
 
-                                <span class="badge badge-danger" style="color: #F7F7F7; border-color: #F7F7F7">Pelo </span>
+                                <span class="badge badge-danger" style="color: #F7F7F7; border-color: #F7F7F7"></span>
                             @endif
 
 
