@@ -11,7 +11,7 @@ class PhoneController extends Controller
 {
 
     public function index() {
-        $phones = Specification::paginate(8);
+        $phones = Specification::orderBy('created_at', 'desc')->paginate(8);
         $paginate = true;
         return view('shopping', compact('phones', 'paginate'));
     }
@@ -33,9 +33,7 @@ class PhoneController extends Controller
 
         $specification = new Specification();
 
-        $specification['pic1'] = "";
-        $specification['pic2'] = "";
-        $specification['pic3'] = "";
+
         $specification['brand'] = $input['brand'];
         $specification['model'] = $input['model'];
         $specification['weight'] = $input['weight'];
@@ -52,6 +50,25 @@ class PhoneController extends Controller
         $specification['color'] = $input['color'];
         $specification['description'] = $input['description'];
         $specification['qty'] = $input['qty'];
+
+        request()->validate([
+            'image.*' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        ]);
+        $images=array();
+        if($files=request()->file('image')){
+            foreach($files as $file){
+                $name=$file->getClientOriginalName();
+                $file->move(public_path('assets/image/catalogotelefoni'), $name);
+                $images[]=$name;
+            }
+        }
+
+        $specification['pic1'] = "../assets/image/catalogotelefoni/".$images[0];;
+        $specification['pic2'] = "../assets/image/catalogotelefoni/".$images[1];;
+        $specification['pic3'] = "../assets/image/catalogotelefoni/".$images[2];;
+        $specification['pic4'] = "../assets/image/catalogotelefoni/".$images[0];;
+
+
 
         $specification->save();
 

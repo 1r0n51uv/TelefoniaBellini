@@ -9,7 +9,7 @@
             <div class="container-fluid">
                 <div class="row justify-content-center">
                     <div class="col-md-4 sidenav">
-                        <form action="/addSpecification" method="post" style="border: 1px whitesmoke solid; padding: 3%; background-color: white;">
+                        <form action="/addSpecification" method="post" enctype="multipart/form-data" style="border: 1px whitesmoke solid; padding: 3%; background-color: white;">
                             {{ csrf_field() }}
 
                             <div class="form-group">
@@ -90,12 +90,19 @@
                                 <input type="number" class="form-control"  name="price">
                             </div>
 
+                            <div class="form-group">
+                                <label>Immagini</label>
+                                <input type="file" name="image[]" class="form-control" required multiple>
+                            </div>
+
+
 
                             <a href="/admin"><button type="submit" class="btn btn-primary">Torna alla home</button></a>
                             <button type="submit" class="btn btn-info">Inserisci</button>
 
                         </form>
                     </div>
+
                 </div>
 
             </div>

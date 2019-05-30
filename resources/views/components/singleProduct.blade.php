@@ -24,7 +24,6 @@
             <img class="card-img-top" src="{{ $phone->pic4 }}" alt="Card image cap"
                  style="width: 60%; display:block; margin:auto; margin-top: 2%">
 
-
             <div class="card-body">
 
                 <h5 class="card-text" style="text-align:center;">
