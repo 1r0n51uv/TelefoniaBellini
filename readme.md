@@ -1,33 +1,21 @@
-<h1 align="center">Telefonia Bellini</h1>
-<p align="center">
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+# Mobile Device E-Commerce
 
-<p>Developed with</p>
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-## Info
+## Technologies
 
-Ecommerce based on Laravel framework. Thanks to all supporters <3.
-Other features, packages, dependencies and API:
-- Bootstrap
-- 
+<ul>
+  <li>Laravel</li>
+   <li>MySQL</li>
+   <li>Bootstrap</li>
+   <li>Various Libraries (ex. stripe)</li>
+  </ul>
 
-## About Laravel
+## Online X
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+(Shop closed)
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Deployed on custom LAMP server, bought and configured on [Vps.ag](https://vps.ag)
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications.
+## About me
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Check out my portfolio [SevAmm.ml](https://sevamm.ml)
